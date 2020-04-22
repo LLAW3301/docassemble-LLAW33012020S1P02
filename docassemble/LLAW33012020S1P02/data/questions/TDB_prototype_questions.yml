@@ -43,9 +43,9 @@ buttons:
   - Restart: restart
 ---
 event: endpoint['eligible']
-question: These are your answers
+question: Services
 subquestion: |
-  Your location is ${ TDBlocation }
+  Services in the **${ TDBlocation.true_values() }** of Adelaide are displayed below
 ---
 question: |
 fields:
@@ -58,4 +58,5 @@ fields:
       - Outer regional
     datatype: checkboxes
 under: |
-  You can select more than one area 
+  You can select more than one area
+---
