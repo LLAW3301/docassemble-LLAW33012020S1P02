@@ -2,6 +2,10 @@
 objects:
   - endpoint: DADict
 ---
+features:
+  progress bar: True
+  debug: False
+---
 mandatory: True
 question: Family Law Pathways Network Service Directory
 subquestion: |
@@ -17,15 +21,15 @@ buttons:
 ---
 mandatory: True
 code: |
-  if TDB_ageconfirm == True:
-    endpoint['eligible']
-  else:
-    endpoint['ineligible']
+  if TDB_ageconfirm == False:
+    endpoint['ineligible1']
 ---
 question: |
 fields:
   - What is your age: TDB_age
     datatype: integer
+    default: 18
+progress: 25
 ---
 code: |
   if TDB_age >= 18:
@@ -33,23 +37,9 @@ code: |
   else:
     TDB_ageconfirm = False
 ---
-event: endpoint['ineligible']
-question: Sorry!
-subquestion: |
-  insert text here regarding being an adult or having adult supervision to use this app
-buttons:
-  - Exit: exit
-    url: https://www.pathwaysnetworksa.com.au/
-  - Restart: restart
----
-event: endpoint['eligible']
-question: Services
-subquestion: |
-  Services in the **${ TDBlocation.true_values() }** of Adelaide are displayed below
----
-question: |
+question: What location do you seek services in?
 fields:
-  - What location do you seek services in?: TDBlocation
+  - If Adelaide CBD is central (see map): TDBlocation
     choices:
       - North
       - East
@@ -57,6 +47,69 @@ fields:
       - West
       - Outer regional
     datatype: checkboxes
+    none of the above: |
+      I do not live in South Australia
 under: |
   You can select more than one area
+progress: 50
+---
+code: |
+  if TDBlocation['North']:
+    TDBlocation_confirm = True
+  elif TDBlocation['East']:
+    TDBlocation_confirm = True
+  elif TDBlocation['South']:
+    TDBlocation_confirm = True
+  elif TDBlocation['West']:
+    TDBlocation_confirm = True
+  elif TDBlocation['Outer regional']:
+    TDBlocation_confirm = True
+  else:
+    TDBlocation_confirm = False
+---
+mandatory: True
+code: |
+  if TDBlocation_confirm == False:
+    endpoint['ineligible2']
+---
+event: endpoint['ineligible1']
+question: Sorry!
+subquestion: |
+  insert text here regarding being an adult or having adult supervision to use this app
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
+event: endpoint['ineligible2']
+question: Sorry!
+subquestion: |
+  insert text here regarding either not living in SA ergo ineligible or require other specific services not listed so, please contact yada yada for help
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
+question: Services
+subquestion: |
+fields:
+  - What type of services are you after?: TDBservices
+    choices:
+      - service1
+      - service2
+      - etc1
+      - etc2
+    datatype: checkboxes
+    none of the above: |
+      Other/not listed
+progress: 75
+---
+mandatory: True
+question: Services
+subquestion: |
+  Services in the **${ TDBlocation.true_values() }** of Adelaide are displayed below <br> 
+  <br>Services: ${ TDBservices.true_values() }
+progress: 100
 ---
