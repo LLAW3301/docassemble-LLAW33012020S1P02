@@ -5,6 +5,9 @@ objects:
 features:
   progress bar: True
   debug: False
+  navigation back button: False
+  question back button: True
+  hide standard menu: True
 ---
 mandatory: True
 question: Family Law Pathways Network Service Directory
@@ -41,6 +44,7 @@ question: What location do you seek services in?
 fields:
   - If Adelaide CBD is central (see map): TDBlocation
     choices:
+      - Adelaide CBD
       - North
       - East
       - South
@@ -55,6 +59,8 @@ progress: 50
 ---
 code: |
   if TDBlocation['North']:
+    TDBlocation_confirm = True
+  elif TDBlocation['Adelaide CBD']:
     TDBlocation_confirm = True
   elif TDBlocation['East']:
     TDBlocation_confirm = True
@@ -85,7 +91,7 @@ progress: 100
 event: endpoint['ineligible2']
 question: Sorry!
 subquestion: |
-  insert text here regarding either not living in SA ergo ineligible or require other specific services not listed so, please contact yada yada for help
+  insert text here regarding **not living in SA** ergo ineligible so please contact yada yada for help
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
@@ -106,10 +112,37 @@ fields:
       Other/not listed
 progress: 75
 ---
+code: |
+  if TDBservices['service1']:
+    TDBservices_confirm = True
+  elif TDBservices['service2']:
+    TDBservices_confirm = True
+  elif TDBservices['etc1']:
+    TDBservices_confirm = True
+  elif TDBservices['etc2']:
+    TDBservices_confirm = True
+  else:
+    TDBservices_confirm = False
+---
+mandatory: True
+code: |
+  if TDBservices_confirm == False:
+    endpoint['ineligible3']
+---
+event: endpoint['ineligible3']
+question: Sorry!
+subquestion: |
+  insert text here regarding how you require **other services** not listed so please contact yada yada for help
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
 mandatory: True
 question: Services
 subquestion: |
-  Services in the **${ TDBlocation.true_values() }** of Adelaide are displayed below <br> 
-  <br>Services: ${ TDBservices.true_values() }
+  You are looking for services in the following locations: **${ TDBlocation.true_values() }** <br> 
+  <br>Services in those locations are: ${ TDBservices.true_values() }
 progress: 100
 ---
