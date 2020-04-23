@@ -1,3 +1,11 @@
+metadata:
+  authors:
+    - name: Timothy Ball
+    - name: Daniel Cheung
+    - name: Phoebe Yab
+    - name: Zoe Vaughan
+  organisation: Flinders University
+  show login: False
 ---
 objects:
   - endpoint: DADict
