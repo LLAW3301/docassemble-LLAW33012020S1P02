@@ -151,6 +151,6 @@ mandatory: True
 question: Services
 subquestion: |
   You are looking for services in the following locations: **${ TDBlocation.true_values() }** <br> 
-  <br>Services in those locations are: ${ TDBservices.true_values() }
+  <br>You are looking for the following services: ${ TDBservices.true_values() }
 progress: 100
 ---
