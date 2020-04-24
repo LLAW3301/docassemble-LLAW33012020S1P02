@@ -1,0 +1,1606 @@
+---
+variable name: FPSD_services
+use objects: true
+data: 
+  A001:
+    service: Mindful Awareness Parenting Group Program
+    service_provider: Anglicare SA
+    address: Darlington Children’s Centre, 12a Kurrajong Place, Seacombe Gardens
+    email: map@anglicaresa.com.au
+    phone: 8186 8900 or 8296 2686
+    cost: Free for parents with a child under 12 years
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: True
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: 8 week program exploring mindful awareness - helping us to focus on ourselves and others with kindness and acceptance.
+  A002:
+    service: Who's in Charge
+    service_provider: Junction
+    address: Seaford Library, Grand Boulevard, Seaford
+    email: no email address available
+    phone: 8392 3000
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: A safe and supportive environment for parents struggling with complex adolescent behaviours.
+  A003:
+    service: Circle of Security
+    service_provider: Aboriginal Family Support Services
+    address: 1st Floor, 47 Commercial Rd, Port Augusta or 3 Gloucester Tce Port Lincoln
+    email: no email address available
+    phone: 8641 0907 or 8683 1909
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: True
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Focuses on attachment, which is what makes a child feel safe, secure and protected.
+  A004:
+    service: Bringing Up Great Kids
+    service_provider: Relationships Australia SA Berri
+    address: Relationships Australia SA, 9 Kay Avenue, Berri
+    email: no email address available
+    phone: 8582 4122
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Bringing Up Great Kids is a four week program that supports parents and carers in building emotional connections with their children.
+  A005:
+    service: In It Together
+    service_provider: Relationships Australia SA Berri
+    address: Relationships Australia SA, 9 Kay Avenue, Berri
+    email: no email address available
+    phone: 8582 4122
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: A four week program where children and parent see individual practitioners concurrently. The information they discuss is mirrored in each session so that parent and child have a shared language which promotes dialogue long after leaving the therapy room.
+  A006:
+    service: I am Me
+    service_provider: Relationships Australia SA Berri
+    address: Relationships Australia SA, 9 Kay Avenue, Berri
+    email: no email address available
+    phone: 8582 4122
+    cost: Free
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: 3 week program for women as a therapeutic group to build identity, value and self-worth.
+  A006:
+    service: On being Male
+    service_provider: Relationships Australia SA Berri
+    address: Relationships Australia SA, 9 Kay Avenue, Berri
+    email: no email address available
+    phone: 8582 4122
+    cost: Free
+    service_category:
+      male: True
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: We will talk about relationships, understanding parenthood and fatherhood, learning where values and ideas come from and how they shape us.
+  A007:
+    service: Strengthening Separated Families Program
+    service_provider: Uniting Country SA
+    address: Port Pirie, Port Augusta, Whyalla and the Flinders District
+    email: no email address available
+    phone: 8649 0812 or 0437 710 224
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: True
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Building Connections Parenting Seminar, Keeping Kids in Mind Post Separation Course, Rocky Road School Holidays program for Children of Separated Parents.
+  A008:
+    service: Bringing Up Great Kids
+    service_provider: Family Relationship Centre Mt Gambier
+    address: Mount Gambier Family Relationship Centre 1 Helen St, Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $10
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Bringing Up Great Kids is a four week program that supports parents and carers in building emotional connections with their children.
+  A009:
+    service: Circle of Security
+    service_provider: Family Relationship Centre Mt Gambier
+    address: Mount Gambier Family Relationship Centre 1 Helen St, Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $10
+    service_category:
+      male: True
+      female: False
+      parents: True
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: A program for fathers, step-fathers and other male caregivers. The Circle of Security® Parenting™ program is based on decades of research about how secure parent-child relationships can be supported and strengthened.
+  A010:
+    service: Seasons for Growth
+    service_provider: Family Relationship Centre Mt Gambier
+    address: Mount Gambier Family Relationship Centre 1 Helen St, Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $10
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: True
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: For parents whose children are affected by grief & loss due to divorce/separation.
+  A011:
+    service: Tuning you're your Teen
+    service_provider: Family Relationship Centre Mt Gambier
+    address: Mount Gambier Family Relationship Centre 1 Helen St, Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $10
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: True
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: A five week program that supports parents of teenagers to connect with and build positive, meaningful and supportive relationships with their teens by increasing awareness of what teens are going though and learning and using emotion coaching strategies.
+  A012:
+    service: Banana Splitz
+    service_provider: Anglicare SA
+    address: 159 Port Rd Hindmarsh 5007
+    email: no email address available
+    phone: 8305 9200
+    cost: $50 (or $20 concession)
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: True
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: Banana Splitz is a group based support program for separated children aged 5-12. Groups typically run for 6 x 2 hour sessions and are offered on afternoons and weekends.
+  A013:
+    service: Banana Splitz
+    service_provider: O'Sullivan Beach Children's Centre
+    address: 51a Galloway Road O’Sullivan Beach
+    email: no email address available
+    phone: 8301 4201
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: True
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: A fun, therapeutic and educational group for children aged 6-12 years for children living with separation.
+  A014:
+    service: Banana Bites
+    service_provider: Anglicare SA
+    address: 159 Port Rd Hindmarsh 5007
+    email: no email address available
+    phone: 8305 9200
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: True
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: Banana Bites is a group program designed to give children an opportunity to be supported, express their thoughts and feelings, let their families know what they need, and learn new skills to cope with family changes.
+  A015:
+    service: Outer North Harbour Homelessness Program
+    service_provider: Centacare
+    address: 34 Yorktown Road Elizabeth Park
+    email: carlow@centacare.org.au
+    phone: 8252 2311
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: True
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: True
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: 24/7 on-site supported accommodation, with support provided to promote young peoples’ independent living skills, health, well-being and social and educational connections.
+  A016:
+    service: iKiDs
+    service_provider: Relationships Australia SA
+    address: Held at Adelaide, Hindmarsh, Marion, And Salisbury
+    email: no email address available
+    phone: 8419 2000
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: True
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: Program for separated children aged 4-18 involving individual counselling and group work.
+  A017:
+    service: Clear as Mud
+    service_provider: Relationships Australia SA
+    address: Level 5, Westfield Shopping Centre, 297 Diagonal Road, Oaklands Park 5046
+    email: no email address available
+    phone: 8377 5400
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: True
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: Free one hour education workshop for children aged 8 to 12 years. This workshop helps children explore common experiences of separation from a child’s perspective.
+  A018:
+    service: Young Parents Group
+    service_provider: Taikurrendi Children and Family Centre
+    address: Taikurrrendi Children and Family Centre, 8 Price Street Christies Beach
+    email: no email address available
+    phone: 8186 1102 or text 0428 666 792
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: True
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: Meet other parents, have fun with your children, learn cooking recipes together, play music/read books together.
+  A019:
+    service: ROAR
+    service_provider: Anglicare SA - Hackham Community Centre
+    address: TBA
+    email: no email address available
+    phone: 8186 8900
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: For children aged 7-11. The course runs over 7 weeks and sessions are held after school for 1.5-2 hours. Designed to teach children about: Rights and responsibilities – what they are and why they are important Emotions/Feelings and how they present in our bodies.
+  A020:
+    service: Outer North Youth Homelessness Service
+    service_provider: Centacare
+    address: 26 Second Street, Nuriootpa
+    email: nnuriootpa@centacare.org.au
+    phone: 8562 4547
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: True
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: True
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Supported Tenancies and Stimulus Housing are generally allocated to young people aged over 18 who are homeless, who are at risk of becoming homeless, or whom face other barriers in accessing alternative forms of accommodation.
+  A021:
+    service: Rocky Road
+    service_provider: Uniting Country SA
+    address: 22 McCritchie Crescent Whyalla 
+    email: no email address available
+    phone: 0437 710 224 or 8649 4367
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: True
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Rocky Road is a group based support program for children aged 7-12 who are living with parental separation. The aim of the program is to teach children the skills to cope with the changes to their family.
+  A022:
+    service: Blast Off
+    service_provider: Family Relationship Centre Mt Gambier
+    address: 1 Helen Street Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $30 per family
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: True
+    blurb: Blast off is a group based support program for children aged 7-12 whose parents have separated.
+  A023:
+    service: Me Being Me
+    service_provider: Family Relationship Centre Mt Gambier
+    address: 1 Helen Street Mount Gambier
+    email: no email address available
+    phone: 8721 3500
+    cost: $10
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: True
+    blurb: A well-being group program for children aged 6-13 years that focuses on many aspects that make up and contribute to a child’s wellbeing and how they interact with the world.
+  A024:
+    service: Gowrie Playgroup
+    service_provider: Gowrie SA
+    address: Wynbring Jida Child Care Centre 2-4 Booth Street, Whyalla Stuart
+    email: no email address available
+    phone: 8649 3737
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: A welcoming and interactive playgroup for children 0-5 years.
+  A025:
+    service: COS-P
+    service_provider: Gowrie SA
+    address: TBA
+    email: carmen.collins@gowriesa.org.au
+    phone: 0481 441 122
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: none provided.
+  A026:
+    service: Introduction to Rocky Road
+    service_provider: Uniting Country SA
+    address: TBA
+    email: no email address available
+    phone: 8682 7900
+    cost: $30 per child
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: True
+    blurb: Rocky Road is a group based support program for children aged 7-12 who are living with parental separation. The aim of the program is to teach children the skills to cope with the changes to their family.
+  A027:
+    service: Legal Education Sessions
+    service_provider: Legal Services Commission
+    address: Legal Services Commission 30 Flinders Street Adelaide
+    email: no email address available
+    phone: 8111 5555 
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: True
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: The Legal Services Commission provides free legal information sessions from time to time for members of the public and workers in the sector. 
+  A028:
+    service: Family law advice and support
+    service_provider: Family Advocacy and Support Service
+    address: Family Court, Level 1 Room 1.12 or 1.17
+    email: no email address available
+    phone: 0434 079 388 or 0434 079 387
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: True
+      drug/alcohol: False
+      disability: False
+      legal services: True
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: This service provides advice, general information, help, referrals, interpreters etc for people who are self represented and who have a hearing date in the Family Court or Federal Circuit Court.
+  A029:
+    service: TBA
+    service_provider: Women's Community Centre SA
+    address: 64 Nelson Street Stepney
+    email: no email address available
+    phone: 8362 6571
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: True
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: True
+      court services: True
+      drug/alcohol: False
+      disability: False
+      legal services: True
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: True
+      South: False
+      West: False
+      Outer regional: False
+    blurb: A low cost legal service every Friday afternoon for women with family law issues.
+  A030:
+    service: Family Court Support
+    service_provider: Women's Information Service
+    address: Ground Floor, Chesser House, 101 Grenfell Street Adelaide 
+    email: no email address available
+    phone: 8303 0590 or 1800 188 158
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: True
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: True
+      domestic violence: True
+      court services: True
+      drug/alcohol: False
+      disability: False
+      legal services: True
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: Family Court Support is a free and confidential service provided by trained volunteers to accompany women to the Adelaide Family and Federal Circuit Court. 
+  A031:
+    service: Free legal advice
+    service_provider: Southern Women's Primary Health
+    address: 20 Alexander Kelly Drive Noarlunga Centre 
+    email: no email address available
+    phone: 8221 5553 or 1800 81634
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: True
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: True
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb: Meet with or contact a qualified lawyer to discuss family violence, family law, including children and property matters, victims of crime compensation, child protection, debt etc.
+  A032:
+    service: Women's Domestic Violence Survivors Group
+    service_provider: Uniting Communities Pitt Street
+    address: Provided on registration (Adelaide)
+    email: no email address available
+    phone: 8202 5190
+    cost: Free
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb: This is a free group facilitated by a Uniting Communities counsellor and typically consists of no more than 10 participants. The group offers women an opportunity to explore the effect of violence and abuse in a safe, nonjudgemental setting.
+  A033:
+    service: Women Are Strong... Women do Survive
+    service_provider: Women's Safety Services SA
+    address: O’Sullivan Beach area (address provided upon registration)
+    email: no email address available
+    phone: 8215 6310
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: True
+      divorce: True
+      pre-separation: False
+      post-separation: True
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  8 week support group for women. How to reconnect with our personal strengths; The effects of abusive or hurtful relationships; How to manage overwhelming emotions; Women’s role in the family and society; Developing strategies for personal safety.
+  A034:
+    service: The Shark Cage
+    service_provider: Anglicare SA
+    address: TBC
+    email: no email address available
+    phone: 8186 8900
+    cost: Free
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: True
+      South: True
+      West: True
+      Outer regional: False
+    blurb:  An 9 week assertiveness and self-confidence building course for women who have experienced abusive or controlling relationships.
+  A035:
+    service: Reclaim Your Path - Pathways to Empowerment
+    service_provider: Zahra Foundation Australia
+    address: To be advised on registration (Southern Location and close to City)
+    email: admin@zahrafoundation.org.au
+    phone: 8352 1889
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: True
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  Pathways to empowerment is a 9 week course for women who have experienced domestic violence. The group is about reconnecting with yourself, working out what sort of life you want, and the practical steps you can take to achieve this.
+  A036:
+    service: Financial Counsellor
+    service_provider: Zahra Foundation Australia
+    address: To be advised on registration
+    email: admin@zahrafoundation.org.au
+    phone: 8352 1889
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: True
+      South: True
+      West: True
+      Outer regional: False
+    blurb:  Providing financial support and assistance to women who have experienced domestic violence.
+  A037:
+    service: Photo Voice Project
+    service_provider: Hackham Community Group
+    address: Hackham Community Centre 72 Collins Parade Hackham
+    email: no email address provided
+    phone: 8392 3080
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  Women who have a lived experience of Family and Domestic Violence can learn photography skills and share their stories, imagery and engages the community to become more aware and get actively involved in advocacy and creating change around domestic violence.
+  A038:
+    service: The Photo Voice Project
+    service_provider: Woodcroft Heights Children's Centre
+    address: Woodcroft Heights Children’s Centre 25 Investigator Drive Woodcroft
+    email: no email address provided
+    phone: 8381 8005
+    cost: TBA
+    service_category:
+      male: False
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: False
+      domestic violence: True
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  Women who have a lived experience of Family and Domestic Violence can learn photography skills and share their stories, imagery and engages the community to become more aware and get actively involved in advocacy and creating change around domestic violence.
+  A039:
+    service: Be Kind and Unwind - Personal Wellbeing
+    service_provider: Anglicare SA
+    address: Woodcroft Morphett Vale Neighbourhood House 175 Bains Road Morphett Vale OR 159 Port Road Hindmarsh
+    email: no email address provided
+    phone: 8186 8900
+    cost: Gold coin donation
+    service_category:
+      male: True
+      female: True
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  Wellbeing workshop – dealing with emotional overload, relaxation and mindfulness.
+  A040:
+    service: Family and Mental Health Service - Parent Cafe Program
+    service_provider: Baptist Care
+    address: Salisbury, Marion, Rostrevor, Adelaide CBD
+    email: fmhss@baptistcaresa.org.au
+    phone: 8209 5040 or 8118 5240 
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: True
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: True
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  A free family counselling and early intervention service, highly skilled in working with children, young people and their families. The aim is to provide long term coping skills and strategies to face challenges, and assist in finding ways for individuals to express themselves through difficult emotions like anger and stress.
+  A041:
+    service: Alcohol and other Drug Program
+    service_provider: Uniting Communities Adelaide
+    address: 27 Gresham Street Adelaide
+    email: no email address provided
+    phone: 8202 5950 
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: True
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb:  This service aims to assist young people establish goals for treatment, improve confidence, deal with poor relationships. Program includes developing more effective community responses to drug and alcohol misuse. For young People between the ages of 12-25 years.
+  A042:
+    service: Outreach Counselling for Drug and Alcohol
+    service_provider: Uniting Communities Adelaide
+    address: 16 Pitt Street Adelaide
+    email: no email address provided
+    phone: 8202 5950 
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: True
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: False
+      East: False
+      South: False
+      West: False
+      Outer regional: False
+    blurb:  The program is for people who are seeking support for alcohol and other drug problems, but who do not wish to take part in the Residential Program. In house outreach counselling is based on an eligibility assessment. Contact Centre for more information.
+  A043:
+    service: Drug and Alcohol Service
+    service_provider: Centacare
+    address: 413 Grange Road Seaton
+    email: no email address provided
+    phone: 8159 1400 
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: True
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: False
+      East: False
+      South: False
+      West: True
+      Outer regional: False
+    blurb:  Outreach services individuals and family members where there is a young person who either is a substance user in the immediate family or related to those residing in the same dwelling. Offers home detoxification; drug and alcohol counselling to young people and young adults 10 – 30 years of age with a substance use problem.
+  A044:
+    service: Drug and Alcohol Services
+    service_provider: SA Health
+    address: TBA
+    email: no email address provided
+    phone: 8159 1400 
+    cost: TBA
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: True
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: True
+      South: True
+      West: True
+      Outer regional: True
+    blurb:  Phone counselling, advice and information provided in South Australia for people experiencing drug, alcohol or other substance abuse.
+  A045:
+    service: Drug and Alcohol Counselling
+    service_provider: Drug ARM SA
+    address: North, South, Central
+    email: no email address provided
+    phone: 07 3620 8880 
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: False
+      children: False
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: False
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: True
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: True
+      North: True
+      East: False
+      South: True
+      West: False
+      Outer regional: False
+    blurb:  A one on one counselling program service which offers drug and alcohol counselling for individuals and their families who are worried about their use of drugs and/or alcohol.
+  A046:
+    service: Balancing Screen time for Families
+    service_provider: Lutheran Community Care
+    address: Blair Athol North Children’s Centre, 5 Marmion Avenue, Blair Athol
+    email: no email address provided
+    phone: 0437 218 573
+    cost: Free
+    service_category:
+      male: False
+      female: False
+      parents: True
+      children: True
+      teenager: False
+      shelter: False
+      course: False
+      divorce: False
+      pre-separation: False
+      post-separation: False
+      behaviour management: True
+      mental health: True
+      domestic violence: False
+      court services: False
+      drug/alcohol: False
+      disability: False
+      legal services: False
+      indigenous: False
+    Location:
+      Adelaide CBD: False
+      North: True
+      East: True
+      South: False
+      West: False
+      Outer regional: False
+    blurb:  This interactive workshop is designed to support your understanding of the effects of too much screen time on children and the impact on families.
+
+
+
+
