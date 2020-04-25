@@ -26,12 +26,26 @@ progress: 50
 question: Services
 subquestion: |
 fields:
-  - What type of services are you after?: TDBservices
+  - What type of services are you after? (listed in alphabetical order): TDBservices
     choices:
-      - service1
-      - service2
-      - etc1
-      - etc2
+      - Behaviour management
+      - Child services
+      - Courses
+      - Court services
+      - Disability services
+      - Divorce services
+      - Domestic violence services
+      - Drug/Alcohol services
+      - Female services
+      - Indigenous services
+      - Legal services
+      - Male services
+      - Mental health services
+      - Parental services
+      - Post-separation services
+      - Pre-separation services
+      - Shelters
+      - Teenager/young adult services  
     datatype: checkboxes
     none of the above: |
       Other/not listed
