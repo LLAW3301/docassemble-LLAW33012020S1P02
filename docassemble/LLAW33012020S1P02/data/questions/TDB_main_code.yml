@@ -88,13 +88,41 @@ buttons:
 progress: 100
 ---
 code: |
-  if TDBservices['service1']:
+  if TDBservices['Male services']:
     TDBservices_confirm = True
-  elif TDBservices['service2']:
+  elif TDBservices['Female services']:
     TDBservices_confirm = True
-  elif TDBservices['etc1']:
+  elif TDBservices['Parental services']:
     TDBservices_confirm = True
-  elif TDBservices['etc2']:
+  elif TDBservices['Child services']:
+    TDBservices_confirm = True
+  elif TDBservices['Teenager/young adult services']:
+    TDBservices_confirm = True
+  elif TDBservices['Indigenous services']:
+    TDBservices_confirm = True
+  elif TDBservices['Shelters']:
+    TDBservices_confirm = True
+  elif TDBservices['Courses']:
+    TDBservices_confirm = True
+  elif TDBservices['Divorce services']:
+    TDBservices_confirm = True
+  elif TDBservices['Pre-separation services']:
+    TDBservices_confirm = True
+  elif TDBservices['Post-separation services']:
+    TDBservices_confirm = True
+  elif TDBservices['Behaviour management']:
+    TDBservices_confirm = True
+  elif TDBservices['Mental health services']:
+    TDBservices_confirm = True
+  elif TDBservices['Domestic violence services']:
+    TDBservices_confirm = True
+  elif TDBservices['Court services']:
+    TDBservices_confirm = True
+  elif TDBservices['Drug/Alcohol services']:
+    TDBservices_confirm = True
+  elif TDBservices['Disability services']:
+    TDBservices_confirm = True
+  elif TDBservices['Legal services']:
     TDBservices_confirm = True
   else:
     TDBservices_confirm = False
