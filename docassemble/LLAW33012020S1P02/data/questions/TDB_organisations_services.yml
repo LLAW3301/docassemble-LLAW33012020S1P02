@@ -1,6 +1,6 @@
 ---
 variable name: FPSD_services
-use objects: true
+use objects: True
 data: 
   A001:
     service: Mindful Awareness Parenting Group Program
@@ -1600,7 +1600,4 @@ data:
       West: False
       Outer regional: False
     blurb:  This interactive workshop is designed to support your understanding of the effects of too much screen time on children and the impact on families.
-
-
-
-
+---
