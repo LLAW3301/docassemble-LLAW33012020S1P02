@@ -9,17 +9,16 @@ metadata:
   show login: False
 ---
 include:
-  - TDB_prototype_questions.yml
-  - TDB_organisations_services.yml
+  - prototype_questions2.yml
+  - organisation_services.yml
 ---
 objects:
   - endpoint: DADict
 ---
 features:
   progress bar: True
-  debug: False
-  navigation back button: False
-  question back button: True
+  debug: True
+  navigation back button: True
   hide standard menu: True
 ---
 mandatory: True
@@ -87,49 +86,9 @@ buttons:
   - Restart: restart
 progress: 100
 ---
-code: |
-  if TDBservices['Male services']:
-    TDBservices_confirm = True
-  elif TDBservices['Female services']:
-    TDBservices_confirm = True
-  elif TDBservices['Parental services']:
-    TDBservices_confirm = True
-  elif TDBservices['Child services']:
-    TDBservices_confirm = True
-  elif TDBservices['Teenager/young adult services']:
-    TDBservices_confirm = True
-  elif TDBservices['Indigenous services']:
-    TDBservices_confirm = True
-  elif TDBservices['Shelters']:
-    TDBservices_confirm = True
-  elif TDBservices['Courses']:
-    TDBservices_confirm = True
-  elif TDBservices['Divorce services']:
-    TDBservices_confirm = True
-  elif TDBservices['Pre-separation services']:
-    TDBservices_confirm = True
-  elif TDBservices['Post-separation services']:
-    TDBservices_confirm = True
-  elif TDBservices['Behaviour management']:
-    TDBservices_confirm = True
-  elif TDBservices['Mental health services']:
-    TDBservices_confirm = True
-  elif TDBservices['Domestic violence services']:
-    TDBservices_confirm = True
-  elif TDBservices['Court services']:
-    TDBservices_confirm = True
-  elif TDBservices['Drug/Alcohol services']:
-    TDBservices_confirm = True
-  elif TDBservices['Disability services']:
-    TDBservices_confirm = True
-  elif TDBservices['Legal services']:
-    TDBservices_confirm = True
-  else:
-    TDBservices_confirm = False
----
 mandatory: True
 code: |
-  if TDBservices_confirm == False:
+  if TDBservices == 'none of the above':
     endpoint['ineligible3']
 ---
 event: endpoint['ineligible3']
@@ -145,7 +104,6 @@ progress: 100
 mandatory: True
 question: Services
 subquestion: |
-  You are looking for services in the following locations: **${ TDBlocation.true_values() }** <br> 
-  <br>You are looking for the following services: ${ TDBservices.true_values() }
+  Showing you ${ TDBservices } in the following locations: **${ TDBlocation.true_values() }**
 progress: 100
 ---

@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.LLAW33012020S1P02',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='tim_branch\r\n\r\ncode for SA Family Pathways Network - service directory app',
+      long_description='tim_branch\r\n\r\ncode for SA Family Pathways Network - service directory app\r\n\r\n**SEE main_code2.yml FOR THE LATEST VARIATION CHANGING CHECKLIST TO ICON BUTTONS**',
       long_description_content_type='text/markdown',
       author='Mark Ferraretto',
       author_email='mark.ferraretto@flinders.edu.au',
