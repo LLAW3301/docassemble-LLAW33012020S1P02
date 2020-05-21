@@ -1,0 +1,90 @@
+---
+question: What is your age?
+fields:
+  - no label: TDB_age
+    datatype: integer
+    default: 18
+progress: 25
+---
+question: "What location(s) do you seek services in?"
+fields:
+  - If Adelaide CBD is central (see map): TDBlocation
+    choices:
+      - Adelaide CBD
+      - North
+      - East
+      - South
+      - West
+      - Outer regional
+    datatype: checkboxes
+    none of the above: |
+      I do not live in South Australia
+right: |
+  [FILE example.jpg, 400px]
+progress: 50
+---
+question: What type of services are you after?
+field: TDBservices
+buttons:
+   - "Behaviour management": Behaviour management services
+     image: behaviour
+   - "Child services": Child services
+     image: child
+   - "Courses": Courses
+     image: courses
+   - "Court services": Court services
+     image: court
+   - "Disability services": Disability services
+     image: disable
+   - "Divorce": Divorce services
+     image: divorce
+   - "Domestic violence": Domestic violence services
+     image: domestic
+   - "Drug/Alcohol services": Drug/Alcohol services
+     image: drug
+   - "Female services": Female services
+     image: female
+   - "Indigenous services": Indigenous services
+     image: indigenous
+   - "Legal services": Legal services
+     image: legal
+   - "Male services": Male services
+     image: male
+   - "Mental health services": Mental health services
+     image: mental
+   - "Parental services": Parental services
+     image: family
+   - "Pre-separation": Pre-separation services
+     image: presep
+   - "Post-separation": Post-separation services
+     image: postsep
+   - "Shelters": Shelters
+     image: shelter
+   - "Teenager/young adult services": Teenager/young adult services 
+     image: youngadult
+   - "Other/not listed": none of the above
+     image: none
+progress: 75
+---
+images:
+  male: male.svg
+  disable: disability.svg
+  child: child.svg
+  court: court.svg
+  behaviour: behaviour.svg
+  courses: courses.svg
+  divorce: divorce.svg
+  domestic: domestic.svg
+  drug: drug.svg
+  family: family.svg
+  female: female.svg
+  indigenous: indigenous.svg
+  legal: legal.svg
+  mental: mental.svg
+  postsep: postsep.svg
+  presep: presep.svg
+  shelter: shelter.svg
+  youngadult: youngadult.svg
+  none: none.svg
+  back: back.svg
+---
