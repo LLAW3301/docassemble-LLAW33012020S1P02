@@ -1,4 +1,6 @@
+# This file contains all of the questions that are asked throughout the app
 ---
+# This section asks for the user age
 question: What is your age?
 fields:
   - no label: TDB_age
@@ -6,24 +8,30 @@ fields:
     default: 18
 progress: 25
 ---
-question: "What location(s) do you seek services in?"
+# This section asks for the user to input the location for where they seek services. 
+# There is reference to a map with a north indicator so users can get an idea as to which location they need
+question: "Please select service location(s)"
+subquestion: Refer to map for {help determining location}
 fields:
-  - If Adelaide CBD is central (see map): TDBlocation
+  - no label: TDBlocation
     choices:
-      - Adelaide CBD
-      - North
-      - East
-      - South
-      - West
-      - Outer regional
+      - ADELAIDE CBD: Adelaide CBD
+      - NORTH<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port Adelaide-Enfield<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salisbury<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tea Tree Gully<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playford: North
+      - EAST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burnside<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Campbelltown<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norwood, Payneham & St. Peters: East
+      - SOUTH<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mitcham<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marion<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Onkaparinga: South
+      - WEST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Torrens<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Holdfast Bay: West
+      - OUTER REGIONAL<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yankalilla<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alexandrina<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adelaide Hills<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barossa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gawler: Outer regional
     datatype: checkboxes
     none of the above: |
       I do not live in South Australia
 right: |
   [FILE example.jpg, 400px]
 progress: 50
+terms:
+  help determining location: For guidance, various Council areas are shown for each compass point. Please note, this list of council areas is non-exhaustive.
 ---
-question: What type of services are you after?
+# This section contains buttons that allows a user to click one single service category. If more categories are required, a user can click the back button and pick a different service category
+question: Please select one service category
 field: TDBservices
 buttons:
    - "Behaviour management": Behaviour management services
@@ -66,6 +74,7 @@ buttons:
      image: none
 progress: 75
 ---
+# This section gives each image icon a reference name, so that reference name can be used to input the image into the above section as clickable icons
 images:
   male: male.svg
   disable: disability.svg
