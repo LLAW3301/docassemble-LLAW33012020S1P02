@@ -7,26 +7,33 @@ metadata:
     - name: Zoe Vaughan
   organisation: Flinders University
   show login: False
+  exit url: https://www.pathwaysnetworksa.com.au/
 ---
 include:
   - prototype_questions2.yml
-  - organisation_services.yml
+  - individual_lists_attempt4.yml
 ---
 objects:
   - endpoint: DADict
 ---
 features:
   progress bar: True
-  debug: True
+  debug: False
   navigation back button: True
   hide standard menu: True
 ---
 mandatory: True
-question: Family Law Pathways Network Service Directory
+question: Service Directory
 subquestion: |
-  insert explanation of what this app does here
-
-  insert disclaimer here
+  Welcome to the South Australian Family Law Pathways Network Service Directory.
+  
+  This application is designed to help you find and engage in family law services according to your needs.<br>
+  
+  
+  <br>***Disclaimer:***  
+  This application is a digitised version of the service directory. As such it may not include all services or updated/amended services. No guarantees are made that any individual service will accept your enquiry or provide services to you.
+  
+  If you choose to enter your email address, the final page of this application will send you a list of services. Your email address is not collected, stored or accessed in any way (nor is any other personal information you submit).
 
   If you continue you accept these terms.
 buttons:
@@ -67,9 +74,9 @@ code: |
     endpoint['ineligible2']
 ---
 event: endpoint['ineligible1']
-question: Sorry!
+question: Age restriction
 subquestion: |
-  insert text here regarding being an adult or having adult supervision to use this app
+  You must be at least 18 or have adult permission to use this application. Please seek adult guidance to proceed. 
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
@@ -77,9 +84,14 @@ buttons:
 progress: 100
 ---
 event: endpoint['ineligible2']
-question: Sorry!
+question: No services available
 subquestion: |
-  insert text here regarding **not living in SA** ergo ineligible so please contact yada yada for help
+  The services in this application are conducted in South Australia. Currently the application does not cater for other jurisdictions.
+  
+  <br>Please contact the SA Family Law Pathways Network for information on how to access services in other jurisdictions.<br>
+  <br>**Phone:** 08 8419 2000<br>
+  **Mobile:** 0407 317 376<br>
+  **Email:** pathways@rasa.org.au
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
@@ -92,18 +104,1240 @@ code: |
     endpoint['ineligible3']
 ---
 event: endpoint['ineligible3']
-question: Sorry!
+question: Other services wanted
 subquestion: |
-  insert text here regarding how you require **other services** not listed so please contact yada yada for help
+  You have indicated that you require other services not listed in this application.
+  
+  <br>Please contact the SA Family Law Pathways Network for information on the specific service type you require.<br>
+  <br>**Phone:** 08 8419 2000<br>
+  **Mobile:** 0407 317 376<br>
+  **Email:** pathways@rasa.org.au
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
   - Restart: restart
 progress: 100
 ---
+code:  |
+
+  if ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Male services' ):
+    service_outcome = 1
+  elif ( TDBlocation['North'] == True and TDBservices == 'Male services' ):
+    service_outcome = 2
+  elif ( TDBlocation['East'] == True and TDBservices == 'Male services' ):
+    service_outcome = 3
+  elif ( TDBlocation['South'] == True and TDBservices == 'Male services' ):
+    service_outcome = 4
+  elif ( TDBlocation['West'] == True and TDBservices == 'Male services' ):
+    service_outcome = 5
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Male services' ):
+    service_outcome = 6
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Female services' ):
+    service_outcome = 7
+  elif ( TDBlocation['North'] == True and TDBservices == 'Female services' ):
+    service_outcome = 8
+  elif ( TDBlocation['East'] == True and TDBservices == 'Female services' ):
+    service_outcome = 9
+  elif ( TDBlocation['South'] == True and TDBservices == 'Female services' ):
+    service_outcome = 10
+  elif ( TDBlocation['West'] == True and TDBservices == 'Female services' ):
+    service_outcome = 11
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Female services' ):
+    service_outcome = 12
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 13
+  elif ( TDBlocation['North'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 14
+  elif ( TDBlocation['East'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 15
+  elif ( TDBlocation['South'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 16
+  elif ( TDBlocation['West'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 17
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Parental services' ):
+    service_outcome = 18
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Child services' ):
+    service_outcome = 19
+  elif ( TDBlocation['North'] == True and TDBservices == 'Child services' ):
+    service_outcome = 20
+  elif ( TDBlocation['East'] == True and TDBservices == 'Child services' ):
+    service_outcome = 21
+  elif ( TDBlocation['South'] == True and TDBservices == 'Child services' ):
+    service_outcome = 22
+  elif ( TDBlocation['West'] == True and TDBservices == 'Child services' ):
+    service_outcome = 23
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Child services' ):
+    service_outcome = 24
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 25
+  elif ( TDBlocation['North'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 26
+  elif ( TDBlocation['East'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 27
+  elif ( TDBlocation['South'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 28
+  elif ( TDBlocation['West'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 29
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Teenager/young adult services' ):
+    service_outcome = 30
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 31
+  elif ( TDBlocation['North'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 32
+  elif ( TDBlocation['East'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 33
+  elif ( TDBlocation['South'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 34
+  elif ( TDBlocation['West'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 35
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Shelters' ):
+    service_outcome = 36
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Courses' ):
+    service_outcome = 37
+  elif ( TDBlocation['North'] == True and TDBservices == 'Courses' ):
+    service_outcome = 38
+  elif ( TDBlocation['East'] == True and TDBservices == 'Courses' ):
+    service_outcome = 39
+  elif ( TDBlocation['South'] == True and TDBservices == 'Courses' ):
+    service_outcome = 40
+  elif ( TDBlocation['West'] == True and TDBservices == 'Courses' ):
+    service_outcome = 41
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Courses' ):
+    service_outcome = 42
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 43
+  elif ( TDBlocation['North'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 44
+  elif ( TDBlocation['East'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 45
+  elif ( TDBlocation['South'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 46
+  elif ( TDBlocation['West'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 47
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Divorce services' ):
+    service_outcome = 48
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 49
+  elif ( TDBlocation['North'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 50
+  elif ( TDBlocation['East'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 51
+  elif ( TDBlocation['South'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 52
+  elif ( TDBlocation['West'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 53
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Pre-separation services' ):
+    service_outcome = 54
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 55
+  elif ( TDBlocation['North'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 56
+  elif ( TDBlocation['East'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 57
+  elif ( TDBlocation['South'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 58
+  elif ( TDBlocation['West'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 59
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Post-separation services' ):
+    service_outcome = 60
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 61
+  elif ( TDBlocation['North'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 62
+  elif ( TDBlocation['East'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 63
+  elif ( TDBlocation['South'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 64
+  elif ( TDBlocation['West'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 65
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Behaviour management services' ):
+    service_outcome = 66
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 67
+  elif ( TDBlocation['North'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 68
+  elif ( TDBlocation['East'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 69
+  elif ( TDBlocation['South'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 70
+  elif ( TDBlocation['West'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 71
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Mental health services' ):
+    service_outcome = 72
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 73
+  elif ( TDBlocation['North'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 74
+  elif ( TDBlocation['East'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 75
+  elif ( TDBlocation['South'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 76
+  elif ( TDBlocation['West'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 77
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Domestic violence services' ):
+    service_outcome = 78
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Court services' ):
+    service_outcome = 79
+  elif ( TDBlocation['North'] == True and TDBservices == 'Court services' ):
+    service_outcome = 80
+  elif ( TDBlocation['East'] == True and TDBservices == 'Court services' ):
+    service_outcome = 81
+  elif ( TDBlocation['South'] == True and TDBservices == 'Court services' ):
+    service_outcome = 82
+  elif ( TDBlocation['West'] == True and TDBservices == 'Court services' ):
+    service_outcome = 83
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Court services' ):
+    service_outcome = 84
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 84.1
+  elif ( TDBlocation['North'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 85
+  elif ( TDBlocation['East'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 86
+  elif ( TDBlocation['South'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 87
+  elif ( TDBlocation['West'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 88
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Drug/Alcohol services' ):
+    service_outcome = 89
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 90
+  elif ( TDBlocation['North'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 91
+  elif ( TDBlocation['East'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 92
+  elif ( TDBlocation['South'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 93
+  elif ( TDBlocation['West'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 94
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Disability services' ):
+    service_outcome = 95
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 95.1
+  elif ( TDBlocation['North'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 96
+  elif ( TDBlocation['East'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 97
+  elif ( TDBlocation['South'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 98
+  elif ( TDBlocation['West'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 99
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Legal services' ):
+    service_outcome = 100
+  elif ( TDBlocation['Adelaide CBD'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 101
+  elif ( TDBlocation['North'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 102
+  elif ( TDBlocation['East'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 103
+  elif ( TDBlocation['South'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 104
+  elif ( TDBlocation['West'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 105
+  elif ( TDBlocation['Outer regional'] == True and TDBservices == 'Indigenous services' ):
+    service_outcome = 106
+  else:
+    service_outcome = 0
+---
 mandatory: True
 question: Services
 subquestion: |
-  Showing you ${ TDBservices } in the following locations: **${ TDBlocation.true_values() }**
+  Showing you <u>${ TDBservices }</u> in the following locations: **${ TDBlocation.true_values() }**  
+  
+  %if service_outcome == 0:
+    *You have not selected any locations or services.*
+  %elif service_outcome == 1:
+  <u>**Service Provider:**</u> ${ CBDmale[0]['service provider'] }<br>**Service:** ${ CBDmale[0]['service'] }<br>**Address:** ${ CBDmale[0]['address'] }<br>**Email:** ${ CBDmale[0]['email'] }<br>**Phone:** ${ CBDmale[0]['phone'] }<br>**Cost:** ${ CBDmale[0]['cost'] }<br>**Blurb:** ${ CBDmale[0]['blurb'] }
+  %elif service_outcome == 2:
+  <u>**Service Provider:**</u> ${ Northmale[0]['service provider'] }<br>**Service:** ${ Northmale[0]['service'] }<br>**Address:** ${ Northmale[0]['address'] }<br>**Email:** ${ Northmale[0]['email'] }<br>**Phone:** ${ Northmale[0]['phone'] }<br>**Cost:** ${ Northmale[0]['cost'] }<br>**Blurb:** ${ Northmale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmale[1]['service provider'] }<br>**Service:** ${ Northmale[1]['service'] }<br>**Address:** ${ Northmale[1]['address'] }<br>**Email:** ${ Northmale[1]['email'] }<br>**Phone:** ${ Northmale[1]['phone'] }<br>**Cost:** ${ Northmale[1]['cost'] }<br>**Blurb:** ${ Northmale[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmale[2]['service provider'] }<br>**Service:** ${ Northmale[2]['service'] }<br>**Address:** ${ Northmale[2]['address'] }<br>**Email:** ${ Northmale[2]['email'] }<br>**Phone:** ${ Northmale[2]['phone'] }<br>**Cost:** ${ Northmale[2]['cost'] }<br>**Blurb:** ${ Northmale[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmale[3]['service provider'] }<br>**Service:** ${ Northmale[3]['service'] }<br>**Address:** ${ Northmale[3]['address'] }<br>**Email:** ${ Northmale[3]['email'] }<br>**Phone:** ${ Northmale[3]['phone'] }<br>**Cost:** ${ Northmale[3]['cost'] }<br>**Blurb:** ${ Northmale[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmale[4]['service provider'] }<br>**Service:** ${ Northmale[4]['service'] }<br>**Address:** ${ Northmale[4]['address'] }<br>**Email:** ${ Northmale[4]['email'] }<br>**Phone:** ${ Northmale[4]['phone'] }<br>**Cost:** ${ Northmale[4]['cost'] }<br>**Blurb:** ${ Northmale[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmale[5]['service provider'] }<br>**Service:** ${ Northmale[5]['service'] }<br>**Address:** ${ Northmale[5]['address'] }<br>**Email:** ${ Northmale[5]['email'] }<br>**Phone:** ${ Northmale[5]['phone'] }<br>**Cost:** ${ Northmale[5]['cost'] }<br>**Blurb:** ${ Northmale[5]['blurb'] }
+  %elif service_outcome == 3:
+    ${ Eastmale }
+  %elif service_outcome == 4:
+  <u>**Service Provider:**</u> ${ Southmale[0]['service provider'] }<br>**Service:** ${ Southmale[0]['service'] }<br>**Address:** ${ Southmale[0]['address'] }<br>**Email:** ${ Southmale[0]['email'] }<br>**Phone:** ${ Southmale[0]['phone'] }<br>**Cost:** ${ Southmale[0]['cost'] }<br>**Blurb:** ${ Southmale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[1]['service provider'] }<br>**Service:** ${ Southmale[1]['service'] }<br>**Address:** ${ Southmale[1]['address'] }<br>**Email:** ${ Southmale[1]['email'] }<br>**Phone:** ${ Southmale[1]['phone'] }<br>**Cost:** ${ Southmale[1]['cost'] }<br>**Blurb:** ${ Southmale[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[2]['service provider'] }<br>**Service:** ${ Southmale[2]['service'] }<br>**Address:** ${ Southmale[2]['address'] }<br>**Email:** ${ Southmale[2]['email'] }<br>**Phone:** ${ Southmale[2]['phone'] }<br>**Cost:** ${ Southmale[2]['cost'] }<br>**Blurb:** ${ Southmale[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[3]['service provider'] }<br>**Service:** ${ Southmale[3]['service'] }<br>**Address:** ${ Southmale[3]['address'] }<br>**Email:** ${ Southmale[3]['email'] }<br>**Phone:** ${ Southmale[3]['phone'] }<br>**Cost:** ${ Southmale[3]['cost'] }<br>**Blurb:** ${ Southmale[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[4]['service provider'] }<br>**Service:** ${ Southmale[4]['service'] }<br>**Address:** ${ Southmale[4]['address'] }<br>**Email:** ${ Southmale[4]['email'] }<br>**Phone:** ${ Southmale[4]['phone'] }<br>**Cost:** ${ Southmale[4]['cost'] }<br>**Blurb:** ${ Southmale[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[5]['service provider'] }<br>**Service:** ${ Southmale[5]['service'] }<br>**Address:** ${ Southmale[5]['address'] }<br>**Email:** ${ Southmale[5]['email'] }<br>**Phone:** ${ Southmale[5]['phone'] }<br>**Cost:** ${ Southmale[5]['cost'] }<br>**Blurb:** ${ Southmale[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmale[6]['service provider'] }<br>**Service:** ${ Southmale[6]['service'] }<br>**Address:** ${ Southmale[6]['address'] }<br>**Email:** ${ Southmale[6]['email'] }<br>**Phone:** ${ Southmale[6]['phone'] }<br>**Cost:** ${ Southmale[6]['cost'] }<br>**Blurb:** ${ Southmale[6]['blurb'] }
+  %elif service_outcome == 5:
+  <u>**Service Provider:**</u> ${ Westmale[0]['service provider'] }<br>**Service:** ${ Westmale[0]['service'] }<br>**Address:** ${ Westmale[0]['address'] }<br>**Email:** ${ Westmale[0]['email'] }<br>**Phone:** ${ Westmale[0]['phone'] }<br>**Cost:** ${ Westmale[0]['cost'] }<br>**Blurb:** ${ Westmale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmale[1]['service provider'] }<br>**Service:** ${ Westmale[1]['service'] }<br>**Address:** ${ Westmale[1]['address'] }<br>**Email:** ${ Westmale[1]['email'] }<br>**Phone:** ${ Westmale[1]['phone'] }<br>**Cost:** ${ Westmale[1]['cost'] }<br>**Blurb:** ${ Westmale[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmale[2]['service provider'] }<br>**Service:** ${ Westmale[2]['service'] }<br>**Address:** ${ Westmale[2]['address'] }<br>**Email:** ${ Westmale[2]['email'] }<br>**Phone:** ${ Westmale[2]['phone'] }<br>**Cost:** ${ Westmale[2]['cost'] }<br>**Blurb:** ${ Westmale[2]['blurb'] }
+  %elif service_outcome == 6:
+  <u>**Service Provider:**</u> ${ Outermale[0]['service provider'] }<br>**Service:** ${ Outermale[0]['service'] }<br>**Address:** ${ Outermale[0]['address'] }<br>**Email:** ${ Outermale[0]['email'] }<br>**Phone:** ${ Outermale[0]['phone'] }<br>**Cost:** ${ Outermale[0]['cost'] }<br>**Blurb:** ${ Outermale[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Outermale[1]['service provider'] }<br>**Service:** ${ Outermale[1]['service'] }<br>**Address:** ${ Outermale[1]['address'] }<br>**Email:** ${ Outermale[1]['email'] }<br>**Phone:** ${ Outermale[1]['phone'] }<br>**Cost:** ${ Outermale[1]['cost'] }<br>**Blurb:** ${ Outermale[1]['blurb'] }
+  %elif service_outcome == 7:
+  <u>**Service Provider:**</u> ${ CBDfemale[0]['service provider'] }<br>**Service:** ${ CBDfemale[0]['service'] }<br>**Address:** ${ CBDfemale[0]['address'] }<br>**Email:** ${ CBDfemale[0]['email'] }<br>**Phone:** ${ CBDfemale[0]['phone'] }<br>**Cost:** ${ CBDfemale[0]['cost'] }<br>**Blurb:** ${ CBDfemale[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ CBDfemale[1]['service provider'] }<br>**Service:** ${ CBDfemale[1]['service'] }<br>**Address:** ${ CBDfemale[1]['address'] }<br>**Email:** ${ CBDfemale[1]['email'] }<br>**Phone:** ${ CBDfemale[1]['phone'] }<br>**Cost:** ${ CBDfemale[1]['cost'] }<br>**Blurb:** ${ CBDfemale[1]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ CBDfemale[2]['service provider'] }<br>**Service:** ${ CBDfemale[2]['service'] }<br>**Address:** ${ CBDfemale[2]['address'] }<br>**Email:** ${ CBDfemale[2]['email'] }<br>**Phone:** ${ CBDfemale[2]['phone'] }<br>**Cost:** ${ CBDfemale[2]['cost'] }<br>**Blurb:** ${ CBDfemale[2]['blurb'] }
+ 
+  <u>**Service Provider:**</u> ${ CBDfemale[3]['service provider'] }<br>**Service:** ${ CBDfemale[3]['service'] }<br>**Address:** ${ CBDfemale[3]['address'] }<br>**Email:** ${ CBDfemale[3]['email'] }<br>**Phone:** ${ CBDfemale[3]['phone'] }<br>**Cost:** ${ CBDfemale[3]['cost'] }<br>**Blurb:** ${ CBDfemale[3]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ CBDfemale[4]['service provider'] }<br>**Service:** ${ CBDfemale[4]['service'] }<br>**Address:** ${ CBDfemale[4]['address'] }<br>**Email:** ${ CBDfemale[4]['email'] }<br>**Phone:** ${ CBDfemale[4]['phone'] }<br>**Cost:** ${ CBDfemale[4]['cost'] }<br>**Blurb:** ${ CBDfemale[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDfemale[5]['service provider'] }<br>**Service:** ${ CBDfemale[5]['service'] }<br>**Address:** ${ CBDfemale[5]['address'] }<br>**Email:** ${ CBDfemale[5]['email'] }<br>**Phone:** ${ CBDfemale[5]['phone'] }<br>**Cost:** ${ CBDfemale[5]['cost'] }<br>**Blurb:** ${ CBDfemale[5]['blurb'] }
+  %elif service_outcome == 8:
+  <u>**Service Provider:**</u> ${ Northfemale[0]['service provider'] }<br>**Service:** ${ Northfemale[0]['service'] }<br>**Address:** ${ Northfemale[0]['address'] }<br>**Email:** ${ Northfemale[0]['email'] }<br>**Phone:** ${ Northfemale[0]['phone'] }<br>**Cost:** ${ Northfemale[0]['cost'] }<br>**Blurb:** ${ Northfemale[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Northfemale[1]['service provider'] }<br>**Service:** ${ Northfemale[1]['service'] }<br>**Address:** ${ Northfemale[1]['address'] }<br>**Email:** ${ Northfemale[1]['email'] }<br>**Phone:** ${ Northfemale[1]['phone'] }<br>**Cost:** ${ Northfemale[1]['cost'] }<br>**Blurb:** ${ Northfemale[1]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Northfemale[2]['service provider'] }<br>**Service:** ${ Northfemale[2]['service'] }<br>**Address:** ${ Northfemale[0]['address'] }<br>**Email:** ${ Northfemale[2]['email'] }<br>**Phone:** ${ Northfemale[2]['phone'] }<br>**Cost:** ${ Northfemale[2]['cost'] }<br>**Blurb:** ${ Northfemale[2]['blurb'] }
+  %elif service_outcome == 9:
+  <u>**Service Provider:**</u> ${ Eastfemale[0]['service provider'] }<br>**Service:** ${ Eastfemale[0]['service'] }<br>**Address:** ${ Eastfemale[0]['address'] }<br>**Email:** ${ Eastfemale[0]['email'] }<br>**Phone:** ${ Eastfemale[0]['phone'] }<br>**Cost:** ${ Eastfemale[0]['cost'] }<br>**Blurb:** ${ Eastfemale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastfemale[1]['service provider'] }<br>**Service:** ${ Eastfemale[1]['service'] }<br>**Address:** ${ Eastfemale[1]['address'] }<br>**Email:** ${ Eastfemale[1]['email'] }<br>**Phone:** ${ Eastfemale[1]['phone'] }<br>**Cost:** ${ Eastfemale[1]['cost'] }<br>**Blurb:** ${ Eastfemale[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastfemale[2]['service provider'] }<br>**Service:** ${ Eastfemale[2]['service'] }<br>**Address:** ${ Eastfemale[2]['address'] }<br>**Email:** ${ Eastfemale[2]['email'] }<br>**Phone:** ${ Eastfemale[2]['phone'] }<br>**Cost:** ${ Eastfemale[2]['cost'] }<br>**Blurb:** ${ Eastfemale[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastfemale[3]['service provider'] }<br>**Service:** ${ Eastfemale[3]['service'] }<br>**Address:** ${ Eastfemale[3]['address'] }<br>**Email:** ${ Eastfemale[3]['email'] }<br>**Phone:** ${ Eastfemale[3]['phone'] }<br>**Cost:** ${ Eastfemale[3]['cost'] }<br>**Blurb:** ${ Eastfemale[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastfemale[4]['service provider'] }<br>**Service:** ${ Eastfemale[4]['service'] }<br>**Address:** ${ Eastfemale[4]['address'] }<br>**Email:** ${ Eastfemale[4]['email'] }<br>**Phone:** ${ Eastfemale[4]['phone'] }<br>**Cost:** ${ Eastfemale[4]['cost'] }<br>**Blurb:** ${ Eastfemale[4]['blurb'] }
+  %elif service_outcome == 10:
+  <u>**Service Provider:**</u> ${ Southfemale[0]['service provider'] }<br>**Service:** ${ Southfemale[0]['service'] }<br>**Address:** ${ Southfemale[0]['address'] }<br>**Email:** ${ Southfemale[0]['email'] }<br>**Phone:** ${ Southfemale[0]['phone'] }<br>**Cost:** ${ Southfemale[0]['cost'] }<br>**Blurb:** ${ Southfemale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southfemale[1]['service provider'] }<br>**Service:** ${ Southfemale[1]['service'] }<br>**Address:** ${ Southfemale[1]['address'] }<br>**Email:** ${ Southfemale[1]['email'] }<br>**Phone:** ${ Southfemale[1]['phone'] }<br>**Cost:** ${ Southfemale[1]['cost'] }<br>**Blurb:** ${ Southfemale[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southfemale[2]['service provider'] }<br>**Service:** ${ Southfemale[2]['service'] }<br>**Address:** ${ Southfemale[2]['address'] }<br>**Email:** ${ Southfemale[2]['email'] }<br>**Phone:** ${ Southfemale[2]['phone'] }<br>**Cost:** ${ Southfemale[2]['cost'] }<br>**Blurb:** ${ Southfemale[2]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[3]['service provider'] }<br>**Service:** ${ Southfemale[3]['service'] }<br>**Address:** ${ Southfemale[3]['address'] }<br>**Email:** ${ Southfemale[3]['email'] }<br>**Phone:** ${ Southfemale[3]['phone'] }<br>**Cost:** ${ Southfemale[3]['cost'] }<br>**Blurb:** ${ Southfemale[3]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[4]['service provider'] }<br>**Service:** ${ Southfemale[4]['service'] }<br>**Address:** ${ Southfemale[4]['address'] }<br>**Email:** ${ Southfemale[4]['email'] }<br>**Phone:** ${ Southfemale[4]['phone'] }<br>**Cost:** ${ Southfemale[4]['cost'] }<br>**Blurb:** ${ Southfemale[4]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[5]['service provider'] }<br>**Service:** ${ Southfemale[5]['service'] }<br>**Address:** ${ Southfemale[5]['address'] }<br>**Email:** ${ Southfemale[5]['email'] }<br>**Phone:** ${ Southfemale[5]['phone'] }<br>**Cost:** ${ Southfemale[5]['cost'] }<br>**Blurb:** ${ Southfemale[5]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[6]['service provider'] }<br>**Service:** ${ Southfemale[6]['service'] }<br>**Address:** ${ Southfemale[6]['address'] }<br>**Email:** ${ Southfemale[6]['email'] }<br>**Phone:** ${ Southfemale[6]['phone'] }<br>**Cost:** ${ Southfemale[6]['cost'] }<br>**Blurb:** ${ Southfemale[6]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[7]['service provider'] }<br>**Service:** ${ Southfemale[7]['service'] }<br>**Address:** ${ Southfemale[7]['address'] }<br>**Email:** ${ Southfemale[7]['email'] }<br>**Phone:** ${ Southfemale[7]['phone'] }<br>**Cost:** ${ Southfemale[7]['cost'] }<br>**Blurb:** ${ Southfemale[7]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southfemale[8]['service provider'] }<br>**Service:** ${ Southfemale[8]['service'] }<br>**Address:** ${ Southfemale[8]['address'] }<br>**Email:** ${ Southfemale[8]['email'] }<br>**Phone:** ${ Southfemale[8]['phone'] }<br>**Cost:** ${ Southfemale[8]['cost'] }<br>**Blurb:** ${ Southfemale[8]['blurb'] }
+  %elif service_outcome == 11:
+  <u>**Service Provider:**</u> ${ Westfemale[0]['service provider'] }<br>**Service:** ${ Westfemale[0]['service'] }<br>**Address:** ${ Westfemale[0]['address'] }<br>**Email:** ${ Westfemale[0]['email'] }<br>**Phone:** ${ Westfemale[0]['phone'] }<br>**Cost:** ${ Westfemale[0]['cost'] }<br>**Blurb:** ${ Westfemale[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westfemale[1]['service provider'] }<br>**Service:** ${ Westfemale[1]['service'] }<br>**Address:** ${ Westfemale[1]['address'] }<br>**Email:** ${ Westfemale[1]['email'] }<br>**Phone:** ${ Westfemale[1]['phone'] }<br>**Cost:** ${ Westfemale[1]['cost'] }<br>**Blurb:** ${ Westfemale[1]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Westfemale[2]['service provider'] }<br>**Service:** ${ Westfemale[2]['service'] }<br>**Address:** ${ Westfemale[2]['address'] }<br>**Email:** ${ Westfemale[2]['email'] }<br>**Phone:** ${ Westfemale[2]['phone'] }<br>**Cost:** ${ Westfemale[2]['cost'] }<br>**Blurb:** ${ Westfemale[2]['blurb'] }
+  %elif service_outcome == 12:
+  <u>**Service Provider:**</u> ${ Outerfemale[0]['service provider'] }<br>**Service:** ${ Outerfemale[0]['service'] }<br>**Address:** ${ Outerfemale[0]['address'] }<br>**Email:** ${ Outerfemale[0]['email'] }<br>**Phone:** ${ Outerfemale[0]['phone'] }<br>**Cost:** ${ Outerfemale[0]['cost'] }<br>**Blurb:** ${ Outerfemale[0]['blurb'] }
+  %elif service_outcome == 13:
+  <u>**Service Provider:**</u> ${ CBDparents[0]['service provider'] }<br>**Service:** ${ CBDparents[0]['service'] }<br>**Address:** ${ CBDparents[0]['address'] }<br>**Email:** ${ CBDparents[0]['email'] }<br>**Phone:** ${ CBDparents[0]['phone'] }<br>**Cost:** ${ CBDparents[0]['cost'] }<br>**Blurb:** ${ CBDparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[1]['service provider'] }<br>**Service:** ${ CBDparents[1]['service'] }<br>**Address:** ${ CBDparents[1]['address'] }<br>**Email:** ${ CBDparents[1]['email'] }<br>**Phone:** ${ CBDparents[1]['phone'] }<br>**Cost:** ${ CBDparents[1]['cost'] }<br>**Blurb:** ${ CBDparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[2]['service provider'] }<br>**Service:** ${ CBDparents[2]['service'] }<br>**Address:** ${ CBDparents[2]['address'] }<br>**Email:** ${ CBDparents[2]['email'] }<br>**Phone:** ${ CBDparents[2]['phone'] }<br>**Cost:** ${ CBDparents[2]['cost'] }<br>**Blurb:** ${ CBDparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[3]['service provider'] }<br>**Service:** ${ CBDparents[3]['service'] }<br>**Address:** ${ CBDparents[3]['address'] }<br>**Email:** ${ CBDparents[3]['email'] }<br>**Phone:** ${ CBDparents[3]['phone'] }<br>**Cost:** ${ CBDparents[3]['cost'] }<br>**Blurb:** ${ CBDparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[4]['service provider'] }<br>**Service:** ${ CBDparents[4]['service'] }<br>**Address:** ${ CBDparents[4]['address'] }<br>**Email:** ${ CBDparents[4]['email'] }<br>**Phone:** ${ CBDparents[4]['phone'] }<br>**Cost:** ${ CBDparents[4]['cost'] }<br>**Blurb:** ${ CBDparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[5]['service provider'] }<br>**Service:** ${ CBDparents[5]['service'] }<br>**Address:** ${ CBDparents[5]['address'] }<br>**Email:** ${ CBDparents[5]['email'] }<br>**Phone:** ${ CBDparents[5]['phone'] }<br>**Cost:** ${ CBDparents[5]['cost'] }<br>**Blurb:** ${ CBDparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[6]['service provider'] }<br>**Service:** ${ CBDparents[6]['service'] }<br>**Address:** ${ CBDparents[6]['address'] }<br>**Email:** ${ CBDparents[6]['email'] }<br>**Phone:** ${ CBDparents[6]['phone'] }<br>**Cost:** ${ CBDparents[6]['cost'] }<br>**Blurb:** ${ CBDparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[7]['service provider'] }<br>**Service:** ${ CBDparents[7]['service'] }<br>**Address:** ${ CBDparents[7]['address'] }<br>**Email:** ${ CBDparents[7]['email'] }<br>**Phone:** ${ CBDparents[7]['phone'] }<br>**Cost:** ${ CBDparents[7]['cost'] }<br>**Blurb:** ${ CBDparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[8]['service provider'] }<br>**Service:** ${ CBDparents[8]['service'] }<br>**Address:** ${ CBDparents[8]['address'] }<br>**Email:** ${ CBDparents[8]['email'] }<br>**Phone:** ${ CBDparents[8]['phone'] }<br>**Cost:** ${ CBDparents[8]['cost'] }<br>**Blurb:** ${ CBDparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[9]['service provider'] }<br>**Service:** ${ CBDparents[9]['service'] }<br>**Address:** ${ CBDparents[9]['address'] }<br>**Email:** ${ CBDparents[9]['email'] }<br>**Phone:** ${ CBDparents[9]['phone'] }<br>**Cost:** ${ CBDparents[9]['cost'] }<br>**Blurb:** ${ CBDparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDparents[10]['service provider'] }<br>**Service:** ${ CBDparents[10]['service'] }<br>**Address:** ${ CBDparents[10]['address'] }<br>**Email:** ${ CBDparents[10]['email'] }<br>**Phone:** ${ CBDparents[10]['phone'] }<br>**Cost:** ${ CBDparents[10]['cost'] }<br>**Blurb:** ${ CBDparents[10]['blurb'] }
+  %elif service_outcome == 14:
+  <u>**Service Provider:**</u> ${ Northparents[0]['service provider'] }<br>**Service:** ${ Northparents[0]['service'] }<br>**Address:** ${ Northparents[0]['address'] }<br>**Email:** ${ Northparents[0]['email'] }<br>**Phone:** ${ Northparents[0]['phone'] }<br>**Cost:** ${ Northparents[0]['cost'] }<br>**Blurb:** ${ Northparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[1]['service provider'] }<br>**Service:** ${ Northparents[1]['service'] }<br>**Address:** ${ Northparents[1]['address'] }<br>**Email:** ${ Northparents[1]['email'] }<br>**Phone:** ${ Northparents[1]['phone'] }<br>**Cost:** ${ Northparents[1]['cost'] }<br>**Blurb:** ${ Northparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[2]['service provider'] }<br>**Service:** ${ Northparents[2]['service'] }<br>**Address:** ${ Northparents[2]['address'] }<br>**Email:** ${ Northparents[2]['email'] }<br>**Phone:** ${ Northparents[2]['phone'] }<br>**Cost:** ${ Northparents[2]['cost'] }<br>**Blurb:** ${ Northparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[3]['service provider'] }<br>**Service:** ${ Northparents[3]['service'] }<br>**Address:** ${ Northparents[3]['address'] }<br>**Email:** ${ Northparents[3]['email'] }<br>**Phone:** ${ Northparents[3]['phone'] }<br>**Cost:** ${ Northparents[3]['cost'] }<br>**Blurb:** ${ Northparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[4]['service provider'] }<br>**Service:** ${ Northparents[4]['service'] }<br>**Address:** ${ Northparents[4]['address'] }<br>**Email:** ${ Northparents[4]['email'] }<br>**Phone:** ${ Northparents[4]['phone'] }<br>**Cost:** ${ Northparents[4]['cost'] }<br>**Blurb:** ${ Northparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[5]['service provider'] }<br>**Service:** ${ Northparents[5]['service'] }<br>**Address:** ${ Northparents[5]['address'] }<br>**Email:** ${ Northparents[5]['email'] }<br>**Phone:** ${ Northparents[5]['phone'] }<br>**Cost:** ${ Northparents[5]['cost'] }<br>**Blurb:** ${ Northparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[6]['service provider'] }<br>**Service:** ${ Northparents[6]['service'] }<br>**Address:** ${ Northparents[6]['address'] }<br>**Email:** ${ Northparents[6]['email'] }<br>**Phone:** ${ Northparents[6]['phone'] }<br>**Cost:** ${ Northparents[6]['cost'] }<br>**Blurb:** ${ Northparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[7]['service provider'] }<br>**Service:** ${ Northparents[7]['service'] }<br>**Address:** ${ Northparents[7]['address'] }<br>**Email:** ${ Northparents[7]['email'] }<br>**Phone:** ${ Northparents[7]['phone'] }<br>**Cost:** ${ Northparents[7]['cost'] }<br>**Blurb:** ${ Northparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[8]['service provider'] }<br>**Service:** ${ Northparents[8]['service'] }<br>**Address:** ${ Northparents[8]['address'] }<br>**Email:** ${ Northparents[8]['email'] }<br>**Phone:** ${ Northparents[8]['phone'] }<br>**Cost:** ${ Northparents[8]['cost'] }<br>**Blurb:** ${ Northparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[9]['service provider'] }<br>**Service:** ${ Northparents[9]['service'] }<br>**Address:** ${ Northparents[9]['address'] }<br>**Email:** ${ Northparents[9]['email'] }<br>**Phone:** ${ Northparents[9]['phone'] }<br>**Cost:** ${ Northparents[9]['cost'] }<br>**Blurb:** ${ Northparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[10]['service provider'] }<br>**Service:** ${ Northparents[10]['service'] }<br>**Address:** ${ Northparents[10]['address'] }<br>**Email:** ${ Northparents[10]['email'] }<br>**Phone:** ${ Northparents[10]['phone'] }<br>**Cost:** ${ Northparents[10]['cost'] }<br>**Blurb:** ${ Northparents[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[11]['service provider'] }<br>**Service:** ${ Northparents[11]['service'] }<br>**Address:** ${ Northparents[11]['address'] }<br>**Email:** ${ Northparents[11]['email'] }<br>**Phone:** ${ Northparents[11]['phone'] }<br>**Cost:** ${ Northparents[11]['cost'] }<br>**Blurb:** ${ Northparents[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[12]['service provider'] }<br>**Service:** ${ Northparents[12]['service'] }<br>**Address:** ${ Northparents[12]['address'] }<br>**Email:** ${ Northparents[12]['email'] }<br>**Phone:** ${ Northparents[12]['phone'] }<br>**Cost:** ${ Northparents[12]['cost'] }<br>**Blurb:** ${ Northparents[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[13]['service provider'] }<br>**Service:** ${ Northparents[13]['service'] }<br>**Address:** ${ Northparents[13]['address'] }<br>**Email:** ${ Northparents[13]['email'] }<br>**Phone:** ${ Northparents[13]['phone'] }<br>**Cost:** ${ Northparents[13]['cost'] }<br>**Blurb:** ${ Northparents[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[14]['service provider'] }<br>**Service:** ${ Northparents[14]['service'] }<br>**Address:** ${ Northparents[14]['address'] }<br>**Email:** ${ Northparents[14]['email'] }<br>**Phone:** ${ Northparents[14]['phone'] }<br>**Cost:** ${ Northparents[14]['cost'] }<br>**Blurb:** ${ Northparents[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[15]['service provider'] }<br>**Service:** ${ Northparents[15]['service'] }<br>**Address:** ${ Northparents[15]['address'] }<br>**Email:** ${ Northparents[15]['email'] }<br>**Phone:** ${ Northparents[15]['phone'] }<br>**Cost:** ${ Northparents[15]['cost'] }<br>**Blurb:** ${ Northparents[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[16]['service provider'] }<br>**Service:** ${ Northparents[16]['service'] }<br>**Address:** ${ Northparents[16]['address'] }<br>**Email:** ${ Northparents[16]['email'] }<br>**Phone:** ${ Northparents[16]['phone'] }<br>**Cost:** ${ Northparents[16]['cost'] }<br>**Blurb:** ${ Northparents[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[17]['service provider'] }<br>**Service:** ${ Northparents[17]['service'] }<br>**Address:** ${ Northparents[17]['address'] }<br>**Email:** ${ Northparents[17]['email'] }<br>**Phone:** ${ Northparents[17]['phone'] }<br>**Cost:** ${ Northparents[17]['cost'] }<br>**Blurb:** ${ Northparents[17]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northparents[18]['service provider'] }<br>**Service:** ${ Northparents[18]['service'] }<br>**Address:** ${ Northparents[18]['address'] }<br>**Email:** ${ Northparents[18]['email'] }<br>**Phone:** ${ Northparents[18]['phone'] }<br>**Cost:** ${ Northparents[18]['cost'] }<br>**Blurb:** ${ Northparents[18]['blurb'] }
+  %elif service_outcome == 15:
+  <u>**Service Provider:**</u> ${ Eastparents[0]['service provider'] }<br>**Service:** ${ Eastparents[0]['service'] }<br>**Address:** ${ Eastparents[0]['address'] }<br>**Email:** ${ Eastparents[0]['email'] }<br>**Phone:** ${ Eastparents[0]['phone'] }<br>**Cost:** ${ Eastparents[0]['cost'] }<br>**Blurb:** ${ Eastparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[1]['service provider'] }<br>**Service:** ${ Eastparents[1]['service'] }<br>**Address:** ${ Eastparents[1]['address'] }<br>**Email:** ${ Eastparents[1]['email'] }<br>**Phone:** ${ Eastparents[1]['phone'] }<br>**Cost:** ${ Eastparents[1]['cost'] }<br>**Blurb:** ${ Eastparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[2]['service provider'] }<br>**Service:** ${ Eastparents[2]['service'] }<br>**Address:** ${ Eastparents[2]['address'] }<br>**Email:** ${ Eastparents[2]['email'] }<br>**Phone:** ${ Eastparents[2]['phone'] }<br>**Cost:** ${ Eastparents[2]['cost'] }<br>**Blurb:** ${ Eastparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[3]['service provider'] }<br>**Service:** ${ Eastparents[3]['service'] }<br>**Address:** ${ Eastparents[3]['address'] }<br>**Email:** ${ Eastparents[3]['email'] }<br>**Phone:** ${ Eastparents[3]['phone'] }<br>**Cost:** ${ Eastparents[3]['cost'] }<br>**Blurb:** ${ Eastparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[4]['service provider'] }<br>**Service:** ${ Eastparents[4]['service'] }<br>**Address:** ${ Eastparents[4]['address'] }<br>**Email:** ${ Eastparents[4]['email'] }<br>**Phone:** ${ Eastparents[4]['phone'] }<br>**Cost:** ${ Eastparents[4]['cost'] }<br>**Blurb:** ${ Eastparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[5]['service provider'] }<br>**Service:** ${ Eastparents[5]['service'] }<br>**Address:** ${ Eastparents[5]['address'] }<br>**Email:** ${ Eastparents[5]['email'] }<br>**Phone:** ${ Eastparents[5]['phone'] }<br>**Cost:** ${ Eastparents[5]['cost'] }<br>**Blurb:** ${ Eastparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[6]['service provider'] }<br>**Service:** ${ Eastparents[6]['service'] }<br>**Address:** ${ Eastparents[6]['address'] }<br>**Email:** ${ Eastparents[6]['email'] }<br>**Phone:** ${ Eastparents[6]['phone'] }<br>**Cost:** ${ Eastparents[6]['cost'] }<br>**Blurb:** ${ Eastparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[7]['service provider'] }<br>**Service:** ${ Eastparents[7]['service'] }<br>**Address:** ${ Eastparents[7]['address'] }<br>**Email:** ${ Eastparents[7]['email'] }<br>**Phone:** ${ Eastparents[7]['phone'] }<br>**Cost:** ${ Eastparents[7]['cost'] }<br>**Blurb:** ${ Eastparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[8]['service provider'] }<br>**Service:** ${ Eastparents[8]['service'] }<br>**Address:** ${ Eastparents[8]['address'] }<br>**Email:** ${ Eastparents[8]['email'] }<br>**Phone:** ${ Eastparents[8]['phone'] }<br>**Cost:** ${ Eastparents[8]['cost'] }<br>**Blurb:** ${ Eastparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[9]['service provider'] }<br>**Service:** ${ Eastparents[9]['service'] }<br>**Address:** ${ Eastparents[9]['address'] }<br>**Email:** ${ Eastparents[9]['email'] }<br>**Phone:** ${ Eastparents[9]['phone'] }<br>**Cost:** ${ Eastparents[9]['cost'] }<br>**Blurb:** ${ Eastparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[10]['service provider'] }<br>**Service:** ${ Eastparents[10]['service'] }<br>**Address:** ${ Eastparents[10]['address'] }<br>**Email:** ${ Eastparents[10]['email'] }<br>**Phone:** ${ Eastparents[10]['phone'] }<br>**Cost:** ${ Eastparents[10]['cost'] }<br>**Blurb:** ${ Eastparents[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[11]['service provider'] }<br>**Service:** ${ Eastparents[11]['service'] }<br>**Address:** ${ Eastparents[11]['address'] }<br>**Email:** ${ Eastparents[11]['email'] }<br>**Phone:** ${ Eastparents[11]['phone'] }<br>**Cost:** ${ Eastparents[11]['cost'] }<br>**Blurb:** ${ Eastparents[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[12]['service provider'] }<br>**Service:** ${ Eastparents[12]['service'] }<br>**Address:** ${ Eastparents[12]['address'] }<br>**Email:** ${ Eastparents[12]['email'] }<br>**Phone:** ${ Eastparents[12]['phone'] }<br>**Cost:** ${ Eastparents[12]['cost'] }<br>**Blurb:** ${ Eastparents[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[13]['service provider'] }<br>**Service:** ${ Eastparents[13]['service'] }<br>**Address:** ${ Eastparents[13]['address'] }<br>**Email:** ${ Eastparents[13]['email'] }<br>**Phone:** ${ Eastparents[13]['phone'] }<br>**Cost:** ${ Eastparents[13]['cost'] }<br>**Blurb:** ${ Eastparents[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[14]['service provider'] }<br>**Service:** ${ Eastparents[14]['service'] }<br>**Address:** ${ Eastparents[14]['address'] }<br>**Email:** ${ Eastparents[14]['email'] }<br>**Phone:** ${ Eastparents[14]['phone'] }<br>**Cost:** ${ Eastparents[14]['cost'] }<br>**Blurb:** ${ Eastparents[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[15]['service provider'] }<br>**Service:** ${ Eastparents[15]['service'] }<br>**Address:** ${ Eastparents[15]['address'] }<br>**Email:** ${ Eastparents[15]['email'] }<br>**Phone:** ${ Eastparents[15]['phone'] }<br>**Cost:** ${ Eastparents[15]['cost'] }<br>**Blurb:** ${ Eastparents[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[16]['service provider'] }<br>**Service:** ${ Eastparents[16]['service'] }<br>**Address:** ${ Eastparents[16]['address'] }<br>**Email:** ${ Eastparents[16]['email'] }<br>**Phone:** ${ Eastparents[16]['phone'] }<br>**Cost:** ${ Eastparents[16]['cost'] }<br>**Blurb:** ${ Eastparents[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastparents[17]['service provider'] }<br>**Service:** ${ Eastparents[17]['service'] }<br>**Address:** ${ Eastparents[17]['address'] }<br>**Email:** ${ Eastparents[17]['email'] }<br>**Phone:** ${ Eastparents[17]['phone'] }<br>**Cost:** ${ Eastparents[17]['cost'] }<br>**Blurb:** ${ Eastparents[17]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Eastparents[18]['service provider'] }<br>**Service:** ${ Eastparents[18]['service'] }<br>**Address:** ${ Eastparents[18]['address'] }<br>**Email:** ${ Eastparents[18]['email'] }<br>**Phone:** ${ Eastparents[18]['phone'] }<br>**Cost:** ${ Eastparents[18]['cost'] }<br>**Blurb:** ${ Eastparents[18]['blurb'] }
+  %elif service_outcome == 16:
+  <u>**Service Provider:**</u> ${ Southparents[0]['service provider'] }<br>**Service:** ${ Southparents[0]['service'] }<br>**Address:** ${ Southparents[0]['address'] }<br>**Email:** ${ Southparents[0]['email'] }<br>**Phone:** ${ Southparents[0]['phone'] }<br>**Cost:** ${ Southparents[0]['cost'] }<br>**Blurb:** ${ Southparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[1]['service provider'] }<br>**Service:** ${ Southparents[1]['service'] }<br>**Address:** ${ Southparents[1]['address'] }<br>**Email:** ${ Southparents[1]['email'] }<br>**Phone:** ${ Southparents[1]['phone'] }<br>**Cost:** ${ Southparents[1]['cost'] }<br>**Blurb:** ${ Southparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[2]['service provider'] }<br>**Service:** ${ Southparents[2]['service'] }<br>**Address:** ${ Southparents[2]['address'] }<br>**Email:** ${ Southparents[2]['email'] }<br>**Phone:** ${ Southparents[2]['phone'] }<br>**Cost:** ${ Southparents[2]['cost'] }<br>**Blurb:** ${ Southparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[3]['service provider'] }<br>**Service:** ${ Southparents[3]['service'] }<br>**Address:** ${ Southparents[3]['address'] }<br>**Email:** ${ Southparents[3]['email'] }<br>**Phone:** ${ Southparents[3]['phone'] }<br>**Cost:** ${ Southparents[3]['cost'] }<br>**Blurb:** ${ Southparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[4]['service provider'] }<br>**Service:** ${ Southparents[4]['service'] }<br>**Address:** ${ Southparents[4]['address'] }<br>**Email:** ${ Southparents[4]['email'] }<br>**Phone:** ${ Southparents[4]['phone'] }<br>**Cost:** ${ Southparents[4]['cost'] }<br>**Blurb:** ${ Southparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[5]['service provider'] }<br>**Service:** ${ Southparents[5]['service'] }<br>**Address:** ${ Southparents[5]['address'] }<br>**Email:** ${ Southparents[5]['email'] }<br>**Phone:** ${ Southparents[5]['phone'] }<br>**Cost:** ${ Southparents[5]['cost'] }<br>**Blurb:** ${ Southparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[6]['service provider'] }<br>**Service:** ${ Southparents[6]['service'] }<br>**Address:** ${ Southparents[6]['address'] }<br>**Email:** ${ Southparents[6]['email'] }<br>**Phone:** ${ Southparents[6]['phone'] }<br>**Cost:** ${ Southparents[6]['cost'] }<br>**Blurb:** ${ Southparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[7]['service provider'] }<br>**Service:** ${ Southparents[7]['service'] }<br>**Address:** ${ Southparents[7]['address'] }<br>**Email:** ${ Southparents[7]['email'] }<br>**Phone:** ${ Southparents[7]['phone'] }<br>**Cost:** ${ Southparents[7]['cost'] }<br>**Blurb:** ${ Southparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[8]['service provider'] }<br>**Service:** ${ Southparents[8]['service'] }<br>**Address:** ${ Southparents[8]['address'] }<br>**Email:** ${ Southparents[8]['email'] }<br>**Phone:** ${ Southparents[8]['phone'] }<br>**Cost:** ${ Southparents[8]['cost'] }<br>**Blurb:** ${ Southparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[9]['service provider'] }<br>**Service:** ${ Southparents[9]['service'] }<br>**Address:** ${ Southparents[9]['address'] }<br>**Email:** ${ Southparents[9]['email'] }<br>**Phone:** ${ Southparents[9]['phone'] }<br>**Cost:** ${ Southparents[9]['cost'] }<br>**Blurb:** ${ Southparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[10]['service provider'] }<br>**Service:** ${ Southparents[10]['service'] }<br>**Address:** ${ Southparents[10]['address'] }<br>**Email:** ${ Southparents[10]['email'] }<br>**Phone:** ${ Southparents[10]['phone'] }<br>**Cost:** ${ Southparents[10]['cost'] }<br>**Blurb:** ${ Southparents[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[11]['service provider'] }<br>**Service:** ${ Southparents[11]['service'] }<br>**Address:** ${ Southparents[11]['address'] }<br>**Email:** ${ Southparents[11]['email'] }<br>**Phone:** ${ Southparents[11]['phone'] }<br>**Cost:** ${ Southparents[11]['cost'] }<br>**Blurb:** ${ Southparents[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[12]['service provider'] }<br>**Service:** ${ Southparents[12]['service'] }<br>**Address:** ${ Southparents[12]['address'] }<br>**Email:** ${ Southparents[12]['email'] }<br>**Phone:** ${ Southparents[12]['phone'] }<br>**Cost:** ${ Southparents[12]['cost'] }<br>**Blurb:** ${ Southparents[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[13]['service provider'] }<br>**Service:** ${ Southparents[13]['service'] }<br>**Address:** ${ Southparents[13]['address'] }<br>**Email:** ${ Southparents[13]['email'] }<br>**Phone:** ${ Southparents[13]['phone'] }<br>**Cost:** ${ Southparents[13]['cost'] }<br>**Blurb:** ${ Southparents[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[14]['service provider'] }<br>**Service:** ${ Southparents[14]['service'] }<br>**Address:** ${ Southparents[14]['address'] }<br>**Email:** ${ Southparents[14]['email'] }<br>**Phone:** ${ Southparents[14]['phone'] }<br>**Cost:** ${ Southparents[14]['cost'] }<br>**Blurb:** ${ Southparents[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[15]['service provider'] }<br>**Service:** ${ Southparents[15]['service'] }<br>**Address:** ${ Southparents[15]['address'] }<br>**Email:** ${ Southparents[15]['email'] }<br>**Phone:** ${ Southparents[15]['phone'] }<br>**Cost:** ${ Southparents[15]['cost'] }<br>**Blurb:** ${ Southparents[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[16]['service provider'] }<br>**Service:** ${ Southparents[16]['service'] }<br>**Address:** ${ Southparents[16]['address'] }<br>**Email:** ${ Southparents[16]['email'] }<br>**Phone:** ${ Southparents[16]['phone'] }<br>**Cost:** ${ Southparents[16]['cost'] }<br>**Blurb:** ${ Southparents[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[17]['service provider'] }<br>**Service:** ${ Southparents[17]['service'] }<br>**Address:** ${ Southparents[17]['address'] }<br>**Email:** ${ Southparents[17]['email'] }<br>**Phone:** ${ Southparents[17]['phone'] }<br>**Cost:** ${ Southparents[17]['cost'] }<br>**Blurb:** ${ Southparents[17]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[18]['service provider'] }<br>**Service:** ${ Southparents[18]['service'] }<br>**Address:** ${ Southparents[18]['address'] }<br>**Email:** ${ Southparents[18]['email'] }<br>**Phone:** ${ Southparents[18]['phone'] }<br>**Cost:** ${ Southparents[18]['cost'] }<br>**Blurb:** ${ Southparents[18]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southparents[19]['service provider'] }<br>**Service:** ${ Southparents[19]['service'] }<br>**Address:** ${ Southparents[19]['address'] }<br>**Email:** ${ Southparents[19]['email'] }<br>**Phone:** ${ Southparents[19]['phone'] }<br>**Cost:** ${ Southparents[19]['cost'] }<br>**Blurb:** ${ Southparents[19]['blurb'] }
+  %elif service_outcome == 17:
+  <u>**Service Provider:**</u> ${ Westparents[0]['service provider'] }<br>**Service:** ${ Westparents[0]['service'] }<br>**Address:** ${ Westparents[0]['address'] }<br>**Email:** ${ Westparents[0]['email'] }<br>**Phone:** ${ Westparents[0]['phone'] }<br>**Cost:** ${ Westparents[0]['cost'] }<br>**Blurb:** ${ Westparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[1]['service provider'] }<br>**Service:** ${ Westparents[1]['service'] }<br>**Address:** ${ Westparents[1]['address'] }<br>**Email:** ${ Westparents[1]['email'] }<br>**Phone:** ${ Westparents[1]['phone'] }<br>**Cost:** ${ Westparents[1]['cost'] }<br>**Blurb:** ${ Westparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[2]['service provider'] }<br>**Service:** ${ Westparents[2]['service'] }<br>**Address:** ${ Westparents[2]['address'] }<br>**Email:** ${ Westparents[2]['email'] }<br>**Phone:** ${ Westparents[2]['phone'] }<br>**Cost:** ${ Westparents[2]['cost'] }<br>**Blurb:** ${ Westparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[3]['service provider'] }<br>**Service:** ${ Westparents[3]['service'] }<br>**Address:** ${ Westparents[3]['address'] }<br>**Email:** ${ Westparents[3]['email'] }<br>**Phone:** ${ Westparents[3]['phone'] }<br>**Cost:** ${ Westparents[3]['cost'] }<br>**Blurb:** ${ Westparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[4]['service provider'] }<br>**Service:** ${ Westparents[4]['service'] }<br>**Address:** ${ Westparents[4]['address'] }<br>**Email:** ${ Westparents[4]['email'] }<br>**Phone:** ${ Westparents[4]['phone'] }<br>**Cost:** ${ Westparents[4]['cost'] }<br>**Blurb:** ${ Westparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[5]['service provider'] }<br>**Service:** ${ Westparents[5]['service'] }<br>**Address:** ${ Westparents[5]['address'] }<br>**Email:** ${ Westparents[5]['email'] }<br>**Phone:** ${ Westparents[5]['phone'] }<br>**Cost:** ${ Westparents[5]['cost'] }<br>**Blurb:** ${ Westparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[6]['service provider'] }<br>**Service:** ${ Westparents[6]['service'] }<br>**Address:** ${ Westparents[6]['address'] }<br>**Email:** ${ Westparents[6]['email'] }<br>**Phone:** ${ Westparents[6]['phone'] }<br>**Cost:** ${ Westparents[6]['cost'] }<br>**Blurb:** ${ Westparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[7]['service provider'] }<br>**Service:** ${ Westparents[7]['service'] }<br>**Address:** ${ Westparents[7]['address'] }<br>**Email:** ${ Westparents[7]['email'] }<br>**Phone:** ${ Westparents[7]['phone'] }<br>**Cost:** ${ Westparents[7]['cost'] }<br>**Blurb:** ${ Westparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[8]['service provider'] }<br>**Service:** ${ Westparents[8]['service'] }<br>**Address:** ${ Westparents[8]['address'] }<br>**Email:** ${ Westparents[8]['email'] }<br>**Phone:** ${ Westparents[8]['phone'] }<br>**Cost:** ${ Westparents[8]['cost'] }<br>**Blurb:** ${ Westparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[9]['service provider'] }<br>**Service:** ${ Westparents[9]['service'] }<br>**Address:** ${ Westparents[9]['address'] }<br>**Email:** ${ Westparents[9]['email'] }<br>**Phone:** ${ Westparents[9]['phone'] }<br>**Cost:** ${ Westparents[9]['cost'] }<br>**Blurb:** ${ Westparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[10]['service provider'] }<br>**Service:** ${ Westparents[10]['service'] }<br>**Address:** ${ Westparents[10]['address'] }<br>**Email:** ${ Westparents[10]['email'] }<br>**Phone:** ${ Westparents[10]['phone'] }<br>**Cost:** ${ Westparents[10]['cost'] }<br>**Blurb:** ${ Westparents[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[11]['service provider'] }<br>**Service:** ${ Westparents[11]['service'] }<br>**Address:** ${ Westparents[11]['address'] }<br>**Email:** ${ Westparents[11]['email'] }<br>**Phone:** ${ Westparents[11]['phone'] }<br>**Cost:** ${ Westparents[11]['cost'] }<br>**Blurb:** ${ Westparents[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[12]['service provider'] }<br>**Service:** ${ Westparents[12]['service'] }<br>**Address:** ${ Westparents[12]['address'] }<br>**Email:** ${ Westparents[12]['email'] }<br>**Phone:** ${ Westparents[12]['phone'] }<br>**Cost:** ${ Westparents[12]['cost'] }<br>**Blurb:** ${ Westparents[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[13]['service provider'] }<br>**Service:** ${ Westparents[13]['service'] }<br>**Address:** ${ Westparents[13]['address'] }<br>**Email:** ${ Westparents[13]['email'] }<br>**Phone:** ${ Westparents[13]['phone'] }<br>**Cost:** ${ Westparents[13]['cost'] }<br>**Blurb:** ${ Westparents[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[14]['service provider'] }<br>**Service:** ${ Westparents[14]['service'] }<br>**Address:** ${ Westparents[14]['address'] }<br>**Email:** ${ Westparents[14]['email'] }<br>**Phone:** ${ Westparents[14]['phone'] }<br>**Cost:** ${ Westparents[14]['cost'] }<br>**Blurb:** ${ Westparents[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[15]['service provider'] }<br>**Service:** ${ Westparents[15]['service'] }<br>**Address:** ${ Westparents[15]['address'] }<br>**Email:** ${ Westparents[15]['email'] }<br>**Phone:** ${ Westparents[15]['phone'] }<br>**Cost:** ${ Westparents[15]['cost'] }<br>**Blurb:** ${ Westparents[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[16]['service provider'] }<br>**Service:** ${ Westparents[16]['service'] }<br>**Address:** ${ Westparents[16]['address'] }<br>**Email:** ${ Westparents[16]['email'] }<br>**Phone:** ${ Westparents[16]['phone'] }<br>**Cost:** ${ Westparents[16]['cost'] }<br>**Blurb:** ${ Westparents[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westparents[17]['service provider'] }<br>**Service:** ${ Westparents[17]['service'] }<br>**Address:** ${ Westparents[17]['address'] }<br>**Email:** ${ Westparents[17]['email'] }<br>**Phone:** ${ Westparents[17]['phone'] }<br>**Cost:** ${ Westparents[17]['cost'] }<br>**Blurb:** ${ Westparents[17]['blurb'] }
+  %elif service_outcome == 18:
+  <u>**Service Provider:**</u> ${ Outerparents[0]['service provider'] }<br>**Service:** ${ Outerparents[0]['service'] }<br>**Address:** ${ Outerparents[0]['address'] }<br>**Email:** ${ Outerparents[0]['email'] }<br>**Phone:** ${ Outerparents[0]['phone'] }<br>**Cost:** ${ Outerparents[0]['cost'] }<br>**Blurb:** ${ Outerparents[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[1]['service provider'] }<br>**Service:** ${ Outerparents[1]['service'] }<br>**Address:** ${ Outerparents[1]['address'] }<br>**Email:** ${ Outerparents[1]['email'] }<br>**Phone:** ${ Outerparents[1]['phone'] }<br>**Cost:** ${ Outerparents[1]['cost'] }<br>**Blurb:** ${ Outerparents[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[2]['service provider'] }<br>**Service:** ${ Outerparents[2]['service'] }<br>**Address:** ${ Outerparents[2]['address'] }<br>**Email:** ${ Outerparents[2]['email'] }<br>**Phone:** ${ Outerparents[2]['phone'] }<br>**Cost:** ${ Outerparents[2]['cost'] }<br>**Blurb:** ${ Outerparents[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[3]['service provider'] }<br>**Service:** ${ Outerparents[3]['service'] }<br>**Address:** ${ Outerparents[3]['address'] }<br>**Email:** ${ Outerparents[3]['email'] }<br>**Phone:** ${ Outerparents[3]['phone'] }<br>**Cost:** ${ Outerparents[3]['cost'] }<br>**Blurb:** ${ Outerparents[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[4]['service provider'] }<br>**Service:** ${ Outerparents[4]['service'] }<br>**Address:** ${ Outerparents[4]['address'] }<br>**Email:** ${ Outerparents[4]['email'] }<br>**Phone:** ${ Outerparents[4]['phone'] }<br>**Cost:** ${ Outerparents[4]['cost'] }<br>**Blurb:** ${ Outerparents[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[5]['service provider'] }<br>**Service:** ${ Outerparents[5]['service'] }<br>**Address:** ${ Outerparents[5]['address'] }<br>**Email:** ${ Outerparents[5]['email'] }<br>**Phone:** ${ Outerparents[5]['phone'] }<br>**Cost:** ${ Outerparents[5]['cost'] }<br>**Blurb:** ${ Outerparents[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[6]['service provider'] }<br>**Service:** ${ Outerparents[6]['service'] }<br>**Address:** ${ Outerparents[6]['address'] }<br>**Email:** ${ Outerparents[6]['email'] }<br>**Phone:** ${ Outerparents[6]['phone'] }<br>**Cost:** ${ Outerparents[6]['cost'] }<br>**Blurb:** ${ Outerparents[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[7]['service provider'] }<br>**Service:** ${ Outerparents[7]['service'] }<br>**Address:** ${ Outerparents[7]['address'] }<br>**Email:** ${ Outerparents[7]['email'] }<br>**Phone:** ${ Outerparents[7]['phone'] }<br>**Cost:** ${ Outerparents[7]['cost'] }<br>**Blurb:** ${ Outerparents[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[8]['service provider'] }<br>**Service:** ${ Outerparents[8]['service'] }<br>**Address:** ${ Outerparents[8]['address'] }<br>**Email:** ${ Outerparents[8]['email'] }<br>**Phone:** ${ Outerparents[8]['phone'] }<br>**Cost:** ${ Outerparents[8]['cost'] }<br>**Blurb:** ${ Outerparents[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[9]['service provider'] }<br>**Service:** ${ Outerparents[9]['service'] }<br>**Address:** ${ Outerparents[9]['address'] }<br>**Email:** ${ Outerparents[9]['email'] }<br>**Phone:** ${ Outerparents[9]['phone'] }<br>**Cost:** ${ Outerparents[9]['cost'] }<br>**Blurb:** ${ Outerparents[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[10]['service provider'] }<br>**Service:** ${ Outerparents[10]['service'] }<br>**Address:** ${ Outerparents[10]['address'] }<br>**Email:** ${ Outerparents[10]['email'] }<br>**Phone:** ${ Outerparents[10]['phone'] }<br>**Cost:** ${ Outerparents[10]['cost'] }<br>**Blurb:** ${ Outerparents[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[11]['service provider'] }<br>**Service:** ${ Outerparents[11]['service'] }<br>**Address:** ${ Outerparents[11]['address'] }<br>**Email:** ${ Outerparents[11]['email'] }<br>**Phone:** ${ Outerparents[11]['phone'] }<br>**Cost:** ${ Outerparents[11]['cost'] }<br>**Blurb:** ${ Outerparents[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[12]['service provider'] }<br>**Service:** ${ Outerparents[12]['service'] }<br>**Address:** ${ Outerparents[12]['address'] }<br>**Email:** ${ Outerparents[12]['email'] }<br>**Phone:** ${ Outerparents[12]['phone'] }<br>**Cost:** ${ Outerparents[12]['cost'] }<br>**Blurb:** ${ Outerparents[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[13]['service provider'] }<br>**Service:** ${ Outerparents[13]['service'] }<br>**Address:** ${ Outerparents[13]['address'] }<br>**Email:** ${ Outerparents[13]['email'] }<br>**Phone:** ${ Outerparents[13]['phone'] }<br>**Cost:** ${ Outerparents[13]['cost'] }<br>**Blurb:** ${ Outerparents[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[14]['service provider'] }<br>**Service:** ${ Outerparents[14]['service'] }<br>**Address:** ${ Outerparents[14]['address'] }<br>**Email:** ${ Outerparents[14]['email'] }<br>**Phone:** ${ Outerparents[14]['phone'] }<br>**Cost:** ${ Outerparents[14]['cost'] }<br>**Blurb:** ${ Outerparents[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[15]['service provider'] }<br>**Service:** ${ Outerparents[15]['service'] }<br>**Address:** ${ Outerparents[15]['address'] }<br>**Email:** ${ Outerparents[15]['email'] }<br>**Phone:** ${ Outerparents[15]['phone'] }<br>**Cost:** ${ Outerparents[15]['cost'] }<br>**Blurb:** ${ Outerparents[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerparents[16]['service provider'] }<br>**Service:** ${ Outerparents[16]['service'] }<br>**Address:** ${ Outerparents[16]['address'] }<br>**Email:** ${ Outerparents[16]['email'] }<br>**Phone:** ${ Outerparents[16]['phone'] }<br>**Cost:** ${ Outerparents[16]['cost'] }<br>**Blurb:** ${ Outerparents[16]['blurb'] }
+  %elif service_outcome == 19:
+  <u>**Service Provider:**</u> ${ CBDchildren[0]['service provider'] }<br>**Service:** ${ CBDchildren[0]['service'] }<br>**Address:** ${ CBDchildren[0]['address'] }<br>**Email:** ${ CBDchildren[0]['email'] }<br>**Phone:** ${ CBDchildren[0]['phone'] }<br>**Cost:** ${ CBDchildren[0]['cost'] }<br>**Blurb:** ${ CBDchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDchildren[1]['service provider'] }<br>**Service:** ${ CBDchildren[1]['service'] }<br>**Address:** ${ CBDchildren[1]['address'] }<br>**Email:** ${ CBDchildren[1]['email'] }<br>**Phone:** ${ CBDchildren[1]['phone'] }<br>**Cost:** ${ CBDchildren[1]['cost'] }<br>**Blurb:** ${ CBDchildren[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDchildren[2]['service provider'] }<br>**Service:** ${ CBDchildren[2]['service'] }<br>**Address:** ${ CBDchildren[2]['address'] }<br>**Email:** ${ CBDchildren[2]['email'] }<br>**Phone:** ${ CBDchildren[2]['phone'] }<br>**Cost:** ${ CBDchildren[2]['cost'] }<br>**Blurb:** ${ CBDchildren[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDchildren[3]['service provider'] }<br>**Service:** ${ CBDchildren[3]['service'] }<br>**Address:** ${ CBDchildren[3]['address'] }<br>**Email:** ${ CBDchildren[3]['email'] }<br>**Phone:** ${ CBDchildren[3]['phone'] }<br>**Cost:** ${ CBDchildren[3]['cost'] }<br>**Blurb:** ${ CBDchildren[3]['blurb'] }
+ 
+  <u>**Service Provider:**</u> ${ CBDchildren[4]['service provider'] }<br>**Service:** ${ CBDchildren[4]['service'] }<br>**Address:** ${ CBDchildren[4]['address'] }<br>**Email:** ${ CBDchildren[4]['email'] }<br>**Phone:** ${ CBDchildren[4]['phone'] }<br>**Cost:** ${ CBDchildren[4]['cost'] }<br>**Blurb:** ${ CBDchildren[4]['blurb'] }
+  %elif service_outcome == 20:
+  <u>**Service Provider:**</u> ${ Northchildren[0]['service provider'] }<br>**Service:** ${ Northchildren[0]['service'] }<br>**Address:** ${ Northchildren[0]['address'] }<br>**Email:** ${ Northchildren[0]['email'] }<br>**Phone:** ${ Northchildren[0]['phone'] }<br>**Cost:** ${ Northchildren[0]['cost'] }<br>**Blurb:** ${ Northchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[1]['service provider'] }<br>**Service:** ${ Northchildren[1]['service'] }<br>**Address:** ${ Northchildren[1]['address'] }<br>**Email:** ${ Northchildren[1]['email'] }<br>**Phone:** ${ Northchildren[1]['phone'] }<br>**Cost:** ${ Northchildren[1]['cost'] }<br>**Blurb:** ${ Northchildren[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[2]['service provider'] }<br>**Service:** ${ Northchildren[2]['service'] }<br>**Address:** ${ Northchildren[2]['address'] }<br>**Email:** ${ Northchildren[2]['email'] }<br>**Phone:** ${ Northchildren[2]['phone'] }<br>**Cost:** ${ Northchildren[2]['cost'] }<br>**Blurb:** ${ Northchildren[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[3]['service provider'] }<br>**Service:** ${ Northchildren[3]['service'] }<br>**Address:** ${ Northchildren[3]['address'] }<br>**Email:** ${ Northchildren[3]['email'] }<br>**Phone:** ${ Northchildren[3]['phone'] }<br>**Cost:** ${ Northchildren[3]['cost'] }<br>**Blurb:** ${ Northchildren[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[4]['service provider'] }<br>**Service:** ${ Northchildren[4]['service'] }<br>**Address:** ${ Northchildren[4]['address'] }<br>**Email:** ${ Northchildren[4]['email'] }<br>**Phone:** ${ Northchildren[4]['phone'] }<br>**Cost:** ${ Northchildren[4]['cost'] }<br>**Blurb:** ${ Northchildren[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[5]['service provider'] }<br>**Service:** ${ Northchildren[5]['service'] }<br>**Address:** ${ Northchildren[5]['address'] }<br>**Email:** ${ Northchildren[5]['email'] }<br>**Phone:** ${ Northchildren[5]['phone'] }<br>**Cost:** ${ Northchildren[5]['cost'] }<br>**Blurb:** ${ Northchildren[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[6]['service provider'] }<br>**Service:** ${ Northchildren[6]['service'] }<br>**Address:** ${ Northchildren[6]['address'] }<br>**Email:** ${ Northchildren[6]['email'] }<br>**Phone:** ${ Northchildren[6]['phone'] }<br>**Cost:** ${ Northchildren[6]['cost'] }<br>**Blurb:** ${ Northchildren[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[7]['service provider'] }<br>**Service:** ${ Northchildren[7]['service'] }<br>**Address:** ${ Northchildren[7]['address'] }<br>**Email:** ${ Northchildren[7]['email'] }<br>**Phone:** ${ Northchildren[7]['phone'] }<br>**Cost:** ${ Northchildren[7]['cost'] }<br>**Blurb:** ${ Northchildren[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[8]['service provider'] }<br>**Service:** ${ Northchildren[8]['service'] }<br>**Address:** ${ Northchildren[8]['address'] }<br>**Email:** ${ Northchildren[8]['email'] }<br>**Phone:** ${ Northchildren[8]['phone'] }<br>**Cost:** ${ Northchildren[8]['cost'] }<br>**Blurb:** ${ Northchildren[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[9]['service provider'] }<br>**Service:** ${ Northchildren[9]['service'] }<br>**Address:** ${ Northchildren[9]['address'] }<br>**Email:** ${ Northchildren[9]['email'] }<br>**Phone:** ${ Northchildren[9]['phone'] }<br>**Cost:** ${ Northchildren[9]['cost'] }<br>**Blurb:** ${ Northchildren[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[10]['service provider'] }<br>**Service:** ${ Northchildren[10]['service'] }<br>**Address:** ${ Northchildren[10]['address'] }<br>**Email:** ${ Northchildren[10]['email'] }<br>**Phone:** ${ Northchildren[10]['phone'] }<br>**Cost:** ${ Northchildren[10]['cost'] }<br>**Blurb:** ${ Northchildren[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[11]['service provider'] }<br>**Service:** ${ Northchildren[11]['service'] }<br>**Address:** ${ Northchildren[11]['address'] }<br>**Email:** ${ Northchildren[11]['email'] }<br>**Phone:** ${ Northchildren[11]['phone'] }<br>**Cost:** ${ Northchildren[11]['cost'] }<br>**Blurb:** ${ Northchildren[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northchildren[12]['service provider'] }<br>**Service:** ${ Northchildren[12]['service'] }<br>**Address:** ${ Northchildren[12]['address'] }<br>**Email:** ${ Northchildren[12]['email'] }<br>**Phone:** ${ Northchildren[12]['phone'] }<br>**Cost:** ${ Northchildren[12]['cost'] }<br>**Blurb:** ${ Northchildren[12]['blurb'] }
+  %elif service_outcome == 21:
+  <u>**Service Provider:**</u> ${ Eastchildren[0]['service provider'] }<br>**Service:** ${ Eastchildren[0]['service'] }<br>**Address:** ${ Eastchildren[0]['address'] }<br>**Email:** ${ Eastchildren[0]['email'] }<br>**Phone:** ${ Eastchildren[0]['phone'] }<br>**Cost:** ${ Eastchildren[0]['cost'] }<br>**Blurb:** ${ Eastchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastchildren[1]['service provider'] }<br>**Service:** ${ Eastchildren[1]['service'] }<br>**Address:** ${ Eastchildren[1]['address'] }<br>**Email:** ${ Eastchildren[1]['email'] }<br>**Phone:** ${ Eastchildren[1]['phone'] }<br>**Cost:** ${ Eastchildren[1]['cost'] }<br>**Blurb:** ${ Eastchildren[1]['blurb'] }
+  %elif service_outcome == 22:
+  <u>**Service Provider:**</u> ${ Southchildren[0]['service provider'] }<br>**Service:** ${ Southchildren[0]['service'] }<br>**Address:** ${ Southchildren[0]['address'] }<br>**Email:** ${ Southchildren[0]['email'] }<br>**Phone:** ${ Southchildren[0]['phone'] }<br>**Cost:** ${ Southchildren[0]['cost'] }<br>**Blurb:** ${ Southchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[1]['service provider'] }<br>**Service:** ${ Southchildren[1]['service'] }<br>**Address:** ${ Southchildren[1]['address'] }<br>**Email:** ${ Southchildren[1]['email'] }<br>**Phone:** ${ Southchildren[1]['phone'] }<br>**Cost:** ${ Southchildren[1]['cost'] }<br>**Blurb:** ${ Southchildren[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[2]['service provider'] }<br>**Service:** ${ Southchildren[2]['service'] }<br>**Address:** ${ Southchildren[2]['address'] }<br>**Email:** ${ Southchildren[2]['email'] }<br>**Phone:** ${ Southchildren[2]['phone'] }<br>**Cost:** ${ Southchildren[2]['cost'] }<br>**Blurb:** ${ Southchildren[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[3]['service provider'] }<br>**Service:** ${ Southchildren[3]['service'] }<br>**Address:** ${ Southchildren[3]['address'] }<br>**Email:** ${ Southchildren[3]['email'] }<br>**Phone:** ${ Southchildren[3]['phone'] }<br>**Cost:** ${ Southchildren[3]['cost'] }<br>**Blurb:** ${ Southchildren[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[4]['service provider'] }<br>**Service:** ${ Southchildren[4]['service'] }<br>**Address:** ${ Southchildren[4]['address'] }<br>**Email:** ${ Southchildren[4]['email'] }<br>**Phone:** ${ Southchildren[4]['phone'] }<br>**Cost:** ${ Southchildren[4]['cost'] }<br>**Blurb:** ${ Southchildren[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[5]['service provider'] }<br>**Service:** ${ Southchildren[5]['service'] }<br>**Address:** ${ Southchildren[5]['address'] }<br>**Email:** ${ Southchildren[5]['email'] }<br>**Phone:** ${ Southchildren[5]['phone'] }<br>**Cost:** ${ Southchildren[5]['cost'] }<br>**Blurb:** ${ Southchildren[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[6]['service provider'] }<br>**Service:** ${ Southchildren[6]['service'] }<br>**Address:** ${ Southchildren[6]['address'] }<br>**Email:** ${ Southchildren[6]['email'] }<br>**Phone:** ${ Southchildren[6]['phone'] }<br>**Cost:** ${ Southchildren[6]['cost'] }<br>**Blurb:** ${ Southchildren[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[7]['service provider'] }<br>**Service:** ${ Southchildren[7]['service'] }<br>**Address:** ${ Southchildren[7]['address'] }<br>**Email:** ${ Southchildren[7]['email'] }<br>**Phone:** ${ Southchildren[7]['phone'] }<br>**Cost:** ${ Southchildren[7]['cost'] }<br>**Blurb:** ${ Southchildren[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[8]['service provider'] }<br>**Service:** ${ Southchildren[8]['service'] }<br>**Address:** ${ Southchildren[8]['address'] }<br>**Email:** ${ Southchildren[8]['email'] }<br>**Phone:** ${ Southchildren[8]['phone'] }<br>**Cost:** ${ Southchildren[8]['cost'] }<br>**Blurb:** ${ Southchildren[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[9]['service provider'] }<br>**Service:** ${ Southchildren[9]['service'] }<br>**Address:** ${ Southchildren[9]['address'] }<br>**Email:** ${ Southchildren[9]['email'] }<br>**Phone:** ${ Southchildren[9]['phone'] }<br>**Cost:** ${ Southchildren[9]['cost'] }<br>**Blurb:** ${ Southchildren[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[10]['service provider'] }<br>**Service:** ${ Southchildren[10]['service'] }<br>**Address:** ${ Southchildren[10]['address'] }<br>**Email:** ${ Southchildren[10]['email'] }<br>**Phone:** ${ Southchildren[10]['phone'] }<br>**Cost:** ${ Southchildren[10]['cost'] }<br>**Blurb:** ${ Southchildren[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[11]['service provider'] }<br>**Service:** ${ Southchildren[11]['service'] }<br>**Address:** ${ Southchildren[11]['address'] }<br>**Email:** ${ Southchildren[11]['email'] }<br>**Phone:** ${ Southchildren[11]['phone'] }<br>**Cost:** ${ Southchildren[11]['cost'] }<br>**Blurb:** ${ Southchildren[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[12]['service provider'] }<br>**Service:** ${ Southchildren[12]['service'] }<br>**Address:** ${ Southchildren[12]['address'] }<br>**Email:** ${ Southchildren[12]['email'] }<br>**Phone:** ${ Southchildren[12]['phone'] }<br>**Cost:** ${ Southchildren[12]['cost'] }<br>**Blurb:** ${ Southchildren[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southchildren[13]['service provider'] }<br>**Service:** ${ Southchildren[13]['service'] }<br>**Address:** ${ Southchildren[13]['address'] }<br>**Email:** ${ Southchildren[13]['email'] }<br>**Phone:** ${ Southchildren[13]['phone'] }<br>**Cost:** ${ Southchildren[13]['cost'] }<br>**Blurb:** ${ Southchildren[13]['blurb'] }
+  %elif service_outcome == 23:
+  <u>**Service Provider:**</u> ${ Westchildren[0]['service provider'] }<br>**Service:** ${ Westchildren[0]['service'] }<br>**Address:** ${ Westchildren[0]['address'] }<br>**Email:** ${ Westchildren[0]['email'] }<br>**Phone:** ${ Westchildren[0]['phone'] }<br>**Cost:** ${ Westchildren[0]['cost'] }<br>**Blurb:** ${ Westchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westchildren[1]['service provider'] }<br>**Service:** ${ Westchildren[1]['service'] }<br>**Address:** ${ Westchildren[1]['address'] }<br>**Email:** ${ Westchildren[1]['email'] }<br>**Phone:** ${ Westchildren[1]['phone'] }<br>**Cost:** ${ Westchildren[1]['cost'] }<br>**Blurb:** ${ Westchildren[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westchildren[2]['service provider'] }<br>**Service:** ${ Westchildren[2]['service'] }<br>**Address:** ${ Westchildren[2]['address'] }<br>**Email:** ${ Westchildren[2]['email'] }<br>**Phone:** ${ Westchildren[2]['phone'] }<br>**Cost:** ${ Westchildren[2]['cost'] }<br>**Blurb:** ${ Westchildren[2]['blurb'] }
+  %elif service_outcome == 24:
+  <u>**Service Provider:**</u> ${ Outerchildren[0]['service provider'] }<br>**Service:** ${ Outerchildren[0]['service'] }<br>**Address:** ${ Outerchildren[0]['address'] }<br>**Email:** ${ Outerchildren[0]['email'] }<br>**Phone:** ${ Outerchildren[0]['phone'] }<br>**Cost:** ${ Outerchildren[0]['cost'] }<br>**Blurb:** ${ Outerchildren[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[1]['service provider'] }<br>**Service:** ${ Outerchildren[1]['service'] }<br>**Address:** ${ Outerchildren[1]['address'] }<br>**Email:** ${ Outerchildren[1]['email'] }<br>**Phone:** ${ Outerchildren[1]['phone'] }<br>**Cost:** ${ Outerchildren[1]['cost'] }<br>**Blurb:** ${ Outerchildren[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[2]['service provider'] }<br>**Service:** ${ Outerchildren[2]['service'] }<br>**Address:** ${ Outerchildren[2]['address'] }<br>**Email:** ${ Outerchildren[2]['email'] }<br>**Phone:** ${ Outerchildren[2]['phone'] }<br>**Cost:** ${ Outerchildren[2]['cost'] }<br>**Blurb:** ${ Outerchildren[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[3]['service provider'] }<br>**Service:** ${ Outerchildren[3]['service'] }<br>**Address:** ${ Outerchildren[3]['address'] }<br>**Email:** ${ Outerchildren[3]['email'] }<br>**Phone:** ${ Outerchildren[3]['phone'] }<br>**Cost:** ${ Outerchildren[3]['cost'] }<br>**Blurb:** ${ Outerchildren[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[4]['service provider'] }<br>**Service:** ${ Outerchildren[4]['service'] }<br>**Address:** ${ Outerchildren[4]['address'] }<br>**Email:** ${ Outerchildren[4]['email'] }<br>**Phone:** ${ Outerchildren[4]['phone'] }<br>**Cost:** ${ Outerchildren[4]['cost'] }<br>**Blurb:** ${ Outerchildren[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[5]['service provider'] }<br>**Service:** ${ Outerchildren[5]['service'] }<br>**Address:** ${ Outerchildren[5]['address'] }<br>**Email:** ${ Outerchildren[5]['email'] }<br>**Phone:** ${ Outerchildren[5]['phone'] }<br>**Cost:** ${ Outerchildren[5]['cost'] }<br>**Blurb:** ${ Outerchildren[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[6]['service provider'] }<br>**Service:** ${ Outerchildren[6]['service'] }<br>**Address:** ${ Outerchildren[6]['address'] }<br>**Email:** ${ Outerchildren[6]['email'] }<br>**Phone:** ${ Outerchildren[6]['phone'] }<br>**Cost:** ${ Outerchildren[6]['cost'] }<br>**Blurb:** ${ Outerchildren[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[7]['service provider'] }<br>**Service:** ${ Outerchildren[7]['service'] }<br>**Address:** ${ Outerchildren[7]['address'] }<br>**Email:** ${ Outerchildren[7]['email'] }<br>**Phone:** ${ Outerchildren[7]['phone'] }<br>**Cost:** ${ Outerchildren[7]['cost'] }<br>**Blurb:** ${ Outerchildren[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[8]['service provider'] }<br>**Service:** ${ Outerchildren[8]['service'] }<br>**Address:** ${ Outerchildren[8]['address'] }<br>**Email:** ${ Outerchildren[8]['email'] }<br>**Phone:** ${ Outerchildren[8]['phone'] }<br>**Cost:** ${ Outerchildren[8]['cost'] }<br>**Blurb:** ${ Outerchildren[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[9]['service provider'] }<br>**Service:** ${ Outerchildren[9]['service'] }<br>**Address:** ${ Outerchildren[9]['address'] }<br>**Email:** ${ Outerchildren[9]['email'] }<br>**Phone:** ${ Outerchildren[9]['phone'] }<br>**Cost:** ${ Outerchildren[9]['cost'] }<br>**Blurb:** ${ Outerchildren[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[10]['service provider'] }<br>**Service:** ${ Outerchildren[10]['service'] }<br>**Address:** ${ Outerchildren[10]['address'] }<br>**Email:** ${ Outerchildren[10]['email'] }<br>**Phone:** ${ Outerchildren[10]['phone'] }<br>**Cost:** ${ Outerchildren[10]['cost'] }<br>**Blurb:** ${ Outerchildren[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerchildren[11]['service provider'] }<br>**Service:** ${ Outerchildren[11]['service'] }<br>**Address:** ${ Outerchildren[11]['address'] }<br>**Email:** ${ Outerchildren[11]['email'] }<br>**Phone:** ${ Outerchildren[11]['phone'] }<br>**Cost:** ${ Outerchildren[11]['cost'] }<br>**Blurb:** ${ Outerchildren[11]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Outerchildren[12]['service provider'] }<br>**Service:** ${ Outerchildren[12]['service'] }<br>**Address:** ${ Outerchildren[12]['address'] }<br>**Email:** ${ Outerchildren[12]['email'] }<br>**Phone:** ${ Outerchildren[12]['phone'] }<br>**Cost:** ${ Outerchildren[12]['cost'] }<br>**Blurb:** ${ Outerchildren[12]['blurb'] }
+  %elif service_outcome == 25:
+  <u>**Service Provider:**</u> ${ CBDteenager[0]['service provider'] }<br>**Service:** ${ CBDteenager[0]['service'] }<br>**Address:** ${ CBDteenager[0]['address'] }<br>**Email:** ${ CBDteenager[0]['email'] }<br>**Phone:** ${ CBDteenager[0]['phone'] }<br>**Cost:** ${ CBDteenager[0]['cost'] }<br>**Blurb:** ${ CBDteenager[0]['blurb'] }
+  %elif service_outcome == 26:
+  <u>**Service Provider:**</u> ${ Northteenager[0]['service provider'] }<br>**Service:** ${ Northteenager[0]['service'] }<br>**Address:** ${ Northteenager[0]['address'] }<br>**Email:** ${ Northteenager[0]['email'] }<br>**Phone:** ${ Northteenager[0]['phone'] }<br>**Cost:** ${ Northteenager[0]['cost'] }<br>**Blurb:** ${ Northteenager[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Northteenager[1]['service provider'] }<br>**Service:** ${ Northteenager[1]['service'] }<br>**Address:** ${ Northteenager[1]['address'] }<br>**Email:** ${ Northteenager[1]['email'] }<br>**Phone:** ${ Northteenager[1]['phone'] }<br>**Cost:** ${ Northteenager[1]['cost'] }<br>**Blurb:** ${ Northteenager[1]['blurb'] }
+  %elif service_outcome == 27:
+  <u>**Service Provider:**</u> ${ Eastteenager[0]['service provider'] }<br>**Service:** ${ Eastteenager[0]['service'] }<br>**Address:** ${ Eastteenager[0]['address'] }<br>**Email:** ${ Eastteenager[0]['email'] }<br>**Phone:** ${ Eastteenager[0]['phone'] }<br>**Cost:** ${ Eastteenager[0]['cost'] }<br>**Blurb:** ${ Eastteenager[0]['blurb'] }
+  %elif service_outcome == 28:
+  <u>**Service Provider:**</u> ${ Southteenager[0]['service provider'] }<br>**Service:** ${ Southteenager[0]['service'] }<br>**Address:** ${ Southteenager[0]['address'] }<br>**Email:** ${ Southteenager[0]['email'] }<br>**Phone:** ${ Southteenager[0]['phone'] }<br>**Cost:** ${ Southteenager[0]['cost'] }<br>**Blurb:** ${ Southteenager[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southteenager[1]['service provider'] }<br>**Service:** ${ Southteenager[1]['service'] }<br>**Address:** ${ Southteenager[1]['address'] }<br>**Email:** ${ Southteenager[1]['email'] }<br>**Phone:** ${ Southteenager[1]['phone'] }<br>**Cost:** ${ Southteenager[1]['cost'] }<br>**Blurb:** ${ Southteenager[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southteenager[2]['service provider'] }<br>**Service:** ${ Southteenager[2]['service'] }<br>**Address:** ${ Southteenager[2]['address'] }<br>**Email:** ${ Southteenager[2]['email'] }<br>**Phone:** ${ Southteenager[2]['phone'] }<br>**Cost:** ${ Southteenager[2]['cost'] }<br>**Blurb:** ${ Southteenager[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southteenager[3]['service provider'] }<br>**Service:** ${ Southteenager[3]['service'] }<br>**Address:** ${ Southteenager[3]['address'] }<br>**Email:** ${ Southteenager[3]['email'] }<br>**Phone:** ${ Southteenager[3]['phone'] }<br>**Cost:** ${ Southteenager[3]['cost'] }<br>**Blurb:** ${ Southteenager[3]['blurb'] }
+  %elif service_outcome == 29:
+  <u>**Service Provider:**</u> ${ Westteenager[0]['service provider'] }<br>**Service:** ${ Westteenager[0]['service'] }<br>**Address:** ${ Westteenager[0]['address'] }<br>**Email:** ${ Westteenager[0]['email'] }<br>**Phone:** ${ Westteenager[0]['phone'] }<br>**Cost:** ${ Westteenager[0]['cost'] }<br>**Blurb:** ${ Westteenager[0]['blurb'] }
+  %elif service_outcome == 30:
+  <u>**Service Provider:**</u> ${ Outerteenager[0]['service provider'] }<br>**Service:** ${ Outerteenager[0]['service'] }<br>**Address:** ${ Outerteenager[0]['address'] }<br>**Email:** ${ Outerteenager[0]['email'] }<br>**Phone:** ${ Outerteenager[0]['phone'] }<br>**Cost:** ${ Outerteenager[0]['cost'] }<br>**Blurb:** ${ Outerteenager[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerteenager[1]['service provider'] }<br>**Service:** ${ Outerteenager[1]['service'] }<br>**Address:** ${ Outerteenager[1]['address'] }<br>**Email:** ${ Outerteenager[1]['email'] }<br>**Phone:** ${ Outerteenager[1]['phone'] }<br>**Cost:** ${ Outerteenager[1]['cost'] }<br>**Blurb:** ${ Outerteenager[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerteenager[2]['service provider'] }<br>**Service:** ${ Outerteenager[2]['service'] }<br>**Address:** ${ Outerteenager[2]['address'] }<br>**Email:** ${ Outerteenager[2]['email'] }<br>**Phone:** ${ Outerteenager[2]['phone'] }<br>**Cost:** ${ Outerteenager[2]['cost'] }<br>**Blurb:** ${ Outerteenager[2]['blurb'] }
+  %elif service_outcome == 31:
+    ${ CBDshelter }
+  %elif service_outcome == 32:
+  <u>**Service Provider:**</u> ${ Northshelter[0]['service provider'] }<br>**Service:** ${ Northshelter[0]['service'] }<br>**Address:** ${ Northshelter[0]['address'] }<br>**Email:** ${ Northshelter[0]['email'] }<br>**Phone:** ${ Northshelter[0]['phone'] }<br>**Cost:** ${ Northshelter[0]['cost'] }<br>**Blurb:** ${ Northshelter[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northshelter[1]['service provider'] }<br>**Service:** ${ Northshelter[1]['service'] }<br>**Address:** ${ Northshelter[1]['address'] }<br>**Email:** ${ Northshelter[1]['email'] }<br>**Phone:** ${ Northshelter[1]['phone'] }<br>**Cost:** ${ Northshelter[1]['cost'] }<br>**Blurb:** ${ Northshelter[1]['blurb'] }
+  %elif service_outcome == 33:
+    ${ Eastshelter }
+  %elif service_outcome == 34:
+    ${ Southshelter }
+  %elif service_outcome == 35:
+    ${ Westshelter }
+  %elif service_outcome == 36:
+  <u>**Service Provider:**</u> ${ Outershelter[0]['service provider'] }<br>**Service:** ${ Outershelter[0]['service'] }<br>**Address:** ${ Outershelter[0]['address'] }<br>**Email:** ${ Outershelter[0]['email'] }<br>**Phone:** ${ Outershelter[0]['phone'] }<br>**Cost:** ${ Outershelter[0]['cost'] }<br>**Blurb:** ${ Outershelter[0]['blurb'] }
+  %elif service_outcome == 37:
+  <u>**Service Provider:**</u> ${ CBDcourse[0]['service provider'] }<br>**Service:** ${ CBDcourse[0]['service'] }<br>**Address:** ${ CBDcourse[0]['address'] }<br>**Email:** ${ CBDcourse[0]['email'] }<br>**Phone:** ${ CBDcourse[0]['phone'] }<br>**Cost:** ${ CBDcourse[0]['cost'] }<br>**Blurb:** ${ CBDcourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourse[1]['service provider'] }<br>**Service:** ${ CBDcourse[1]['service'] }<br>**Address:** ${ CBDcourse[1]['address'] }<br>**Email:** ${ CBDcourse[1]['email'] }<br>**Phone:** ${ CBDcourse[1]['phone'] }<br>**Cost:** ${ CBDcourse[1]['cost'] }<br>**Blurb:** ${ CBDcourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourse[2]['service provider'] }<br>**Service:** ${ CBDcourse[2]['service'] }<br>**Address:** ${ CBDcourse[2]['address'] }<br>**Email:** ${ CBDcourse[2]['email'] }<br>**Phone:** ${ CBDcourse[2]['phone'] }<br>**Cost:** ${ CBDcourse[2]['cost'] }<br>**Blurb:** ${ CBDcourse[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourse[3]['service provider'] }<br>**Service:** ${ CBDcourse[3]['service'] }<br>**Address:** ${ CBDcourse[3]['address'] }<br>**Email:** ${ CBDcourse[3]['email'] }<br>**Phone:** ${ CBDcourse[3]['phone'] }<br>**Cost:** ${ CBDcourse[3]['cost'] }<br>**Blurb:** ${ CBDcourse[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourse[4]['service provider'] }<br>**Service:** ${ CBDcourse[4]['service'] }<br>**Address:** ${ CBDcourse[4]['address'] }<br>**Email:** ${ CBDcourse[4]['email'] }<br>**Phone:** ${ CBDcourse[4]['phone'] }<br>**Cost:** ${ CBDcourse[4]['cost'] }<br>**Blurb:** ${ CBDcourse[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourse[5]['service provider'] }<br>**Service:** ${ CBDcourse[5]['service'] }<br>**Address:** ${ CBDcourse[5]['address'] }<br>**Email:** ${ CBDcourse[5]['email'] }<br>**Phone:** ${ CBDcourse[5]['phone'] }<br>**Cost:** ${ CBDcourse[5]['cost'] }<br>**Blurb:** ${ CBDcourse[5]['blurb'] }
+  %elif service_outcome == 38:
+  <u>**Service Provider:**</u> ${ Northcourse[0]['service provider'] }<br>**Service:** ${ Northcourse[0]['service'] }<br>**Address:** ${ Northcourse[0]['address'] }<br>**Email:** ${ Northcourse[0]['email'] }<br>**Phone:** ${ Northcourse[0]['phone'] }<br>**Cost:** ${ Northcourse[0]['cost'] }<br>**Blurb:** ${ Northcourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[1]['service provider'] }<br>**Service:** ${ Northcourse[1]['service'] }<br>**Address:** ${ Northcourse[1]['address'] }<br>**Email:** ${ Northcourse[1]['email'] }<br>**Phone:** ${ Northcourse[1]['phone'] }<br>**Cost:** ${ Northcourse[1]['cost'] }<br>**Blurb:** ${ Northcourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[2]['service provider'] }<br>**Service:** ${ Northcourse[2]['service'] }<br>**Address:** ${ Northcourse[2]['address'] }<br>**Email:** ${ Northcourse[2]['email'] }<br>**Phone:** ${ Northcourse[2]['phone'] }<br>**Cost:** ${ Northcourse[2]['cost'] }<br>**Blurb:** ${ Northcourse[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[3]['service provider'] }<br>**Service:** ${ Northcourse[3]['service'] }<br>**Address:** ${ Northcourse[3]['address'] }<br>**Email:** ${ Northcourse[3]['email'] }<br>**Phone:** ${ Northcourse[3]['phone'] }<br>**Cost:** ${ Northcourse[3]['cost'] }<br>**Blurb:** ${ Northcourse[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[4]['service provider'] }<br>**Service:** ${ Northcourse[4]['service'] }<br>**Address:** ${ Northcourse[4]['address'] }<br>**Email:** ${ Northcourse[4]['email'] }<br>**Phone:** ${ Northcourse[4]['phone'] }<br>**Cost:** ${ Northcourse[4]['cost'] }<br>**Blurb:** ${ Northcourse[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[5]['service provider'] }<br>**Service:** ${ Northcourse[5]['service'] }<br>**Address:** ${ Northcourse[5]['address'] }<br>**Email:** ${ Northcourse[5]['email'] }<br>**Phone:** ${ Northcourse[5]['phone'] }<br>**Cost:** ${ Northcourse[5]['cost'] }<br>**Blurb:** ${ Northcourse[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[6]['service provider'] }<br>**Service:** ${ Northcourse[6]['service'] }<br>**Address:** ${ Northcourse[6]['address'] }<br>**Email:** ${ Northcourse[6]['email'] }<br>**Phone:** ${ Northcourse[6]['phone'] }<br>**Cost:** ${ Northcourse[6]['cost'] }<br>**Blurb:** ${ Northcourse[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[7]['service provider'] }<br>**Service:** ${ Northcourse[7]['service'] }<br>**Address:** ${ Northcourse[7]['address'] }<br>**Email:** ${ Northcourse[7]['email'] }<br>**Phone:** ${ Northcourse[7]['phone'] }<br>**Cost:** ${ Northcourse[7]['cost'] }<br>**Blurb:** ${ Northcourse[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[8]['service provider'] }<br>**Service:** ${ Northcourse[8]['service'] }<br>**Address:** ${ Northcourse[8]['address'] }<br>**Email:** ${ Northcourse[8]['email'] }<br>**Phone:** ${ Northcourse[8]['phone'] }<br>**Cost:** ${ Northcourse[8]['cost'] }<br>**Blurb:** ${ Northcourse[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[9]['service provider'] }<br>**Service:** ${ Northcourse[9]['service'] }<br>**Address:** ${ Northcourse[9]['address'] }<br>**Email:** ${ Northcourse[9]['email'] }<br>**Phone:** ${ Northcourse[9]['phone'] }<br>**Cost:** ${ Northcourse[9]['cost'] }<br>**Blurb:** ${ Northcourse[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[10]['service provider'] }<br>**Service:** ${ Northcourse[10]['service'] }<br>**Address:** ${ Northcourse[10]['address'] }<br>**Email:** ${ Northcourse[10]['email'] }<br>**Phone:** ${ Northcourse[10]['phone'] }<br>**Cost:** ${ Northcourse[10]['cost'] }<br>**Blurb:** ${ Northcourse[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[11]['service provider'] }<br>**Service:** ${ Northcourse[11]['service'] }<br>**Address:** ${ Northcourse[11]['address'] }<br>**Email:** ${ Northcourse[11]['email'] }<br>**Phone:** ${ Northcourse[11]['phone'] }<br>**Cost:** ${ Northcourse[11]['cost'] }<br>**Blurb:** ${ Northcourse[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[12]['service provider'] }<br>**Service:** ${ Northcourse[12]['service'] }<br>**Address:** ${ Northcourse[12]['address'] }<br>**Email:** ${ Northcourse[12]['email'] }<br>**Phone:** ${ Northcourse[12]['phone'] }<br>**Cost:** ${ Northcourse[12]['cost'] }<br>**Blurb:** ${ Northcourse[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[13]['service provider'] }<br>**Service:** ${ Northcourse[13]['service'] }<br>**Address:** ${ Northcourse[13]['address'] }<br>**Email:** ${ Northcourse[13]['email'] }<br>**Phone:** ${ Northcourse[13]['phone'] }<br>**Cost:** ${ Northcourse[13]['cost'] }<br>**Blurb:** ${ Northcourse[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[14]['service provider'] }<br>**Service:** ${ Northcourse[14]['service'] }<br>**Address:** ${ Northcourse[14]['address'] }<br>**Email:** ${ Northcourse[14]['email'] }<br>**Phone:** ${ Northcourse[14]['phone'] }<br>**Cost:** ${ Northcourse[14]['cost'] }<br>**Blurb:** ${ Northcourse[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[15]['service provider'] }<br>**Service:** ${ Northcourse[15]['service'] }<br>**Address:** ${ Northcourse[15]['address'] }<br>**Email:** ${ Northcourse[15]['email'] }<br>**Phone:** ${ Northcourse[15]['phone'] }<br>**Cost:** ${ Northcourse[15]['cost'] }<br>**Blurb:** ${ Northcourse[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[16]['service provider'] }<br>**Service:** ${ Northcourse[16]['service'] }<br>**Address:** ${ Northcourse[16]['address'] }<br>**Email:** ${ Northcourse[16]['email'] }<br>**Phone:** ${ Northcourse[16]['phone'] }<br>**Cost:** ${ Northcourse[16]['cost'] }<br>**Blurb:** ${ Northcourse[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[17]['service provider'] }<br>**Service:** ${ Northcourse[17]['service'] }<br>**Address:** ${ Northcourse[17]['address'] }<br>**Email:** ${ Northcourse[17]['email'] }<br>**Phone:** ${ Northcourse[17]['phone'] }<br>**Cost:** ${ Northcourse[17]['cost'] }<br>**Blurb:** ${ Northcourse[17]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[18]['service provider'] }<br>**Service:** ${ Northcourse[18]['service'] }<br>**Address:** ${ Northcourse[18]['address'] }<br>**Email:** ${ Northcourse[18]['email'] }<br>**Phone:** ${ Northcourse[18]['phone'] }<br>**Cost:** ${ Northcourse[18]['cost'] }<br>**Blurb:** ${ Northcourse[18]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[19]['service provider'] }<br>**Service:** ${ Northcourse[19]['service'] }<br>**Address:** ${ Northcourse[19]['address'] }<br>**Email:** ${ Northcourse[19]['email'] }<br>**Phone:** ${ Northcourse[19]['phone'] }<br>**Cost:** ${ Northcourse[19]['cost'] }<br>**Blurb:** ${ Northcourse[19]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[20]['service provider'] }<br>**Service:** ${ Northcourse[20]['service'] }<br>**Address:** ${ Northcourse[20]['address'] }<br>**Email:** ${ Northcourse[20]['email'] }<br>**Phone:** ${ Northcourse[20]['phone'] }<br>**Cost:** ${ Northcourse[20]['cost'] }<br>**Blurb:** ${ Northcourse[20]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[21]['service provider'] }<br>**Service:** ${ Northcourse[21]['service'] }<br>**Address:** ${ Northcourse[21]['address'] }<br>**Email:** ${ Northcourse[21]['email'] }<br>**Phone:** ${ Northcourse[21]['phone'] }<br>**Cost:** ${ Northcourse[21]['cost'] }<br>**Blurb:** ${ Northcourse[21]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[22]['service provider'] }<br>**Service:** ${ Northcourse[22]['service'] }<br>**Address:** ${ Northcourse[22]['address'] }<br>**Email:** ${ Northcourse[22]['email'] }<br>**Phone:** ${ Northcourse[22]['phone'] }<br>**Cost:** ${ Northcourse[22]['cost'] }<br>**Blurb:** ${ Northcourse[22]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[23]['service provider'] }<br>**Service:** ${ Northcourse[23]['service'] }<br>**Address:** ${ Northcourse[23]['address'] }<br>**Email:** ${ Northcourse[23]['email'] }<br>**Phone:** ${ Northcourse[23]['phone'] }<br>**Cost:** ${ Northcourse[23]['cost'] }<br>**Blurb:** ${ Northcourse[23]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[24]['service provider'] }<br>**Service:** ${ Northcourse[24]['service'] }<br>**Address:** ${ Northcourse[24]['address'] }<br>**Email:** ${ Northcourse[24]['email'] }<br>**Phone:** ${ Northcourse[24]['phone'] }<br>**Cost:** ${ Northcourse[24]['cost'] }<br>**Blurb:** ${ Northcourse[24]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[25]['service provider'] }<br>**Service:** ${ Northcourse[25]['service'] }<br>**Address:** ${ Northcourse[25]['address'] }<br>**Email:** ${ Northcourse[25]['email'] }<br>**Phone:** ${ Northcourse[25]['phone'] }<br>**Cost:** ${ Northcourse[25]['cost'] }<br>**Blurb:** ${ Northcourse[25]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[26]['service provider'] }<br>**Service:** ${ Northcourse[26]['service'] }<br>**Address:** ${ Northcourse[26]['address'] }<br>**Email:** ${ Northcourse[26]['email'] }<br>**Phone:** ${ Northcourse[26]['phone'] }<br>**Cost:** ${ Northcourse[26]['cost'] }<br>**Blurb:** ${ Northcourse[26]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[27]['service provider'] }<br>**Service:** ${ Northcourse[27]['service'] }<br>**Address:** ${ Northcourse[27]['address'] }<br>**Email:** ${ Northcourse[27]['email'] }<br>**Phone:** ${ Northcourse[27]['phone'] }<br>**Cost:** ${ Northcourse[27]['cost'] }<br>**Blurb:** ${ Northcourse[27]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northcourse[28]['service provider'] }<br>**Service:** ${ Northcourse[28]['service'] }<br>**Address:** ${ Northcourse[28]['address'] }<br>**Email:** ${ Northcourse[28]['email'] }<br>**Phone:** ${ Northcourse[28]['phone'] }<br>**Cost:** ${ Northcourse[28]['cost'] }<br>**Blurb:** ${ Northcourse[28]['blurb'] }
+  %elif service_outcome == 39:
+  <u>**Service Provider:**</u> ${ Eastcourse[0]['service provider'] }<br>**Service:** ${ Eastcourse[0]['service'] }<br>**Address:** ${ Eastcourse[0]['address'] }<br>**Email:** ${ Eastcourse[0]['email'] }<br>**Phone:** ${ Eastcourse[0]['phone'] }<br>**Cost:** ${ Eastcourse[0]['cost'] }<br>**Blurb:** ${ Eastcourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastcourse[1]['service provider'] }<br>**Service:** ${ Eastcourse[1]['service'] }<br>**Address:** ${ Eastcourse[1]['address'] }<br>**Email:** ${ Eastcourse[1]['email'] }<br>**Phone:** ${ Eastcourse[1]['phone'] }<br>**Cost:** ${ Eastcourse[1]['cost'] }<br>**Blurb:** ${ Eastcourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastcourse[2]['service provider'] }<br>**Service:** ${ Eastcourse[2]['service'] }<br>**Address:** ${ Eastcourse[2]['address'] }<br>**Email:** ${ Eastcourse[2]['email'] }<br>**Phone:** ${ Eastcourse[2]['phone'] }<br>**Cost:** ${ Eastcourse[2]['cost'] }<br>**Blurb:** ${ Eastcourse[2]['blurb'] }
+  %elif service_outcome == 40:
+  <u>**Service Provider:**</u> ${ Southcourse[0]['service provider'] }<br>**Service:** ${ Southcourse[0]['service'] }<br>**Address:** ${ Southcourse[0]['address'] }<br>**Email:** ${ Southcourse[0]['email'] }<br>**Phone:** ${ Southcourse[0]['phone'] }<br>**Cost:** ${ Southcourse[0]['cost'] }<br>**Blurb:** ${ Southcourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[1]['service provider'] }<br>**Service:** ${ Southcourse[1]['service'] }<br>**Address:** ${ Southcourse[1]['address'] }<br>**Email:** ${ Southcourse[1]['email'] }<br>**Phone:** ${ Southcourse[1]['phone'] }<br>**Cost:** ${ Southcourse[1]['cost'] }<br>**Blurb:** ${ Southcourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[2]['service provider'] }<br>**Service:** ${ Southcourse[2]['service'] }<br>**Address:** ${ Southcourse[2]['address'] }<br>**Email:** ${ Southcourse[2]['email'] }<br>**Phone:** ${ Southcourse[2]['phone'] }<br>**Cost:** ${ Southcourse[2]['cost'] }<br>**Blurb:** ${ Southcourse[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[3]['service provider'] }<br>**Service:** ${ Southcourse[3]['service'] }<br>**Address:** ${ Southcourse[3]['address'] }<br>**Email:** ${ Southcourse[3]['email'] }<br>**Phone:** ${ Southcourse[3]['phone'] }<br>**Cost:** ${ Southcourse[3]['cost'] }<br>**Blurb:** ${ Southcourse[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[4]['service provider'] }<br>**Service:** ${ Southcourse[4]['service'] }<br>**Address:** ${ Southcourse[4]['address'] }<br>**Email:** ${ Southcourse[4]['email'] }<br>**Phone:** ${ Southcourse[4]['phone'] }<br>**Cost:** ${ Southcourse[4]['cost'] }<br>**Blurb:** ${ Southcourse[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[5]['service provider'] }<br>**Service:** ${ Southcourse[5]['service'] }<br>**Address:** ${ Southcourse[5]['address'] }<br>**Email:** ${ Southcourse[5]['email'] }<br>**Phone:** ${ Southcourse[5]['phone'] }<br>**Cost:** ${ Southcourse[5]['cost'] }<br>**Blurb:** ${ Southcourse[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[6]['service provider'] }<br>**Service:** ${ Southcourse[6]['service'] }<br>**Address:** ${ Southcourse[6]['address'] }<br>**Email:** ${ Southcourse[6]['email'] }<br>**Phone:** ${ Southcourse[6]['phone'] }<br>**Cost:** ${ Southcourse[6]['cost'] }<br>**Blurb:** ${ Southcourse[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[7]['service provider'] }<br>**Service:** ${ Southcourse[7]['service'] }<br>**Address:** ${ Southcourse[7]['address'] }<br>**Email:** ${ Southcourse[7]['email'] }<br>**Phone:** ${ Southcourse[7]['phone'] }<br>**Cost:** ${ Southcourse[7]['cost'] }<br>**Blurb:** ${ Southcourse[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[8]['service provider'] }<br>**Service:** ${ Southcourse[8]['service'] }<br>**Address:** ${ Southcourse[8]['address'] }<br>**Email:** ${ Southcourse[8]['email'] }<br>**Phone:** ${ Southcourse[8]['phone'] }<br>**Cost:** ${ Southcourse[8]['cost'] }<br>**Blurb:** ${ Southcourse[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[9]['service provider'] }<br>**Service:** ${ Southcourse[9]['service'] }<br>**Address:** ${ Southcourse[9]['address'] }<br>**Email:** ${ Southcourse[9]['email'] }<br>**Phone:** ${ Southcourse[9]['phone'] }<br>**Cost:** ${ Southcourse[9]['cost'] }<br>**Blurb:** ${ Southcourse[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[10]['service provider'] }<br>**Service:** ${ Southcourse[10]['service'] }<br>**Address:** ${ Southcourse[10]['address'] }<br>**Email:** ${ Southcourse[10]['email'] }<br>**Phone:** ${ Southcourse[10]['phone'] }<br>**Cost:** ${ Southcourse[10]['cost'] }<br>**Blurb:** ${ Southcourse[10]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[11]['service provider'] }<br>**Service:** ${ Southcourse[11]['service'] }<br>**Address:** ${ Southcourse[11]['address'] }<br>**Email:** ${ Southcourse[11]['email'] }<br>**Phone:** ${ Southcourse[11]['phone'] }<br>**Cost:** ${ Southcourse[11]['cost'] }<br>**Blurb:** ${ Southcourse[11]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[12]['service provider'] }<br>**Service:** ${ Southcourse[12]['service'] }<br>**Address:** ${ Southcourse[12]['address'] }<br>**Email:** ${ Southcourse[12]['email'] }<br>**Phone:** ${ Southcourse[12]['phone'] }<br>**Cost:** ${ Southcourse[12]['cost'] }<br>**Blurb:** ${ Southcourse[12]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[13]['service provider'] }<br>**Service:** ${ Southcourse[13]['service'] }<br>**Address:** ${ Southcourse[13]['address'] }<br>**Email:** ${ Southcourse[13]['email'] }<br>**Phone:** ${ Southcourse[13]['phone'] }<br>**Cost:** ${ Southcourse[13]['cost'] }<br>**Blurb:** ${ Southcourse[13]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[14]['service provider'] }<br>**Service:** ${ Southcourse[14]['service'] }<br>**Address:** ${ Southcourse[14]['address'] }<br>**Email:** ${ Southcourse[14]['email'] }<br>**Phone:** ${ Southcourse[14]['phone'] }<br>**Cost:** ${ Southcourse[14]['cost'] }<br>**Blurb:** ${ Southcourse[14]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[15]['service provider'] }<br>**Service:** ${ Southcourse[15]['service'] }<br>**Address:** ${ Southcourse[15]['address'] }<br>**Email:** ${ Southcourse[15]['email'] }<br>**Phone:** ${ Southcourse[15]['phone'] }<br>**Cost:** ${ Southcourse[15]['cost'] }<br>**Blurb:** ${ Southcourse[15]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[16]['service provider'] }<br>**Service:** ${ Southcourse[16]['service'] }<br>**Address:** ${ Southcourse[16]['address'] }<br>**Email:** ${ Southcourse[16]['email'] }<br>**Phone:** ${ Southcourse[16]['phone'] }<br>**Cost:** ${ Southcourse[16]['cost'] }<br>**Blurb:** ${ Southcourse[16]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[17]['service provider'] }<br>**Service:** ${ Southcourse[17]['service'] }<br>**Address:** ${ Southcourse[17]['address'] }<br>**Email:** ${ Southcourse[17]['email'] }<br>**Phone:** ${ Southcourse[17]['phone'] }<br>**Cost:** ${ Southcourse[17]['cost'] }<br>**Blurb:** ${ Southcourse[17]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[18]['service provider'] }<br>**Service:** ${ Southcourse[18]['service'] }<br>**Address:** ${ Southcourse[18]['address'] }<br>**Email:** ${ Southcourse[18]['email'] }<br>**Phone:** ${ Southcourse[18]['phone'] }<br>**Cost:** ${ Southcourse[18]['cost'] }<br>**Blurb:** ${ Southcourse[18]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[19]['service provider'] }<br>**Service:** ${ Southcourse[19]['service'] }<br>**Address:** ${ Southcourse[19]['address'] }<br>**Email:** ${ Southcourse[19]['email'] }<br>**Phone:** ${ Southcourse[19]['phone'] }<br>**Cost:** ${ Southcourse[19]['cost'] }<br>**Blurb:** ${ Southcourse[19]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[20]['service provider'] }<br>**Service:** ${ Southcourse[20]['service'] }<br>**Address:** ${ Southcourse[20]['address'] }<br>**Email:** ${ Southcourse[20]['email'] }<br>**Phone:** ${ Southcourse[20]['phone'] }<br>**Cost:** ${ Southcourse[20]['cost'] }<br>**Blurb:** ${ Southcourse[20]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[21]['service provider'] }<br>**Service:** ${ Southcourse[21]['service'] }<br>**Address:** ${ Southcourse[21]['address'] }<br>**Email:** ${ Southcourse[21]['email'] }<br>**Phone:** ${ Southcourse[21]['phone'] }<br>**Cost:** ${ Southcourse[21]['cost'] }<br>**Blurb:** ${ Southcourse[21]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[22]['service provider'] }<br>**Service:** ${ Southcourse[22]['service'] }<br>**Address:** ${ Southcourse[22]['address'] }<br>**Email:** ${ Southcourse[22]['email'] }<br>**Phone:** ${ Southcourse[22]['phone'] }<br>**Cost:** ${ Southcourse[22]['cost'] }<br>**Blurb:** ${ Southcourse[22]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[23]['service provider'] }<br>**Service:** ${ Southcourse[23]['service'] }<br>**Address:** ${ Southcourse[23]['address'] }<br>**Email:** ${ Southcourse[23]['email'] }<br>**Phone:** ${ Southcourse[23]['phone'] }<br>**Cost:** ${ Southcourse[23]['cost'] }<br>**Blurb:** ${ Southcourse[23]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[24]['service provider'] }<br>**Service:** ${ Southcourse[24]['service'] }<br>**Address:** ${ Southcourse[24]['address'] }<br>**Email:** ${ Southcourse[24]['email'] }<br>**Phone:** ${ Southcourse[24]['phone'] }<br>**Cost:** ${ Southcourse[24]['cost'] }<br>**Blurb:** ${ Southcourse[24]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[25]['service provider'] }<br>**Service:** ${ Southcourse[25]['service'] }<br>**Address:** ${ Southcourse[25]['address'] }<br>**Email:** ${ Southcourse[25]['email'] }<br>**Phone:** ${ Southcourse[25]['phone'] }<br>**Cost:** ${ Southcourse[25]['cost'] }<br>**Blurb:** ${ Southcourse[25]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southcourse[26]['service provider'] }<br>**Service:** ${ Southcourse[26]['service'] }<br>**Address:** ${ Southcourse[26]['address'] }<br>**Email:** ${ Southcourse[26]['email'] }<br>**Phone:** ${ Southcourse[26]['phone'] }<br>**Cost:** ${ Southcourse[26]['cost'] }<br>**Blurb:** ${ Southcourse[26]['blurb'] }
+  %elif service_outcome == 41:
+  <u>**Service Provider:**</u> ${ Westcourse[0]['service provider'] }<br>**Service:** ${ Westcourse[0]['service'] }<br>**Address:** ${ Westcourse[0]['address'] }<br>**Email:** ${ Westcourse[0]['email'] }<br>**Phone:** ${ Westcourse[0]['phone'] }<br>**Cost:** ${ Westcourse[0]['cost'] }<br>**Blurb:** ${ Westcourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[1]['service provider'] }<br>**Service:** ${ Westcourse[1]['service'] }<br>**Address:** ${ Westcourse[1]['address'] }<br>**Email:** ${ Westcourse[1]['email'] }<br>**Phone:** ${ Westcourse[1]['phone'] }<br>**Cost:** ${ Westcourse[1]['cost'] }<br>**Blurb:** ${ Westcourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[2]['service provider'] }<br>**Service:** ${ Westcourse[2]['service'] }<br>**Address:** ${ Westcourse[2]['address'] }<br>**Email:** ${ Westcourse[2]['email'] }<br>**Phone:** ${ Westcourse[2]['phone'] }<br>**Cost:** ${ Westcourse[2]['cost'] }<br>**Blurb:** ${ Westcourse[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[3]['service provider'] }<br>**Service:** ${ Westcourse[3]['service'] }<br>**Address:** ${ Westcourse[3]['address'] }<br>**Email:** ${ Westcourse[3]['email'] }<br>**Phone:** ${ Westcourse[3]['phone'] }<br>**Cost:** ${ Westcourse[3]['cost'] }<br>**Blurb:** ${ Westcourse[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[4]['service provider'] }<br>**Service:** ${ Westcourse[4]['service'] }<br>**Address:** ${ Westcourse[4]['address'] }<br>**Email:** ${ Westcourse[4]['email'] }<br>**Phone:** ${ Westcourse[4]['phone'] }<br>**Cost:** ${ Westcourse[4]['cost'] }<br>**Blurb:** ${ Westcourse[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[5]['service provider'] }<br>**Service:** ${ Westcourse[5]['service'] }<br>**Address:** ${ Westcourse[5]['address'] }<br>**Email:** ${ Westcourse[5]['email'] }<br>**Phone:** ${ Westcourse[5]['phone'] }<br>**Cost:** ${ Westcourse[5]['cost'] }<br>**Blurb:** ${ Westcourse[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[6]['service provider'] }<br>**Service:** ${ Westcourse[6]['service'] }<br>**Address:** ${ Westcourse[6]['address'] }<br>**Email:** ${ Westcourse[6]['email'] }<br>**Phone:** ${ Westcourse[6]['phone'] }<br>**Cost:** ${ Westcourse[6]['cost'] }<br>**Blurb:** ${ Westcourse[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[7]['service provider'] }<br>**Service:** ${ Westcourse[7]['service'] }<br>**Address:** ${ Westcourse[7]['address'] }<br>**Email:** ${ Westcourse[7]['email'] }<br>**Phone:** ${ Westcourse[7]['phone'] }<br>**Cost:** ${ Westcourse[7]['cost'] }<br>**Blurb:** ${ Westcourse[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[8]['service provider'] }<br>**Service:** ${ Westcourse[8]['service'] }<br>**Address:** ${ Westcourse[8]['address'] }<br>**Email:** ${ Westcourse[8]['email'] }<br>**Phone:** ${ Westcourse[8]['phone'] }<br>**Cost:** ${ Westcourse[8]['cost'] }<br>**Blurb:** ${ Westcourse[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[9]['service provider'] }<br>**Service:** ${ Westcourse[9]['service'] }<br>**Address:** ${ Westcourse[9]['address'] }<br>**Email:** ${ Westcourse[9]['email'] }<br>**Phone:** ${ Westcourse[9]['phone'] }<br>**Cost:** ${ Westcourse[9]['cost'] }<br>**Blurb:** ${ Westcourse[9]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westcourse[10]['service provider'] }<br>**Service:** ${ Westcourse[10]['service'] }<br>**Address:** ${ Westcourse[10]['address'] }<br>**Email:** ${ Westcourse[10]['email'] }<br>**Phone:** ${ Westcourse[10]['phone'] }<br>**Cost:** ${ Westcourse[10]['cost'] }<br>**Blurb:** ${ Westcourse[10]['blurb'] }
+  %elif service_outcome == 42:
+  <u>**Service Provider:**</u> ${ Outercourse[0]['service provider'] }<br>**Service:** ${ Outercourse[0]['service'] }<br>**Address:** ${ Outercourse[0]['address'] }<br>**Email:** ${ Outercourse[0]['email'] }<br>**Phone:** ${ Outercourse[0]['phone'] }<br>**Cost:** ${ Outercourse[0]['cost'] }<br>**Blurb:** ${ Outercourse[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[1]['service provider'] }<br>**Service:** ${ Outercourse[1]['service'] }<br>**Address:** ${ Outercourse[1]['address'] }<br>**Email:** ${ Outercourse[1]['email'] }<br>**Phone:** ${ Outercourse[1]['phone'] }<br>**Cost:** ${ Outercourse[1]['cost'] }<br>**Blurb:** ${ Outercourse[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[2]['service provider'] }<br>**Service:** ${ Outercourse[2]['service'] }<br>**Address:** ${ Outercourse[2]['address'] }<br>**Email:** ${ Outercourse[2]['email'] }<br>**Phone:** ${ Outercourse[2]['phone'] }<br>**Cost:** ${ Outercourse[2]['cost'] }<br>**Blurb:** ${ Outercourse[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[3]['service provider'] }<br>**Service:** ${ Outercourse[3]['service'] }<br>**Address:** ${ Outercourse[3]['address'] }<br>**Email:** ${ Outercourse[3]['email'] }<br>**Phone:** ${ Outercourse[3]['phone'] }<br>**Cost:** ${ Outercourse[3]['cost'] }<br>**Blurb:** ${ Outercourse[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[4]['service provider'] }<br>**Service:** ${ Outercourse[4]['service'] }<br>**Address:** ${ Outercourse[4]['address'] }<br>**Email:** ${ Outercourse[4]['email'] }<br>**Phone:** ${ Outercourse[4]['phone'] }<br>**Cost:** ${ Outercourse[4]['cost'] }<br>**Blurb:** ${ Outercourse[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[5]['service provider'] }<br>**Service:** ${ Outercourse[5]['service'] }<br>**Address:** ${ Outercourse[5]['address'] }<br>**Email:** ${ Outercourse[5]['email'] }<br>**Phone:** ${ Outercourse[5]['phone'] }<br>**Cost:** ${ Outercourse[5]['cost'] }<br>**Blurb:** ${ Outercourse[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[6]['service provider'] }<br>**Service:** ${ Outercourse[6]['service'] }<br>**Address:** ${ Outercourse[6]['address'] }<br>**Email:** ${ Outercourse[6]['email'] }<br>**Phone:** ${ Outercourse[6]['phone'] }<br>**Cost:** ${ Outercourse[6]['cost'] }<br>**Blurb:** ${ Outercourse[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[7]['service provider'] }<br>**Service:** ${ Outercourse[7]['service'] }<br>**Address:** ${ Outercourse[7]['address'] }<br>**Email:** ${ Outercourse[7]['email'] }<br>**Phone:** ${ Outercourse[7]['phone'] }<br>**Cost:** ${ Outercourse[7]['cost'] }<br>**Blurb:** ${ Outercourse[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[8]['service provider'] }<br>**Service:** ${ Outercourse[8]['service'] }<br>**Address:** ${ Outercourse[8]['address'] }<br>**Email:** ${ Outercourse[8]['email'] }<br>**Phone:** ${ Outercourse[8]['phone'] }<br>**Cost:** ${ Outercourse[8]['cost'] }<br>**Blurb:** ${ Outercourse[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outercourse[9]['service provider'] }<br>**Service:** ${ Outercourse[9]['service'] }<br>**Address:** ${ Outercourse[9]['address'] }<br>**Email:** ${ Outercourse[9]['email'] }<br>**Phone:** ${ Outercourse[9]['phone'] }<br>**Cost:** ${ Outercourse[9]['cost'] }<br>**Blurb:** ${ Outercourse[9]['blurb'] }
+  %elif service_outcome == 43:
+  <u>**Service Provider:**</u> ${ CBDdivorce[0]['service provider'] }<br>**Service:** ${ CBDdivorce[0]['service'] }<br>**Address:** ${ CBDdivorce[0]['address'] }<br>**Email:** ${ CBDdivorce[0]['email'] }<br>**Phone:** ${ CBDdivorce[0]['phone'] }<br>**Cost:** ${ CBDdivorce[0]['cost'] }<br>**Blurb:** ${ CBDdivorce[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ CBDdivorce[1]['service provider'] }<br>**Service:** ${ CBDdivorce[1]['service'] }<br>**Address:** ${ CBDdivorce[1]['address'] }<br>**Email:** ${ CBDdivorce[1]['email'] }<br>**Phone:** ${ CBDdivorce[1]['phone'] }<br>**Cost:** ${ CBDdivorce[1]['cost'] }<br>**Blurb:** ${ CBDdivorce[1]['blurb'] }
+  %elif service_outcome == 44:
+  <u>**Service Provider:**</u> ${ Northdivorce[0]['service provider'] }<br>**Service:** ${ Northdivorce[0]['service'] }<br>**Address:** ${ Northdivorce[0]['address'] }<br>**Email:** ${ Northdivorce[0]['email'] }<br>**Phone:** ${ Northdivorce[0]['phone'] }<br>**Cost:** ${ Northdivorce[0]['cost'] }<br>**Blurb:** ${ Northdivorce[0]['blurb'] }
+  %elif service_outcome == 45:
+  <u>**Service Provider:**</u> ${ Eastdivorce[0]['service provider'] }<br>**Service:** ${ Eastdivorce[0]['service'] }<br>**Address:** ${ Eastdivorce[0]['address'] }<br>**Email:** ${ Eastdivorce[0]['email'] }<br>**Phone:** ${ Eastdivorce[0]['phone'] }<br>**Cost:** ${ Eastdivorce[0]['cost'] }<br>**Blurb:** ${ Eastdivorce[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastdivorce[1]['service provider'] }<br>**Service:** ${ Eastdivorce[1]['service'] }<br>**Address:** ${ Eastdivorce[1]['address'] }<br>**Email:** ${ Eastdivorce[1]['email'] }<br>**Phone:** ${ Eastdivorce[1]['phone'] }<br>**Cost:** ${ Eastdivorce[1]['cost'] }<br>**Blurb:** ${ Eastdivorce[1]['blurb'] }
+  %elif service_outcome == 46:
+  <u>**Service Provider:**</u> ${ Southdivorce[0]['service provider'] }<br>**Service:** ${ Southdivorce[0]['service'] }<br>**Address:** ${ Southdivorce[0]['address'] }<br>**Email:** ${ Southdivorce[0]['email'] }<br>**Phone:** ${ Southdivorce[0]['phone'] }<br>**Cost:** ${ Southdivorce[0]['cost'] }<br>**Blurb:** ${ Southdivorce[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southdivorce[1]['service provider'] }<br>**Service:** ${ Southdivorce[1]['service'] }<br>**Address:** ${ Southdivorce[1]['address'] }<br>**Email:** ${ Southdivorce[1]['email'] }<br>**Phone:** ${ Southdivorce[1]['phone'] }<br>**Cost:** ${ Southdivorce[1]['cost'] }<br>**Blurb:** ${ Southdivorce[1]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southdivorce[2]['service provider'] }<br>**Service:** ${ Southdivorce[2]['service'] }<br>**Address:** ${ Southdivorce[2]['address'] }<br>**Email:** ${ Southdivorce[2]['email'] }<br>**Phone:** ${ Southdivorce[2]['phone'] }<br>**Cost:** ${ Southdivorce[2]['cost'] }<br>**Blurb:** ${ Southdivorce[2]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southdivorce[3]['service provider'] }<br>**Service:** ${ Southdivorce[3]['service'] }<br>**Address:** ${ Southdivorce[3]['address'] }<br>**Email:** ${ Southdivorce[3]['email'] }<br>**Phone:** ${ Southdivorce[3]['phone'] }<br>**Cost:** ${ Southdivorce[3]['cost'] }<br>**Blurb:** ${ Southdivorce[3]['blurb'] }
+  %elif service_outcome == 47:
+  <u>**Service Provider:**</u> ${ Westdivorce[0]['service provider'] }<br>**Service:** ${ Westdivorce[0]['service'] }<br>**Address:** ${ Westdivorce[0]['address'] }<br>**Email:** ${ Westdivorce[0]['email'] }<br>**Phone:** ${ Westdivorce[0]['phone'] }<br>**Cost:** ${ Westdivorce[0]['cost'] }<br>**Blurb:** ${ Westdivorce[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westdivorce[1]['service provider'] }<br>**Service:** ${ Westdivorce[1]['service'] }<br>**Address:** ${ Westdivorce[1]['address'] }<br>**Email:** ${ Westdivorce[1]['email'] }<br>**Phone:** ${ Westdivorce[1]['phone'] }<br>**Cost:** ${ Westdivorce[1]['cost'] }<br>**Blurb:** ${ Westdivorce[1]['blurb'] }
+  %elif service_outcome == 48:
+  <u>**Service Provider:**</u> ${ Outerdivorce[0]['service provider'] }<br>**Service:** ${ Outerdivorce[0]['service'] }<br>**Address:** ${ Outerdivorce[0]['address'] }<br>**Email:** ${ Outerdivorce[0]['email'] }<br>**Phone:** ${ Outerdivorce[0]['phone'] }<br>**Cost:** ${ Outerdivorce[0]['cost'] }<br>**Blurb:** ${ Outerdivorce[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerdivorce[1]['service provider'] }<br>**Service:** ${ Outerdivorce[1]['service'] }<br>**Address:** ${ Outerdivorce[1]['address'] }<br>**Email:** ${ Outerdivorce[1]['email'] }<br>**Phone:** ${ Outerdivorce[1]['phone'] }<br>**Cost:** ${ Outerdivorce[1]['cost'] }<br>**Blurb:** ${ Outerdivorce[1]['blurb'] }
+  %elif service_outcome == 49:
+  <u>**Service Provider:**</u> ${ CBDpresep[0]['service provider'] }<br>**Service:** ${ CBDpresep[0]['service'] }<br>**Address:** ${ CBDpresep[0]['address'] }<br>**Email:** ${ CBDpresep[0]['email'] }<br>**Phone:** ${ CBDpresep[0]['phone'] }<br>**Cost:** ${ CBDpresep[0]['cost'] }<br>**Blurb:** ${ CBDpresep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpresep[1]['service provider'] }<br>**Service:** ${ CBDpresep[1]['service'] }<br>**Address:** ${ CBDpresep[1]['address'] }<br>**Email:** ${ CBDpresep[1]['email'] }<br>**Phone:** ${ CBDpresep[1]['phone'] }<br>**Cost:** ${ CBDpresep[1]['cost'] }<br>**Blurb:** ${ CBDpresep[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpresep[2]['service provider'] }<br>**Service:** ${ CBDpresep[2]['service'] }<br>**Address:** ${ CBDpresep[2]['address'] }<br>**Email:** ${ CBDpresep[2]['email'] }<br>**Phone:** ${ CBDpresep[2]['phone'] }<br>**Cost:** ${ CBDpresep[2]['cost'] }<br>**Blurb:** ${ CBDpresep[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpresep[3]['service provider'] }<br>**Service:** ${ CBDpresep[3]['service'] }<br>**Address:** ${ CBDpresep[3]['address'] }<br>**Email:** ${ CBDpresep[3]['email'] }<br>**Phone:** ${ CBDpresep[3]['phone'] }<br>**Cost:** ${ CBDpresep[3]['cost'] }<br>**Blurb:** ${ CBDpresep[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpresep[4]['service provider'] }<br>**Service:** ${ CBDpresep[4]['service'] }<br>**Address:** ${ CBDpresep[4]['address'] }<br>**Email:** ${ CBDpresep[4]['email'] }<br>**Phone:** ${ CBDpresep[4]['phone'] }<br>**Cost:** ${ CBDpresep[4]['cost'] }<br>**Blurb:** ${ CBDpresep[4]['blurb'] }
+  %elif service_outcome == 50:
+  <u>**Service Provider:**</u> ${ Northpresep[0]['service provider'] }<br>**Service:** ${ Northpresep[0]['service'] }<br>**Address:** ${ Northpresep[0]['address'] }<br>**Email:** ${ Northpresep[0]['email'] }<br>**Phone:** ${ Northpresep[0]['phone'] }<br>**Cost:** ${ Northpresep[0]['cost'] }<br>**Blurb:** ${ Northpresep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northpresep[1]['service provider'] }<br>**Service:** ${ Northpresep[1]['service'] }<br>**Address:** ${ Northpresep[1]['address'] }<br>**Email:** ${ Northpresep[1]['email'] }<br>**Phone:** ${ Northpresep[1]['phone'] }<br>**Cost:** ${ Northpresep[1]['cost'] }<br>**Blurb:** ${ Northpresep[1]['blurb'] }
+  %elif service_outcome == 51:
+  <u>**Service Provider:**</u> ${ Eastpresep[0]['service provider'] }<br>**Service:** ${ Eastpresep[0]['service'] }<br>**Address:** ${ Eastpresep[0]['address'] }<br>**Email:** ${ Eastpresep[0]['email'] }<br>**Phone:** ${ Eastpresep[0]['phone'] }<br>**Cost:** ${ Eastpresep[0]['cost'] }<br>**Blurb:** ${ Eastpresep[0]['blurb'] }
+  %elif service_outcome == 52:
+  <u>**Service Provider:**</u> ${ Southpresep[0]['service provider'] }<br>**Service:** ${ Southpresep[0]['service'] }<br>**Address:** ${ Southpresep[0]['address'] }<br>**Email:** ${ Southpresep[0]['email'] }<br>**Phone:** ${ Southpresep[0]['phone'] }<br>**Cost:** ${ Southpresep[0]['cost'] }<br>**Blurb:** ${ Southpresep[0]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southpresep[1]['service provider'] }<br>**Service:** ${ Southpresep[1]['service'] }<br>**Address:** ${ Southpresep[1]['address'] }<br>**Email:** ${ Southpresep[1]['email'] }<br>**Phone:** ${ Southpresep[1]['phone'] }<br>**Cost:** ${ Southpresep[1]['cost'] }<br>**Blurb:** ${ Southpresep[1]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southpresep[2]['service provider'] }<br>**Service:** ${ Southpresep[2]['service'] }<br>**Address:** ${ Southpresep[2]['address'] }<br>**Email:** ${ Southpresep[2]['email'] }<br>**Phone:** ${ Southpresep[2]['phone'] }<br>**Cost:** ${ Southpresep[2]['cost'] }<br>**Blurb:** ${ Southpresep[2]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southpresep[3]['service provider'] }<br>**Service:** ${ Southpresep[3]['service'] }<br>**Address:** ${ Southpresep[3]['address'] }<br>**Email:** ${ Southpresep[3]['email'] }<br>**Phone:** ${ Southpresep[3]['phone'] }<br>**Cost:** ${ Southpresep[3]['cost'] }<br>**Blurb:** ${ Southpresep[3]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ Southpresep[4]['service provider'] }<br>**Service:** ${ Southpresep[4]['service'] }<br>**Address:** ${ Southpresep[4]['address'] }<br>**Email:** ${ Southpresep[4]['email'] }<br>**Phone:** ${ Southpresep[4]['phone'] }<br>**Cost:** ${ Southpresep[4]['cost'] }<br>**Blurb:** ${ Southpresep[4]['blurb'] }
+  %elif service_outcome == 53:
+  <u>**Service Provider:**</u> ${ Westpresep[0]['service provider'] }<br>**Service:** ${ Westpresep[0]['service'] }<br>**Address:** ${ Westpresep[0]['address'] }<br>**Email:** ${ Westpresep[0]['email'] }<br>**Phone:** ${ Westpresep[0]['phone'] }<br>**Cost:** ${ Westpresep[0]['cost'] }<br>**Blurb:** ${ Westpresep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westpresep[1]['service provider'] }<br>**Service:** ${ Westpresep[1]['service'] }<br>**Address:** ${ Westpresep[1]['address'] }<br>**Email:** ${ Westpresep[1]['email'] }<br>**Phone:** ${ Westpresep[1]['phone'] }<br>**Cost:** ${ Westpresep[1]['cost'] }<br>**Blurb:** ${ Westpresep[1]['blurb'] }
+  %elif service_outcome == 54:
+  <u>**Service Provider:**</u> ${ Outerpresep[0]['service provider'] }<br>**Service:** ${ Outerpresep[0]['service'] }<br>**Address:** ${ Outerpresep[0]['address'] }<br>**Email:** ${ Outerpresep[0]['email'] }<br>**Phone:** ${ Outerpresep[0]['phone'] }<br>**Cost:** ${ Outerpresep[0]['cost'] }<br>**Blurb:** ${ Outerpresep[0]['blurb'] }
+  %elif service_outcome == 55:
+  <u>**Service Provider:**</u> ${ CBDpostsep[0]['service provider'] }<br>**Service:** ${ CBDpostsep[0]['service'] }<br>**Address:** ${ CBDpostsep[0]['address'] }<br>**Email:** ${ CBDpostsep[0]['email'] }<br>**Phone:** ${ CBDpostsep[0]['phone'] }<br>**Cost:** ${ CBDpostsep[0]['cost'] }<br>**Blurb:** ${ CBDpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpostsep[1]['service provider'] }<br>**Service:** ${ CBDpostsep[1]['service'] }<br>**Address:** ${ CBDpostsep[1]['address'] }<br>**Email:** ${ CBDpostsep[1]['email'] }<br>**Phone:** ${ CBDpostsep[1]['phone'] }<br>**Cost:** ${ CBDpostsep[1]['cost'] }<br>**Blurb:** ${ CBDpostsep[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpostsep[2]['service provider'] }<br>**Service:** ${ CBDpostsep[2]['service'] }<br>**Address:** ${ CBDpostsep[2]['address'] }<br>**Email:** ${ CBDpostsep[2]['email'] }<br>**Phone:** ${ CBDpostsep[2]['phone'] }<br>**Cost:** ${ CBDpostsep[2]['cost'] }<br>**Blurb:** ${ CBDpostsep[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpostsep[3]['service provider'] }<br>**Service:** ${ CBDpostsep[3]['service'] }<br>**Address:** ${ CBDpostsep[3]['address'] }<br>**Email:** ${ CBDpostsep[3]['email'] }<br>**Phone:** ${ CBDpostsep[3]['phone'] }<br>**Cost:** ${ CBDpostsep[3]['cost'] }<br>**Blurb:** ${ CBDpostsep[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDpostsep[4]['service provider'] }<br>**Service:** ${ CBDpostsep[4]['service'] }<br>**Address:** ${ CBDpostsep[4]['address'] }<br>**Email:** ${ CBDpostsep[4]['email'] }<br>**Phone:** ${ CBDpostsep[4]['phone'] }<br>**Cost:** ${ CBDpostsep[4]['cost'] }<br>**Blurb:** ${ CBDpostsep[4]['blurb'] }
+  %elif service_outcome == 56:
+  <u>**Service Provider:**</u> ${ Northpostsep[0]['service provider'] }<br>**Service:** ${ Northpostsep[0]['service'] }<br>**Address:** ${ Northpostsep[0]['address'] }<br>**Email:** ${ Northpostsep[0]['email'] }<br>**Phone:** ${ Northpostsep[0]['phone'] }<br>**Cost:** ${ Northpostsep[0]['cost'] }<br>**Blurb:** ${ Northpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northpostsep[1]['service provider'] }<br>**Service:** ${ Northpostsep[1]['service'] }<br>**Address:** ${ Northpostsep[1]['address'] }<br>**Email:** ${ Northpostsep[1]['email'] }<br>**Phone:** ${ Northpostsep[1]['phone'] }<br>**Cost:** ${ Northpostsep[1]['cost'] }<br>**Blurb:** ${ Northpostsep[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northpostsep[2]['service provider'] }<br>**Service:** ${ Northpostsep[2]['service'] }<br>**Address:** ${ Northpostsep[2]['address'] }<br>**Email:** ${ Northpostsep[2]['email'] }<br>**Phone:** ${ Northpostsep[2]['phone'] }<br>**Cost:** ${ Northpostsep[2]['cost'] }<br>**Blurb:** ${ Northpostsep[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northpostsep[3]['service provider'] }<br>**Service:** ${ Northpostsep[3]['service'] }<br>**Address:** ${ Northpostsep[3]['address'] }<br>**Email:** ${ Northpostsep[3]['email'] }<br>**Phone:** ${ Northpostsep[3]['phone'] }<br>**Cost:** ${ Northpostsep[3]['cost'] }<br>**Blurb:** ${ Northpostsep[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northpostsep[4]['service provider'] }<br>**Service:** ${ Northpostsep[4]['service'] }<br>**Address:** ${ Northpostsep[4]['address'] }<br>**Email:** ${ Northpostsep[4]['email'] }<br>**Phone:** ${ Northpostsep[4]['phone'] }<br>**Cost:** ${ Northpostsep[4]['cost'] }<br>**Blurb:** ${ Northpostsep[4]['blurb'] }
+  %elif service_outcome == 57:
+  <u>**Service Provider:**</u> ${ Eastpostsep[0]['service provider'] }<br>**Service:** ${ Eastpostsep[0]['service'] }<br>**Address:** ${ Eastpostsep[0]['address'] }<br>**Email:** ${ Eastpostsep[0]['email'] }<br>**Phone:** ${ Eastpostsep[0]['phone'] }<br>**Cost:** ${ Eastpostsep[0]['cost'] }<br>**Blurb:** ${ Eastpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastpostsep[1]['service provider'] }<br>**Service:** ${ Eastpostsep[1]['service'] }<br>**Address:** ${ Eastpostsep[1]['address'] }<br>**Email:** ${ Eastpostsep[1]['email'] }<br>**Phone:** ${ Eastpostsep[1]['phone'] }<br>**Cost:** ${ Eastpostsep[1]['cost'] }<br>**Blurb:** ${ Eastpostsep[1]['blurb'] }
+  %elif service_outcome == 58:
+  <u>**Service Provider:**</u> ${ Southpostsep[0]['service provider'] }<br>**Service:** ${ Southpostsep[0]['service'] }<br>**Address:** ${ Southpostsep[0]['address'] }<br>**Email:** ${ Southpostsep[0]['email'] }<br>**Phone:** ${ Southpostsep[0]['phone'] }<br>**Cost:** ${ Southpostsep[0]['cost'] }<br>**Blurb:** ${ Southpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[1]['service provider'] }<br>**Service:** ${ Southpostsep[1]['service'] }<br>**Address:** ${ Southpostsep[1]['address'] }<br>**Email:** ${ Southpostsep[1]['email'] }<br>**Phone:** ${ Southpostsep[1]['phone'] }<br>**Cost:** ${ Southpostsep[1]['cost'] }<br>**Blurb:** ${ Southpostsep[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[2]['service provider'] }<br>**Service:** ${ Southpostsep[2]['service'] }<br>**Address:** ${ Southpostsep[2]['address'] }<br>**Email:** ${ Southpostsep[2]['email'] }<br>**Phone:** ${ Southpostsep[2]['phone'] }<br>**Cost:** ${ Southpostsep[2]['cost'] }<br>**Blurb:** ${ Southpostsep[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[3]['service provider'] }<br>**Service:** ${ Southpostsep[3]['service'] }<br>**Address:** ${ Southpostsep[3]['address'] }<br>**Email:** ${ Southpostsep[3]['email'] }<br>**Phone:** ${ Southpostsep[3]['phone'] }<br>**Cost:** ${ Southpostsep[3]['cost'] }<br>**Blurb:** ${ Southpostsep[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[4]['service provider'] }<br>**Service:** ${ Southpostsep[4]['service'] }<br>**Address:** ${ Southpostsep[4]['address'] }<br>**Email:** ${ Southpostsep[4]['email'] }<br>**Phone:** ${ Southpostsep[4]['phone'] }<br>**Cost:** ${ Southpostsep[4]['cost'] }<br>**Blurb:** ${ Southpostsep[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[5]['service provider'] }<br>**Service:** ${ Southpostsep[5]['service'] }<br>**Address:** ${ Southpostsep[5]['address'] }<br>**Email:** ${ Southpostsep[5]['email'] }<br>**Phone:** ${ Southpostsep[5]['phone'] }<br>**Cost:** ${ Southpostsep[5]['cost'] }<br>**Blurb:** ${ Southpostsep[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[6]['service provider'] }<br>**Service:** ${ Southpostsep[6]['service'] }<br>**Address:** ${ Southpostsep[6]['address'] }<br>**Email:** ${ Southpostsep[6]['email'] }<br>**Phone:** ${ Southpostsep[6]['phone'] }<br>**Cost:** ${ Southpostsep[6]['cost'] }<br>**Blurb:** ${ Southpostsep[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southpostsep[7]['service provider'] }<br>**Service:** ${ Southpostsep[7]['service'] }<br>**Address:** ${ Southpostsep[7]['address'] }<br>**Email:** ${ Southpostsep[7]['email'] }<br>**Phone:** ${ Southpostsep[7]['phone'] }<br>**Cost:** ${ Southpostsep[7]['cost'] }<br>**Blurb:** ${ Southpostsep[7]['blurb'] }
+  %elif service_outcome == 59:
+  <u>**Service Provider:**</u> ${ Westpostsep[0]['service provider'] }<br>**Service:** ${ Westpostsep[0]['service'] }<br>**Address:** ${ Westpostsep[0]['address'] }<br>**Email:** ${ Westpostsep[0]['email'] }<br>**Phone:** ${ Westpostsep[0]['phone'] }<br>**Cost:** ${ Westpostsep[0]['cost'] }<br>**Blurb:** ${ Westpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westpostsep[1]['service provider'] }<br>**Service:** ${ Westpostsep[1]['service'] }<br>**Address:** ${ Westpostsep[1]['address'] }<br>**Email:** ${ Westpostsep[1]['email'] }<br>**Phone:** ${ Westpostsep[1]['phone'] }<br>**Cost:** ${ Westpostsep[1]['cost'] }<br>**Blurb:** ${ Westpostsep[1]['blurb'] }
+  %elif service_outcome == 60:
+  <u>**Service Provider:**</u> ${ Outerpostsep[0]['service provider'] }<br>**Service:** ${ Outerpostsep[0]['service'] }<br>**Address:** ${ Outerpostsep[0]['address'] }<br>**Email:** ${ Outerpostsep[0]['email'] }<br>**Phone:** ${ Outerpostsep[0]['phone'] }<br>**Cost:** ${ Outerpostsep[0]['cost'] }<br>**Blurb:** ${ Outerpostsep[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[1]['service provider'] }<br>**Service:** ${ Outerpostsep[1]['service'] }<br>**Address:** ${ Outerpostsep[1]['address'] }<br>**Email:** ${ Outerpostsep[1]['email'] }<br>**Phone:** ${ Outerpostsep[1]['phone'] }<br>**Cost:** ${ Outerpostsep[1]['cost'] }<br>**Blurb:** ${ Outerpostsep[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[2]['service provider'] }<br>**Service:** ${ Outerpostsep[2]['service'] }<br>**Address:** ${ Outerpostsep[2]['address'] }<br>**Email:** ${ Outerpostsep[2]['email'] }<br>**Phone:** ${ Outerpostsep[2]['phone'] }<br>**Cost:** ${ Outerpostsep[2]['cost'] }<br>**Blurb:** ${ Outerpostsep[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[3]['service provider'] }<br>**Service:** ${ Outerpostsep[3]['service'] }<br>**Address:** ${ Outerpostsep[3]['address'] }<br>**Email:** ${ Outerpostsep[3]['email'] }<br>**Phone:** ${ Outerpostsep[3]['phone'] }<br>**Cost:** ${ Outerpostsep[3]['cost'] }<br>**Blurb:** ${ Outerpostsep[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[4]['service provider'] }<br>**Service:** ${ Outerpostsep[4]['service'] }<br>**Address:** ${ Outerpostsep[4]['address'] }<br>**Email:** ${ Outerpostsep[4]['email'] }<br>**Phone:** ${ Outerpostsep[4]['phone'] }<br>**Cost:** ${ Outerpostsep[4]['cost'] }<br>**Blurb:** ${ Outerpostsep[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[5]['service provider'] }<br>**Service:** ${ Outerpostsep[5]['service'] }<br>**Address:** ${ Outerpostsep[5]['address'] }<br>**Email:** ${ Outerpostsep[5]['email'] }<br>**Phone:** ${ Outerpostsep[5]['phone'] }<br>**Cost:** ${ Outerpostsep[5]['cost'] }<br>**Blurb:** ${ Outerpostsep[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[6]['service provider'] }<br>**Service:** ${ Outerpostsep[6]['service'] }<br>**Address:** ${ Outerpostsep[6]['address'] }<br>**Email:** ${ Outerpostsep[6]['email'] }<br>**Phone:** ${ Outerpostsep[6]['phone'] }<br>**Cost:** ${ Outerpostsep[6]['cost'] }<br>**Blurb:** ${ Outerpostsep[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[7]['service provider'] }<br>**Service:** ${ Outerpostsep[7]['service'] }<br>**Address:** ${ Outerpostsep[7]['address'] }<br>**Email:** ${ Outerpostsep[7]['email'] }<br>**Phone:** ${ Outerpostsep[7]['phone'] }<br>**Cost:** ${ Outerpostsep[7]['cost'] }<br>**Blurb:** ${ Outerpostsep[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[8]['service provider'] }<br>**Service:** ${ Outerpostsep[8]['service'] }<br>**Address:** ${ Outerpostsep[8]['address'] }<br>**Email:** ${ Outerpostsep[8]['email'] }<br>**Phone:** ${ Outerpostsep[8]['phone'] }<br>**Cost:** ${ Outerpostsep[8]['cost'] }<br>**Blurb:** ${ Outerpostsep[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerpostsep[9]['service provider'] }<br>**Service:** ${ Outerpostsep[9]['service'] }<br>**Address:** ${ Outerpostsep[9]['address'] }<br>**Email:** ${ Outerpostsep[9]['email'] }<br>**Phone:** ${ Outerpostsep[9]['phone'] }<br>**Cost:** ${ Outerpostsep[9]['cost'] }<br>**Blurb:** ${ Outerpostsep[9]['blurb'] }
+  %elif service_outcome == 61:
+  <u>**Service Provider:**</u> ${ CBDbehaviour[0]['service provider'] }<br>**Service:** ${ CBDbehaviour[0]['service'] }<br>**Address:** ${ CBDbehaviour[0]['address'] }<br>**Email:** ${ CBDbehaviour[0]['email'] }<br>**Phone:** ${ CBDbehaviour[0]['phone'] }<br>**Cost:** ${ CBDbehaviour[0]['cost'] }<br>**Blurb:** ${ CBDbehaviour[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDbehaviour[1]['service provider'] }<br>**Service:** ${ CBDbehaviour[1]['service'] }<br>**Address:** ${ CBDbehaviour[1]['address'] }<br>**Email:** ${ CBDbehaviour[1]['email'] }<br>**Phone:** ${ CBDbehaviour[1]['phone'] }<br>**Cost:** ${ CBDbehaviour[1]['cost'] }<br>**Blurb:** ${ CBDbehaviour[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDbehaviour[2]['service provider'] }<br>**Service:** ${ CBDbehaviour[2]['service'] }<br>**Address:** ${ CBDbehaviour[2]['address'] }<br>**Email:** ${ CBDbehaviour[2]['email'] }<br>**Phone:** ${ CBDbehaviour[2]['phone'] }<br>**Cost:** ${ CBDbehaviour[2]['cost'] }<br>**Blurb:** ${ CBDbehaviour[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDbehaviour[3]['service provider'] }<br>**Service:** ${ CBDbehaviour[3]['service'] }<br>**Address:** ${ CBDbehaviour[3]['address'] }<br>**Email:** ${ CBDbehaviour[3]['email'] }<br>**Phone:** ${ CBDbehaviour[3]['phone'] }<br>**Cost:** ${ CBDbehaviour[3]['cost'] }<br>**Blurb:** ${ CBDbehaviour[3]['blurb'] }
+  %elif service_outcome == 62:
+  <u>**Service Provider:**</u> ${ Northbehaviour[0]['service provider'] }<br>**Service:** ${ Northbehaviour[0]['service'] }<br>**Address:** ${ Northbehaviour[0]['address'] }<br>**Email:** ${ Northbehaviour[0]['email'] }<br>**Phone:** ${ Northbehaviour[0]['phone'] }<br>**Cost:** ${ Northbehaviour[0]['cost'] }<br>**Blurb:** ${ Northbehaviour[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northbehaviour[1]['service provider'] }<br>**Service:** ${ Northbehaviour[1]['service'] }<br>**Address:** ${ Northbehaviour[1]['address'] }<br>**Email:** ${ Northbehaviour[1]['email'] }<br>**Phone:** ${ Northbehaviour[1]['phone'] }<br>**Cost:** ${ Northbehaviour[1]['cost'] }<br>**Blurb:** ${ Northbehaviour[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northbehaviour[2]['service provider'] }<br>**Service:** ${ Northbehaviour[2]['service'] }<br>**Address:** ${ Northbehaviour[2]['address'] }<br>**Email:** ${ Northbehaviour[2]['email'] }<br>**Phone:** ${ Northbehaviour[2]['phone'] }<br>**Cost:** ${ Northbehaviour[2]['cost'] }<br>**Blurb:** ${ Northbehaviour[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northbehaviour[3]['service provider'] }<br>**Service:** ${ Northbehaviour[3]['service'] }<br>**Address:** ${ Northbehaviour[3]['address'] }<br>**Email:** ${ Northbehaviour[3]['email'] }<br>**Phone:** ${ Northbehaviour[3]['phone'] }<br>**Cost:** ${ Northbehaviour[3]['cost'] }<br>**Blurb:** ${ Northbehaviour[3]['blurb'] }
+  %elif service_outcome == 63:
+  <u>**Service Provider:**</u> ${ Eastbehaviour[0]['service provider'] }<br>**Service:** ${ Eastbehaviour[0]['service'] }<br>**Address:** ${ Eastbehaviour[0]['address'] }<br>**Email:** ${ Eastbehaviour[0]['email'] }<br>**Phone:** ${ Eastbehaviour[0]['phone'] }<br>**Cost:** ${ Eastbehaviour[0]['cost'] }<br>**Blurb:** ${ Eastbehaviour[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastbehaviour[1]['service provider'] }<br>**Service:** ${ Eastbehaviour[1]['service'] }<br>**Address:** ${ Eastbehaviour[1]['address'] }<br>**Email:** ${ Eastbehaviour[1]['email'] }<br>**Phone:** ${ Eastbehaviour[1]['phone'] }<br>**Cost:** ${ Eastbehaviour[1]['cost'] }<br>**Blurb:** ${ Eastbehaviour[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastbehaviour[2]['service provider'] }<br>**Service:** ${ Eastbehaviour[2]['service'] }<br>**Address:** ${ Eastbehaviour[2]['address'] }<br>**Email:** ${ Eastbehaviour[2]['email'] }<br>**Phone:** ${ Eastbehaviour[2]['phone'] }<br>**Cost:** ${ Eastbehaviour[2]['cost'] }<br>**Blurb:** ${ Eastbehaviour[2]['blurb'] }
+  %elif service_outcome == 64:
+  <u>**Service Provider:**</u> ${ Southbehaviour[0]['service provider'] }<br>**Service:** ${ Southbehaviour[0]['service'] }<br>**Address:** ${ Southbehaviour[0]['address'] }<br>**Email:** ${ Southbehaviour[0]['email'] }<br>**Phone:** ${ Southbehaviour[0]['phone'] }<br>**Cost:** ${ Southbehaviour[0]['cost'] }<br>**Blurb:** ${ Southbehaviour[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southbehaviour[1]['service provider'] }<br>**Service:** ${ Southbehaviour[1]['service'] }<br>**Address:** ${ Southbehaviour[1]['address'] }<br>**Email:** ${ Southbehaviour[1]['email'] }<br>**Phone:** ${ Southbehaviour[1]['phone'] }<br>**Cost:** ${ Southbehaviour[1]['cost'] }<br>**Blurb:** ${ Southbehaviour[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southbehaviour[2]['service provider'] }<br>**Service:** ${ Southbehaviour[2]['service'] }<br>**Address:** ${ Southbehaviour[2]['address'] }<br>**Email:** ${ Southbehaviour[2]['email'] }<br>**Phone:** ${ Southbehaviour[2]['phone'] }<br>**Cost:** ${ Southbehaviour[2]['cost'] }<br>**Blurb:** ${ Southbehaviour[1]['blurb'] }
+  %elif service_outcome == 65:
+  <u>**Service Provider:**</u> ${ Westbehaviour[0]['service provider'] }<br>**Service:** ${ Westbehaviour[0]['service'] }<br>**Address:** ${ Westbehaviour[0]['address'] }<br>**Email:** ${ Westbehaviour[0]['email'] }<br>**Phone:** ${ Westbehaviour[0]['phone'] }<br>**Cost:** ${ Westbehaviour[0]['cost'] }<br>**Blurb:** ${ Westbehaviour[0]['blurb'] }
+  %elif service_outcome == 66:
+  <u>**Service Provider:**</u> ${ Outerbehaviour[0]['service provider'] }<br>**Service:** ${ Outerbehaviour[0]['service'] }<br>**Address:** ${ Outerbehaviour[0]['address'] }<br>**Email:** ${ Outerbehaviour[0]['email'] }<br>**Phone:** ${ Outerbehaviour[0]['phone'] }<br>**Cost:** ${ Outerbehaviour[0]['cost'] }<br>**Blurb:** ${ Outerbehaviour[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerbehaviour[1]['service provider'] }<br>**Service:** ${ Outerbehaviour[1]['service'] }<br>**Address:** ${ Outerbehaviour[1]['address'] }<br>**Email:** ${ Outerbehaviour[1]['email'] }<br>**Phone:** ${ Outerbehaviour[1]['phone'] }<br>**Cost:** ${ Outerbehaviour[1]['cost'] }<br>**Blurb:** ${ Outerbehaviour[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerbehaviour[2]['service provider'] }<br>**Service:** ${ Outerbehaviour[2]['service'] }<br>**Address:** ${ Outerbehaviour[2]['address'] }<br>**Email:** ${ Outerbehaviour[2]['email'] }<br>**Phone:** ${ Outerbehaviour[2]['phone'] }<br>**Cost:** ${ Outerbehaviour[2]['cost'] }<br>**Blurb:** ${ Outerbehaviour[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outerbehaviour[3]['service provider'] }<br>**Service:** ${ Outerbehaviour[3]['service'] }<br>**Address:** ${ Outerbehaviour[3]['address'] }<br>**Email:** ${ Outerbehaviour[3]['email'] }<br>**Phone:** ${ Outerbehaviour[3]['phone'] }<br>**Cost:** ${ Outerbehaviour[3]['cost'] }<br>**Blurb:** ${ Outerbehaviour[3]['blurb'] }
+  %elif service_outcome == 67:
+  <u>**Service Provider:**</u> ${ CBDmental[0]['service provider'] }<br>**Service:** ${ CBDmental[0]['service'] }<br>**Address:** ${ CBDmental[0]['address'] }<br>**Email:** ${ CBDmental[0]['email'] }<br>**Phone:** ${ CBDmental[0]['phone'] }<br>**Cost:** ${ CBDmental[0]['cost'] }<br>**Blurb:** ${ CBDmental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[1]['service provider'] }<br>**Service:** ${ CBDmental[1]['service'] }<br>**Address:** ${ CBDmental[1]['address'] }<br>**Email:** ${ CBDmental[1]['email'] }<br>**Phone:** ${ CBDmental[1]['phone'] }<br>**Cost:** ${ CBDmental[1]['cost'] }<br>**Blurb:** ${ CBDmental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[2]['service provider'] }<br>**Service:** ${ CBDmental[2]['service'] }<br>**Address:** ${ CBDmental[2]['address'] }<br>**Email:** ${ CBDmental[2]['email'] }<br>**Phone:** ${ CBDmental[2]['phone'] }<br>**Cost:** ${ CBDmental[2]['cost'] }<br>**Blurb:** ${ CBDmental[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[3]['service provider'] }<br>**Service:** ${ CBDmental[3]['service'] }<br>**Address:** ${ CBDmental[3]['address'] }<br>**Email:** ${ CBDmental[3]['email'] }<br>**Phone:** ${ CBDmental[3]['phone'] }<br>**Cost:** ${ CBDmental[3]['cost'] }<br>**Blurb:** ${ CBDmental[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[4]['service provider'] }<br>**Service:** ${ CBDmental[4]['service'] }<br>**Address:** ${ CBDmental[4]['address'] }<br>**Email:** ${ CBDmental[4]['email'] }<br>**Phone:** ${ CBDmental[4]['phone'] }<br>**Cost:** ${ CBDmental[4]['cost'] }<br>**Blurb:** ${ CBDmental[4]['blurb'] }
+ 
+  <u>**Service Provider:**</u> ${ CBDmental[5]['service provider'] }<br>**Service:** ${ CBDmental[5]['service'] }<br>**Address:** ${ CBDmental[5]['address'] }<br>**Email:** ${ CBDmental[5]['email'] }<br>**Phone:** ${ CBDmental[5]['phone'] }<br>**Cost:** ${ CBDmental[5]['cost'] }<br>**Blurb:** ${ CBDmental[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[6]['service provider'] }<br>**Service:** ${ CBDmental[6]['service'] }<br>**Address:** ${ CBDmental[6]['address'] }<br>**Email:** ${ CBDmental[6]['email'] }<br>**Phone:** ${ CBDmental[6]['phone'] }<br>**Cost:** ${ CBDmental[6]['cost'] }<br>**Blurb:** ${ CBDmental[6]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[7]['service provider'] }<br>**Service:** ${ CBDmental[7]['service'] }<br>**Address:** ${ CBDmental[7]['address'] }<br>**Email:** ${ CBDmental[7]['email'] }<br>**Phone:** ${ CBDmental[7]['phone'] }<br>**Cost:** ${ CBDmental[7]['cost'] }<br>**Blurb:** ${ CBDmental[7]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[8]['service provider'] }<br>**Service:** ${ CBDmental[8]['service'] }<br>**Address:** ${ CBDmental[8]['address'] }<br>**Email:** ${ CBDmental[8]['email'] }<br>**Phone:** ${ CBDmental[8]['phone'] }<br>**Cost:** ${ CBDmental[8]['cost'] }<br>**Blurb:** ${ CBDmental[8]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDmental[9]['service provider'] }<br>**Service:** ${ CBDmental[9]['service'] }<br>**Address:** ${ CBDmental[9]['address'] }<br>**Email:** ${ CBDmental[9]['email'] }<br>**Phone:** ${ CBDmental[9]['phone'] }<br>**Cost:** ${ CBDmental[9]['cost'] }<br>**Blurb:** ${ CBDmental[9]['blurb'] }
+  %elif service_outcome == 68:
+  <u>**Service Provider:**</u> ${ Northmental[0]['service provider'] }<br>**Service:** ${ Northmental[0]['service'] }<br>**Address:** ${ Northmental[0]['address'] }<br>**Email:** ${ Northmental[0]['email'] }<br>**Phone:** ${ Northmental[0]['phone'] }<br>**Cost:** ${ Northmental[0]['cost'] }<br>**Blurb:** ${ Northmental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[1]['service provider'] }<br>**Service:** ${ Northmental[1]['service'] }<br>**Address:** ${ Northmental[1]['address'] }<br>**Email:** ${ Northmental[1]['email'] }<br>**Phone:** ${ Northmental[1]['phone'] }<br>**Cost:** ${ Northmental[1]['cost'] }<br>**Blurb:** ${ Northmental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[2]['service provider'] }<br>**Service:** ${ Northmental[2]['service'] }<br>**Address:** ${ Northmental[2]['address'] }<br>**Email:** ${ Northmental[2]['email'] }<br>**Phone:** ${ Northmental[2]['phone'] }<br>**Cost:** ${ Northmental[2]['cost'] }<br>**Blurb:** ${ Northmental[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[3]['service provider'] }<br>**Service:** ${ Northmental[3]['service'] }<br>**Address:** ${ Northmental[3]['address'] }<br>**Email:** ${ Northmental[3]['email'] }<br>**Phone:** ${ Northmental[3]['phone'] }<br>**Cost:** ${ Northmental[3]['cost'] }<br>**Blurb:** ${ Northmental[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[4]['service provider'] }<br>**Service:** ${ Northmental[4]['service'] }<br>**Address:** ${ Northmental[4]['address'] }<br>**Email:** ${ Northmental[4]['email'] }<br>**Phone:** ${ Northmental[4]['phone'] }<br>**Cost:** ${ Northmental[4]['cost'] }<br>**Blurb:** ${ Northmental[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[5]['service provider'] }<br>**Service:** ${ Northmental[5]['service'] }<br>**Address:** ${ Northmental[5]['address'] }<br>**Email:** ${ Northmental[5]['email'] }<br>**Phone:** ${ Northmental[5]['phone'] }<br>**Cost:** ${ Northmental[5]['cost'] }<br>**Blurb:** ${ Northmental[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northmental[6]['service provider'] }<br>**Service:** ${ Northmental[6]['service'] }<br>**Address:** ${ Northmental[6]['address'] }<br>**Email:** ${ Northmental[6]['email'] }<br>**Phone:** ${ Northmental[6]['phone'] }<br>**Cost:** ${ Northmental[6]['cost'] }<br>**Blurb:** ${ Northmental[6]['blurb'] }
+  %elif service_outcome == 69:
+  <u>**Service Provider:**</u> ${ Eastmental[0]['service provider'] }<br>**Service:** ${ Eastmental[0]['service'] }<br>**Address:** ${ Eastmental[0]['address'] }<br>**Email:** ${ Eastmental[0]['email'] }<br>**Phone:** ${ Eastmental[0]['phone'] }<br>**Cost:** ${ Eastmental[0]['cost'] }<br>**Blurb:** ${ Eastmental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastmental[1]['service provider'] }<br>**Service:** ${ Eastmental[1]['service'] }<br>**Address:** ${ Eastmental[1]['address'] }<br>**Email:** ${ Eastmental[1]['email'] }<br>**Phone:** ${ Eastmental[1]['phone'] }<br>**Cost:** ${ Eastmental[1]['cost'] }<br>**Blurb:** ${ Eastmental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastmental[2]['service provider'] }<br>**Service:** ${ Eastmental[2]['service'] }<br>**Address:** ${ Eastmental[2]['address'] }<br>**Email:** ${ Eastmental[2]['email'] }<br>**Phone:** ${ Eastmental[2]['phone'] }<br>**Cost:** ${ Eastmental[2]['cost'] }<br>**Blurb:** ${ Eastmental[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastmental[3]['service provider'] }<br>**Service:** ${ Eastmental[3]['service'] }<br>**Address:** ${ Eastmental[3]['address'] }<br>**Email:** ${ Eastmental[3]['email'] }<br>**Phone:** ${ Eastmental[3]['phone'] }<br>**Cost:** ${ Eastmental[3]['cost'] }<br>**Blurb:** ${ Eastmental[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastmental[4]['service provider'] }<br>**Service:** ${ Eastmental[4]['service'] }<br>**Address:** ${ Eastmental[4]['address'] }<br>**Email:** ${ Eastmental[4]['email'] }<br>**Phone:** ${ Eastmental[4]['phone'] }<br>**Cost:** ${ Eastmental[4]['cost'] }<br>**Blurb:** ${ Eastmental[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastmental[5]['service provider'] }<br>**Service:** ${ Eastmental[5]['service'] }<br>**Address:** ${ Eastmental[5]['address'] }<br>**Email:** ${ Eastmental[5]['email'] }<br>**Phone:** ${ Eastmental[5]['phone'] }<br>**Cost:** ${ Eastmental[5]['cost'] }<br>**Blurb:** ${ Eastmental[5]['blurb'] }
+  %elif service_outcome == 70:
+  <u>**Service Provider:**</u> ${ Southmental[0]['service provider'] }<br>**Service:** ${ Southmental[0]['service'] }<br>**Address:** ${ Southmental[0]['address'] }<br>**Email:** ${ Southmental[0]['email'] }<br>**Phone:** ${ Southmental[0]['phone'] }<br>**Cost:** ${ Southmental[0]['cost'] }<br>**Blurb:** ${ Southmental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[1]['service provider'] }<br>**Service:** ${ Southmental[1]['service'] }<br>**Address:** ${ Southmental[1]['address'] }<br>**Email:** ${ Southmental[1]['email'] }<br>**Phone:** ${ Southmental[1]['phone'] }<br>**Cost:** ${ Southmental[1]['cost'] }<br>**Blurb:** ${ Southmental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[2]['service provider'] }<br>**Service:** ${ Southmental[2]['service'] }<br>**Address:** ${ Southmental[2]['address'] }<br>**Email:** ${ Southmental[2]['email'] }<br>**Phone:** ${ Southmental[2]['phone'] }<br>**Cost:** ${ Southmental[2]['cost'] }<br>**Blurb:** ${ Southmental[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[3]['service provider'] }<br>**Service:** ${ Southmental[3]['service'] }<br>**Address:** ${ Southmental[3]['address'] }<br>**Email:** ${ Southmental[3]['email'] }<br>**Phone:** ${ Southmental[3]['phone'] }<br>**Cost:** ${ Southmental[3]['cost'] }<br>**Blurb:** ${ Southmental[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[4]['service provider'] }<br>**Service:** ${ Southmental[4]['service'] }<br>**Address:** ${ Southmental[4]['address'] }<br>**Email:** ${ Southmental[4]['email'] }<br>**Phone:** ${ Southmental[4]['phone'] }<br>**Cost:** ${ Southmental[4]['cost'] }<br>**Blurb:** ${ Southmental[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[5]['service provider'] }<br>**Service:** ${ Southmental[5]['service'] }<br>**Address:** ${ Southmental[5]['address'] }<br>**Email:** ${ Southmental[5]['email'] }<br>**Phone:** ${ Southmental[5]['phone'] }<br>**Cost:** ${ Southmental[5]['cost'] }<br>**Blurb:** ${ Southmental[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southmental[6]['service provider'] }<br>**Service:** ${ Southmental[6]['service'] }<br>**Address:** ${ Southmental[6]['address'] }<br>**Email:** ${ Southmental[6]['email'] }<br>**Phone:** ${ Southmental[6]['phone'] }<br>**Cost:** ${ Southmental[6]['cost'] }<br>**Blurb:** ${ Southmental[6]['blurb'] }
+  %elif service_outcome == 71:
+  <u>**Service Provider:**</u> ${ Westmental[0]['service provider'] }<br>**Service:** ${ Westmental[0]['service'] }<br>**Address:** ${ Westmental[0]['address'] }<br>**Email:** ${ Westmental[0]['email'] }<br>**Phone:** ${ Westmental[0]['phone'] }<br>**Cost:** ${ Westmental[0]['cost'] }<br>**Blurb:** ${ Westmental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmental[1]['service provider'] }<br>**Service:** ${ Westmental[1]['service'] }<br>**Address:** ${ Westmental[1]['address'] }<br>**Email:** ${ Westmental[1]['email'] }<br>**Phone:** ${ Westmental[1]['phone'] }<br>**Cost:** ${ Westmental[1]['cost'] }<br>**Blurb:** ${ Westmental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmental[2]['service provider'] }<br>**Service:** ${ Westmental[2]['service'] }<br>**Address:** ${ Westmental[2]['address'] }<br>**Email:** ${ Westmental[2]['email'] }<br>**Phone:** ${ Westmental[2]['phone'] }<br>**Cost:** ${ Westmental[2]['cost'] }<br>**Blurb:** ${ Westmental[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmental[3]['service provider'] }<br>**Service:** ${ Westmental[3]['service'] }<br>**Address:** ${ Westmental[3]['address'] }<br>**Email:** ${ Westmental[3]['email'] }<br>**Phone:** ${ Westmental[3]['phone'] }<br>**Cost:** ${ Westmental[3]['cost'] }<br>**Blurb:** ${ Westmental[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmental[4]['service provider'] }<br>**Service:** ${ Westmental[4]['service'] }<br>**Address:** ${ Westmental[4]['address'] }<br>**Email:** ${ Westmental[4]['email'] }<br>**Phone:** ${ Westmental[4]['phone'] }<br>**Cost:** ${ Westmental[4]['cost'] }<br>**Blurb:** ${ Westmental[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westmental[5]['service provider'] }<br>**Service:** ${ Westmental[5]['service'] }<br>**Address:** ${ Westmental[5]['address'] }<br>**Email:** ${ Westmental[5]['email'] }<br>**Phone:** ${ Westmental[5]['phone'] }<br>**Cost:** ${ Westmental[5]['cost'] }<br>**Blurb:** ${ Westmental[5]['blurb'] }
+  %elif service_outcome == 72:
+  <u>**Service Provider:**</u> ${ Outermental[0]['service provider'] }<br>**Service:** ${ Outermental[0]['service'] }<br>**Address:** ${ Outermental[0]['address'] }<br>**Email:** ${ Outermental[0]['email'] }<br>**Phone:** ${ Outermental[0]['phone'] }<br>**Cost:** ${ Outermental[0]['cost'] }<br>**Blurb:** ${ Outermental[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outermental[1]['service provider'] }<br>**Service:** ${ Outermental[1]['service'] }<br>**Address:** ${ Outermental[1]['address'] }<br>**Email:** ${ Outermental[1]['email'] }<br>**Phone:** ${ Outermental[1]['phone'] }<br>**Cost:** ${ Outermental[1]['cost'] }<br>**Blurb:** ${ Outermental[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Outermental[2]['service provider'] }<br>**Service:** ${ Outermental[2]['service'] }<br>**Address:** ${ Outermental[2]['address'] }<br>**Email:** ${ Outermental[2]['email'] }<br>**Phone:** ${ Outermental[2]['phone'] }<br>**Cost:** ${ Outermental[2]['cost'] }<br>**Blurb:** ${ Outermental[2]['blurb'] }
+  %elif service_outcome == 73:
+  <u>**Service Provider:**</u> ${ CBDdomestic[0]['service provider'] }<br>**Service:** ${ CBDdomestic[0]['service'] }<br>**Address:** ${ CBDdomestic[0]['address'] }<br>**Email:** ${ CBDdomestic[0]['email'] }<br>**Phone:** ${ CBDdomestic[0]['phone'] }<br>**Cost:** ${ CBDdomestic[0]['cost'] }<br>**Blurb:** ${ CBDdomestic[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdomestic[1]['service provider'] }<br>**Service:** ${ CBDdomestic[1]['service'] }<br>**Address:** ${ CBDdomestic[1]['address'] }<br>**Email:** ${ CBDdomestic[1]['email'] }<br>**Phone:** ${ CBDdomestic[1]['phone'] }<br>**Cost:** ${ CBDdomestic[1]['cost'] }<br>**Blurb:** ${ CBDdomestic[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdomestic[2]['service provider'] }<br>**Service:** ${ CBDdomestic[2]['service'] }<br>**Address:** ${ CBDdomestic[2]['address'] }<br>**Email:** ${ CBDdomestic[2]['email'] }<br>**Phone:** ${ CBDdomestic[2]['phone'] }<br>**Cost:** ${ CBDdomestic[2]['cost'] }<br>**Blurb:** ${ CBDdomestic[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdomestic[3]['service provider'] }<br>**Service:** ${ CBDdomestic[3]['service'] }<br>**Address:** ${ CBDdomestic[3]['address'] }<br>**Email:** ${ CBDdomestic[3]['email'] }<br>**Phone:** ${ CBDdomestic[3]['phone'] }<br>**Cost:** ${ CBDdomestic[3]['cost'] }<br>**Blurb:** ${ CBDdomestic[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdomestic[4]['service provider'] }<br>**Service:** ${ CBDdomestic[4]['service'] }<br>**Address:** ${ CBDdomestic[4]['address'] }<br>**Email:** ${ CBDdomestic[4]['email'] }<br>**Phone:** ${ CBDdomestic[4]['phone'] }<br>**Cost:** ${ CBDdomestic[4]['cost'] }<br>**Blurb:** ${ CBDdomestic[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdomestic[5]['service provider'] }<br>**Service:** ${ CBDdomestic[5]['service'] }<br>**Address:** ${ CBDdomestic[5]['address'] }<br>**Email:** ${ CBDdomestic[5]['email'] }<br>**Phone:** ${ CBDdomestic[5]['phone'] }<br>**Cost:** ${ CBDdomestic[5]['cost'] }<br>**Blurb:** ${ CBDdomestic[5]['blurb'] }
+  
+  <u>**Service Provider:**</u> ${ CBDdomestic[6]['service provider'] }<br>**Service:** ${ CBDdomestic[6]['service'] }<br>**Address:** ${ CBDdomestic[6]['address'] }<br>**Email:** ${ CBDdomestic[6]['email'] }<br>**Phone:** ${ CBDdomestic[6]['phone'] }<br>**Cost:** ${ CBDdomestic[6]['cost'] }<br>**Blurb:** ${ CBDdomestic[6]['blurb'] }
+  %elif service_outcome == 74:
+  <u>**Service Provider:**</u> ${ Northdomestic[0]['service provider'] }<br>**Service:** ${ Northdomestic[0]['service'] }<br>**Address:** ${ Northdomestic[0]['address'] }<br>**Email:** ${ Northdomestic[0]['email'] }<br>**Phone:** ${ Northdomestic[0]['phone'] }<br>**Cost:** ${ Northdomestic[0]['cost'] }<br>**Blurb:** ${ Northdomestic[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northdomestic[1]['service provider'] }<br>**Service:** ${ Northdomestic[1]['service'] }<br>**Address:** ${ Northdomestic[1]['address'] }<br>**Email:** ${ Northdomestic[1]['email'] }<br>**Phone:** ${ Northdomestic[1]['phone'] }<br>**Cost:** ${ Northdomestic[1]['cost'] }<br>**Blurb:** ${ Northdomestic[1]['blurb'] }
+  %elif service_outcome == 75:
+  <u>**Service Provider:**</u> ${ Eastdomestic[0]['service provider'] }<br>**Service:** ${ Eastdomestic[0]['service'] }<br>**Address:** ${ Eastdomestic[0]['address'] }<br>**Email:** ${ Eastdomestic[0]['email'] }<br>**Phone:** ${ Eastdomestic[0]['phone'] }<br>**Cost:** ${ Eastdomestic[0]['cost'] }<br>**Blurb:** ${ Eastdomestic[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastdomestic[1]['service provider'] }<br>**Service:** ${ Eastdomestic[1]['service'] }<br>**Address:** ${ Eastdomestic[1]['address'] }<br>**Email:** ${ Eastdomestic[1]['email'] }<br>**Phone:** ${ Eastdomestic[1]['phone'] }<br>**Cost:** ${ Eastdomestic[1]['cost'] }<br>**Blurb:** ${ Eastdomestic[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastdomestic[2]['service provider'] }<br>**Service:** ${ Eastdomestic[2]['service'] }<br>**Address:** ${ Eastdomestic[2]['address'] }<br>**Email:** ${ Eastdomestic[2]['email'] }<br>**Phone:** ${ Eastdomestic[2]['phone'] }<br>**Cost:** ${ Eastdomestic[2]['cost'] }<br>**Blurb:** ${ Eastdomestic[2]['blurb'] }
+  %elif service_outcome == 76:
+  <u>**Service Provider:**</u> ${ Southdomestic[0]['service provider'] }<br>**Service:** ${ Southdomestic[0]['service'] }<br>**Address:** ${ Southdomestic[0]['address'] }<br>**Email:** ${ Southdomestic[0]['email'] }<br>**Phone:** ${ Southdomestic[0]['phone'] }<br>**Cost:** ${ Southdomestic[0]['cost'] }<br>**Blurb:** ${ Southdomestic[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[1]['service provider'] }<br>**Service:** ${ Southdomestic[1]['service'] }<br>**Address:** ${ Southdomestic[1]['address'] }<br>**Email:** ${ Southdomestic[1]['email'] }<br>**Phone:** ${ Southdomestic[1]['phone'] }<br>**Cost:** ${ Southdomestic[1]['cost'] }<br>**Blurb:** ${ Southdomestic[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[2]['service provider'] }<br>**Service:** ${ Southdomestic[2]['service'] }<br>**Address:** ${ Southdomestic[2]['address'] }<br>**Email:** ${ Southdomestic[2]['email'] }<br>**Phone:** ${ Southdomestic[2]['phone'] }<br>**Cost:** ${ Southdomestic[2]['cost'] }<br>**Blurb:** ${ Southdomestic[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[3]['service provider'] }<br>**Service:** ${ Southdomestic[3]['service'] }<br>**Address:** ${ Southdomestic[3]['address'] }<br>**Email:** ${ Southdomestic[3]['email'] }<br>**Phone:** ${ Southdomestic[3]['phone'] }<br>**Cost:** ${ Southdomestic[3]['cost'] }<br>**Blurb:** ${ Southdomestic[3]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[4]['service provider'] }<br>**Service:** ${ Southdomestic[4]['service'] }<br>**Address:** ${ Southdomestic[4]['address'] }<br>**Email:** ${ Southdomestic[4]['email'] }<br>**Phone:** ${ Southdomestic[4]['phone'] }<br>**Cost:** ${ Southdomestic[4]['cost'] }<br>**Blurb:** ${ Southdomestic[4]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[5]['service provider'] }<br>**Service:** ${ Southdomestic[5]['service'] }<br>**Address:** ${ Southdomestic[5]['address'] }<br>**Email:** ${ Southdomestic[5]['email'] }<br>**Phone:** ${ Southdomestic[5]['phone'] }<br>**Cost:** ${ Southdomestic[5]['cost'] }<br>**Blurb:** ${ Southdomestic[5]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdomestic[6]['service provider'] }<br>**Service:** ${ Southdomestic[6]['service'] }<br>**Address:** ${ Southdomestic[6]['address'] }<br>**Email:** ${ Southdomestic[6]['email'] }<br>**Phone:** ${ Southdomestic[6]['phone'] }<br>**Cost:** ${ Southdomestic[6]['cost'] }<br>**Blurb:** ${ Southdomestic[6]['blurb'] }
+  %elif service_outcome == 77:
+  <u>**Service Provider:**</u> ${ Westdomestic[0]['service provider'] }<br>**Service:** ${ Westdomestic[0]['service'] }<br>**Address:** ${ Westdomestic[0]['address'] }<br>**Email:** ${ Westdomestic[0]['email'] }<br>**Phone:** ${ Westdomestic[0]['phone'] }<br>**Cost:** ${ Westdomestic[0]['cost'] }<br>**Blurb:** ${ Westdomestic[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westdomestic[1]['service provider'] }<br>**Service:** ${ Westdomestic[1]['service'] }<br>**Address:** ${ Westdomestic[1]['address'] }<br>**Email:** ${ Westdomestic[1]['email'] }<br>**Phone:** ${ Westdomestic[1]['phone'] }<br>**Cost:** ${ Westdomestic[1]['cost'] }<br>**Blurb:** ${ Westdomestic[1]['blurb'] }
+  %elif service_outcome == 78:
+    ${ Outerdomestic }
+  %elif service_outcome == 79:
+  <u>**Service Provider:**</u> ${ CBDcourt[0]['service provider'] }<br>**Service:** ${ CBDcourt[0]['service'] }<br>**Address:** ${ CBDcourt[0]['address'] }<br>**Email:** ${ CBDcourt[0]['email'] }<br>**Phone:** ${ CBDcourt[0]['phone'] }<br>**Cost:** ${ CBDcourt[0]['cost'] }<br>**Blurb:** ${ CBDcourt[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourt[1]['service provider'] }<br>**Service:** ${ CBDcourt[1]['service'] }<br>**Address:** ${ CBDcourt[1]['address'] }<br>**Email:** ${ CBDcourt[1]['email'] }<br>**Phone:** ${ CBDcourt[1]['phone'] }<br>**Cost:** ${ CBDcourt[1]['cost'] }<br>**Blurb:** ${ CBDcourt[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDcourt[2]['service provider'] }<br>**Service:** ${ CBDcourt[2]['service'] }<br>**Address:** ${ CBDcourt[2]['address'] }<br>**Email:** ${ CBDcourt[2]['email'] }<br>**Phone:** ${ CBDcourt[2]['phone'] }<br>**Cost:** ${ CBDcourt[2]['cost'] }<br>**Blurb:** ${ CBDcourt[2]['blurb'] }
+  %elif service_outcome == 80:
+  <u>**Service Provider:**</u> ${ Northcourt[0]['service provider'] }<br>**Service:** ${ Northcourt[0]['service'] }<br>**Address:** ${ Northcourt[0]['address'] }<br>**Email:** ${ Northcourt[0]['email'] }<br>**Phone:** ${ Northcourt[0]['phone'] }<br>**Cost:** ${ Northcourt[0]['cost'] }<br>**Blurb:** ${ Northcourt[0]['blurb'] }
+  %elif service_outcome == 81:
+  <u>**Service Provider:**</u> ${ Eastcourt[0]['service provider'] }<br>**Service:** ${ Eastcourt[0]['service'] }<br>**Address:** ${ Eastcourt[0]['address'] }<br>**Email:** ${ Eastcourt[0]['email'] }<br>**Phone:** ${ Eastcourt[0]['phone'] }<br>**Cost:** ${ Eastcourt[0]['cost'] }<br>**Blurb:** ${ Eastcourt[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Eastcourt[1]['service provider'] }<br>**Service:** ${ Eastcourt[1]['service'] }<br>**Address:** ${ Eastcourt[1]['address'] }<br>**Email:** ${ Eastcourt[1]['email'] }<br>**Phone:** ${ Eastcourt[1]['phone'] }<br>**Cost:** ${ Eastcourt[1]['cost'] }<br>**Blurb:** ${ Eastcourt[1]['blurb'] }
+  %elif service_outcome == 82:
+  <u>**Service Provider:**</u> ${ Southcourt[0]['service provider'] }<br>**Service:** ${ Southcourt[0]['service'] }<br>**Address:** ${ Southcourt[0]['address'] }<br>**Email:** ${ Southcourt[0]['email'] }<br>**Phone:** ${ Southcourt[0]['phone'] }<br>**Cost:** ${ Southcourt[0]['cost'] }<br>**Blurb:** ${ Southcourt[0]['blurb'] }
+  %elif service_outcome == 83:
+  <u>**Service Provider:**</u> ${ Westcourt[0]['service provider'] }<br>**Service:** ${ Westcourt[0]['service'] }<br>**Address:** ${ Westcourt[0]['address'] }<br>**Email:** ${ Westcourt[0]['email'] }<br>**Phone:** ${ Westcourt[0]['phone'] }<br>**Cost:** ${ Westcourt[0]['cost'] }<br>**Blurb:** ${ Westcourt[0]['blurb'] }
+  %elif service_outcome == 84:
+  <u>**Service Provider:**</u> ${ Outercourt[0]['service provider'] }<br>**Service:** ${ Outercourt[0]['service'] }<br>**Address:** ${ Outercourt[0]['address'] }<br>**Email:** ${ Outercourt[0]['email'] }<br>**Phone:** ${ Outercourt[0]['phone'] }<br>**Cost:** ${ Outercourt[0]['cost'] }<br>**Blurb:** ${ Outercourt[0]['blurb'] }
+  %elif service_outcome == 84.1:
+  <u>**Service Provider:**</u> ${ CBDdrug[0]['service provider'] }<br>**Service:** ${ CBDdrug[0]['service'] }<br>**Address:** ${ CBDdrug[0]['address'] }<br>**Email:** ${ CBDdrug[0]['email'] }<br>**Phone:** ${ CBDdrug[0]['phone'] }<br>**Cost:** ${ CBDdrug[0]['cost'] }<br>**Blurb:** ${ CBDdrug[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdrug[1]['service provider'] }<br>**Service:** ${ CBDdrug[1]['service'] }<br>**Address:** ${ CBDdrug[1]['address'] }<br>**Email:** ${ CBDdrug[1]['email'] }<br>**Phone:** ${ CBDdrug[1]['phone'] }<br>**Cost:** ${ CBDdrug[1]['cost'] }<br>**Blurb:** ${ CBDdrug[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdrug[2]['service provider'] }<br>**Service:** ${ CBDdrug[2]['service'] }<br>**Address:** ${ CBDdrug[2]['address'] }<br>**Email:** ${ CBDdrug[2]['email'] }<br>**Phone:** ${ CBDdrug[2]['phone'] }<br>**Cost:** ${ CBDdrug[2]['cost'] }<br>**Blurb:** ${ CBDdrug[2]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDdrug[3]['service provider'] }<br>**Service:** ${ CBDdrug[3]['service'] }<br>**Address:** ${ CBDdrug[3]['address'] }<br>**Email:** ${ CBDdrug[3]['email'] }<br>**Phone:** ${ CBDdrug[3]['phone'] }<br>**Cost:** ${ CBDdrug[3]['cost'] }<br>**Blurb:** ${ CBDdrug[3]['blurb'] }
+  %elif service_outcome == 85:
+  <u>**Service Provider:**</u> ${ Northdrug[0]['service provider'] }<br>**Service:** ${ Northdrug[0]['service'] }<br>**Address:** ${ Northdrug[0]['address'] }<br>**Email:** ${ Northdrug[0]['email'] }<br>**Phone:** ${ Northdrug[0]['phone'] }<br>**Cost:** ${ Northdrug[0]['cost'] }<br>**Blurb:** ${ Northdrug[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northdrug[1]['service provider'] }<br>**Service:** ${ Northdrug[1]['service'] }<br>**Address:** ${ Northdrug[1]['address'] }<br>**Email:** ${ Northdrug[1]['email'] }<br>**Phone:** ${ Northdrug[1]['phone'] }<br>**Cost:** ${ Northdrug[1]['cost'] }<br>**Blurb:** ${ Northdrug[1]['blurb'] }
+  %elif service_outcome == 86:
+  <u>**Service Provider:**</u> ${ Eastdrug[0]['service provider'] }<br>**Service:** ${ Eastdrug[0]['service'] }<br>**Address:** ${ Eastdrug[0]['address'] }<br>**Email:** ${ Eastdrug[0]['email'] }<br>**Phone:** ${ Eastdrug[0]['phone'] }<br>**Cost:** ${ Eastdrug[0]['cost'] }<br>**Blurb:** ${ Eastdrug[0]['blurb'] }
+  %elif service_outcome == 87:
+  <u>**Service Provider:**</u> ${ Southdrug[0]['service provider'] }<br>**Service:** ${ Southdrug[0]['service'] }<br>**Address:** ${ Southdrug[0]['address'] }<br>**Email:** ${ Southdrug[0]['email'] }<br>**Phone:** ${ Southdrug[0]['phone'] }<br>**Cost:** ${ Southdrug[0]['cost'] }<br>**Blurb:** ${ Southdrug[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdrug[1]['service provider'] }<br>**Service:** ${ Southdrug[1]['service'] }<br>**Address:** ${ Southdrug[1]['address'] }<br>**Email:** ${ Southdrug[1]['email'] }<br>**Phone:** ${ Southdrug[1]['phone'] }<br>**Cost:** ${ Southdrug[1]['cost'] }<br>**Blurb:** ${ Southdrug[1]['blurb'] }
+  %elif service_outcome == 88:
+  <u>**Service Provider:**</u> ${ Westdrug[0]['service provider'] }<br>**Service:** ${ Westdrug[0]['service'] }<br>**Address:** ${ Westdrug[0]['address'] }<br>**Email:** ${ Westdrug[0]['email'] }<br>**Phone:** ${ Westdrug[0]['phone'] }<br>**Cost:** ${ Westdrug[0]['cost'] }<br>**Blurb:** ${ Westdrug[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Westdrug[1]['service provider'] }<br>**Service:** ${ Westdrug[1]['service'] }<br>**Address:** ${ Westdrug[1]['address'] }<br>**Email:** ${ Westdrug[1]['email'] }<br>**Phone:** ${ Westdrug[1]['phone'] }<br>**Cost:** ${ Westdrug[1]['cost'] }<br>**Blurb:** ${ Westdrug[1]['blurb'] }
+  %elif service_outcome == 89:
+  <u>**Service Provider:**</u> ${ Outerdrug[0]['service provider'] }<br>**Service:** ${ Outerdrug[0]['service'] }<br>**Address:** ${ Outerdrug[0]['address'] }<br>**Email:** ${ Outerdrug[0]['email'] }<br>**Phone:** ${ Outerdrug[0]['phone'] }<br>**Cost:** ${ Outerdrug[0]['cost'] }<br>**Blurb:** ${ Outerdrug[0]['blurb'] }
+  %elif service_outcome == 90:
+    ${ CBDdisability }
+  %elif service_outcome == 91:
+  <u>**Service Provider:**</u> ${ Northdisability[0]['service provider'] }<br>**Service:** ${ Northdisability[0]['service'] }<br>**Address:** ${ Northdisability[0]['address'] }<br>**Email:** ${ Northdisability[0]['email'] }<br>**Phone:** ${ Northdisability[0]['phone'] }<br>**Cost:** ${ Northdisability[0]['cost'] }<br>**Blurb:** ${ Northdisability[0]['blurb'] }
+  %elif service_outcome == 92:
+    ${ Eastdisability }
+  %elif service_outcome == 93:
+  <u>**Service Provider:**</u> ${ Southdisability[0]['service provider'] }<br>**Service:** ${ Southdisability[0]['service'] }<br>**Address:** ${ Southdisability[0]['address'] }<br>**Email:** ${ Southdisability[0]['email'] }<br>**Phone:** ${ Southdisability[0]['phone'] }<br>**Cost:** ${ Southdisability[0]['cost'] }<br>**Blurb:** ${ Southdisability[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdisability[1]['service provider'] }<br>**Service:** ${ Southdisability[1]['service'] }<br>**Address:** ${ Southdisability[1]['address'] }<br>**Email:** ${ Southdisability[1]['email'] }<br>**Phone:** ${ Southdisability[1]['phone'] }<br>**Cost:** ${ Southdisability[1]['cost'] }<br>**Blurb:** ${ Southdisability[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Southdisability[2]['service provider'] }<br>**Service:** ${ Southdisability[2]['service'] }<br>**Address:** ${ Southdisability[2]['address'] }<br>**Email:** ${ Southdisability[2]['email'] }<br>**Phone:** ${ Southdisability[2]['phone'] }<br>**Cost:** ${ Southdisability[2]['cost'] }<br>**Blurb:** ${ Southdisability[2]['blurb'] }
+  %elif service_outcome == 94:
+  <u>**Service Provider:**</u> ${ Westdisability[0]['service provider'] }<br>**Service:** ${ Westdisability[0]['service'] }<br>**Address:** ${ Westdisability[0]['address'] }<br>**Email:** ${ Westdisability[0]['email'] }<br>**Phone:** ${ Westdisability[0]['phone'] }<br>**Cost:** ${ Westdisability[0]['cost'] }<br>**Blurb:** ${ Westdisability[0]['blurb'] }
+  %elif service_outcome == 95:
+  <u>**Service Provider:**</u> ${ Outerdisability[0]['service provider'] }<br>**Service:** ${ Outerdisability[0]['service'] }<br>**Address:** ${ Outerdisability[0]['address'] }<br>**Email:** ${ Outerdisability[0]['email'] }<br>**Phone:** ${ Outerdisability[0]['phone'] }<br>**Cost:** ${ Outerdisability[0]['cost'] }<br>**Blurb:** ${ Outerdisability[0]['blurb'] }
+  %elif service_outcome == 95.1:
+  <u>**Service Provider:**</u> ${ CBDlegal[0]['service provider'] }<br>**Service:** ${ CBDlegal[0]['service'] }<br>**Address:** ${ CBDlegal[0]['address'] }<br>**Email:** ${ CBDlegal[0]['email'] }<br>**Phone:** ${ CBDlegal[0]['phone'] }<br>**Cost:** ${ CBDlegal[0]['cost'] }<br>**Blurb:** ${ CBDlegal[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDlegal[1]['service provider'] }<br>**Service:** ${ CBDlegal[1]['service'] }<br>**Address:** ${ CBDlegal[1]['address'] }<br>**Email:** ${ CBDlegal[1]['email'] }<br>**Phone:** ${ CBDlegal[1]['phone'] }<br>**Cost:** ${ CBDlegal[1]['cost'] }<br>**Blurb:** ${ CBDlegal[1]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ CBDlegal[2]['service provider'] }<br>**Service:** ${ CBDlegal[2]['service'] }<br>**Address:** ${ CBDlegal[2]['address'] }<br>**Email:** ${ CBDlegal[2]['email'] }<br>**Phone:** ${ CBDlegal[2]['phone'] }<br>**Cost:** ${ CBDlegal[2]['cost'] }<br>**Blurb:** ${ CBDlegal[2]['blurb'] }
+  %elif service_outcome == 96:
+    ${ Northlegal }
+  %elif service_outcome == 97:
+  <u>**Service Provider:**</u> ${ Eastlegal[0]['service provider'] }<br>**Service:** ${ Eastlegal[0]['service'] }<br>**Address:** ${ Eastlegal[0]['address'] }<br>**Email:** ${ Eastlegal[0]['email'] }<br>**Phone:** ${ Eastlegal[0]['phone'] }<br>**Cost:** ${ Eastlegal[0]['cost'] }<br>**Blurb:** ${ Eastlegal[0]['blurb'] }
+  %elif service_outcome == 98:
+  <u>**Service Provider:**</u> ${ Southlegal[0]['service provider'] }<br>**Service:** ${ Southlegal[0]['service'] }<br>**Address:** ${ Southlegal[0]['address'] }<br>**Email:** ${ Southlegal[0]['email'] }<br>**Phone:** ${ Southlegal[0]['phone'] }<br>**Cost:** ${ Southlegal[0]['cost'] }<br>**Blurb:** ${ Southlegal[0]['blurb'] }
+  %elif service_outcome == 99:
+    ${ Westlegal }
+  %elif service_outcome == 100:
+    ${ Outerlegal }
+  %elif service_outcome == 101:
+    ${ CBDindig }
+  %elif service_outcome == 102:
+  <u>**Service Provider:**</u> ${ Northindig[0]['service provider'] }<br>**Service:** ${ Northindig[0]['service'] }<br>**Address:** ${ Northindig[0]['address'] }<br>**Email:** ${ Northindig[0]['email'] }<br>**Phone:** ${ Northindig[0]['phone'] }<br>**Cost:** ${ Northindig[0]['cost'] }<br>**Blurb:** ${ Northindig[0]['blurb'] }
+
+  <u>**Service Provider:**</u> ${ Northindig[1]['service provider'] }<br>**Service:** ${ Northindig[1]['service'] }<br>**Address:** ${ Northindig[1]['address'] }<br>**Email:** ${ Northindig[1]['email'] }<br>**Phone:** ${ Northindig[1]['phone'] }<br>**Cost:** ${ Northindig[1]['cost'] }<br>**Blurb:** ${ Northindig[1]['blurb'] }
+  %elif service_outcome == 103:
+    ${ Eastindig }
+  %elif service_outcome == 104:
+    ${ Southindig }
+  %elif service_outcome == 105:
+  <u>**Service Provider:**</u> ${ Westindig[0]['service provider'] }<br>**Service:** ${ Westindig[0]['service'] }<br>**Address:** ${ Westindig[0]['address'] }<br>**Email:** ${ Westindig[0]['email'] }<br>**Phone:** ${ Westindig[0]['phone'] }<br>**Cost:** ${ Westindig[0]['cost'] }<br>**Blurb:** ${ Westindig[0]['blurb'] }
+  %elif service_outcome == 106:
+  <u>**Service Provider:**</u> ${ Outerindig[0]['service provider'] }<br>**Service:** ${ Outerindig[0]['service'] }<br>**Address:** ${ Outerindig[0]['address'] }<br>**Email:** ${ Outerindig[0]['email'] }<br>**Phone:** ${ Outerindig[0]['phone'] }<br>**Cost:** ${ Outerindig[0]['cost'] }<br>**Blurb:** ${ Outerindig[0]['blurb'] }
+  %endif
+  <br>
+  <br>
+  <br>
+  <br>**Click below to download this list of services, or to email it to yourself**
 progress: 100
+attachment: 
+  name: Service Directory App Report
+  docx template file: FLPN_services_app_report.docx
+  valid formats:
+    - pdf
+allow emailing: True
 ---
