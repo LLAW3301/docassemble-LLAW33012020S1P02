@@ -1,5 +1,3 @@
-tim_branch
+Code for SA Family Pathways Network - service directory app
 
-code for SA Family Pathways Network - service directory app
-
-**SEE main_code2.yml FOR THE LATEST VARIATION CHANGING CHECKLIST TO ICON BUTTONS**
+Run main_code2.yml to get started

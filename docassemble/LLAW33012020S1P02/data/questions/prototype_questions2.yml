@@ -1,12 +1,12 @@
 ---
-question: |
+question: What is your age?
 fields:
-  - What is your age: TDB_age
+  - no label: TDB_age
     datatype: integer
     default: 18
 progress: 25
 ---
-question: What location do you seek services in?
+question: "What location(s) do you seek services in?"
 fields:
   - If Adelaide CBD is central (see map): TDBlocation
     choices:
@@ -19,11 +19,11 @@ fields:
     datatype: checkboxes
     none of the above: |
       I do not live in South Australia
-under: |
-  You can select more than one area
+right: |
+  [FILE example.jpg, 400px]
 progress: 50
 ---
-question: What type of services are you after? (listed in alpabetical order)
+question: What type of services are you after?
 field: TDBservices
 buttons:
    - "Behaviour management": Behaviour management services
@@ -86,4 +86,5 @@ images:
   shelter: shelter.svg
   youngadult: youngadult.svg
   none: none.svg
+  back: back.svg
 ---
