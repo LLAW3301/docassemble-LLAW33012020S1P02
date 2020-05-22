@@ -15,12 +15,12 @@ subquestion: Refer to map for {help determining location}
 fields:
   - no label: TDBlocation
     choices:
-      - ADELAIDE CBD: Adelaide CBD
-      - NORTH<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port Adelaide-Enfield<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salisbury<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tea Tree Gully<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playford: North
-      - EAST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burnside<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Campbelltown<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norwood, Payneham & St. Peters: East
-      - SOUTH<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mitcham<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marion<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Onkaparinga: South
-      - WEST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Torrens<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Holdfast Bay: West
-      - OUTER REGIONAL<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yankalilla<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alexandrina<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adelaide Hills<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barossa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gawler: Outer regional
+      - <b>Adelaide CBD</b>: Adelaide CBD
+      - <b>North</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port Adelaide-Enfield<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salisbury<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tea Tree Gully<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playford: North
+      - <b>East</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burnside<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Campbelltown<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norwood, Payneham & St. Peters: East
+      - <b>South</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mitcham<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marion<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Onkaparinga: South
+      - <b>West</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Torrens<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Holdfast Bay: West
+      - <b>Outer Regional</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yankalilla<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alexandrina<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adelaide Hills<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barossa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gawler: Outer regional
     datatype: checkboxes
     none of the above: |
       I do not live in South Australia
