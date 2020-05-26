@@ -411,7 +411,7 @@ subquestion: |
 
   <span class="PYserviceprovider"> ${ Northmale[5]['service provider'] }</span><br><span class="PYservicetype"> ${ Northmale[5]['service'] }</span><br><span class="PYblurb">${ Northmale[5]['blurb'] }</span><br><br><i class="material-icons">location_on</i>${ Northmale[5]['address'] }<br><i class="material-icons">email</i> ${ Northmale[5]['email'] }<br><i class="material-icons">phone</i> ${ Northmale[5]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northmale[5]['cost'] }
   %elif service_outcome == 3:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -847,7 +847,7 @@ subquestion: |
   <span class="PYserviceprovider"> ${ Outerteenager[2]['service provider'] }</span><br><span class="PYservicetype"> ${ Outerteenager[2]['service'] }</span><br><span class="PYblurb">${ Outerteenager[2]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Outerteenager[2]['address'] }<br><i class="material-icons">email</i> ${ Outerteenager[2]['email'] }<br><i class="material-icons">phone</i> ${ Outerteenager[2]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Outerteenager[2]['cost'] }
   
   %elif service_outcome == 31:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -858,19 +858,19 @@ subquestion: |
   <span class="PYserviceprovider"> ${ Northshelter[1]['service provider'] }</span><br><span class="PYservicetype"> ${ Northshelter[1]['service'] }</span><br><span class="PYblurb">${ Northshelter[1]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Northshelter[1]['address'] }<br><i class="material-icons">email</i> ${ Northshelter[1]['email'] }<br><i class="material-icons">phone</i> ${ Northshelter[1]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northshelter[1]['cost'] }<hr>
   
   %elif service_outcome == 33:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
     
   %elif service_outcome == 34:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
     
   %elif service_outcome == 35:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1372,7 +1372,7 @@ subquestion: |
   <span class="PYserviceprovider"> ${ Westdomestic[1]['service provider'] }</span><br><span class="PYservicetype"> ${ Westdomestic[1]['service'] }</span><br><span class="PYblurb">${ Westdomestic[1]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Westdomestic[1]['address'] }<br><i class="material-icons">email</i> ${ Westdomestic[1]['email'] }<br><i class="material-icons">phone</i> ${ Westdomestic[1]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Westdomestic[1]['cost'] }<hr>
   
   %elif service_outcome == 78:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1432,7 +1432,7 @@ subquestion: |
   <span class="PYserviceprovider"> ${ Outerdrug[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Outerdrug[0]['service'] }</span><br><span class="PYblurb">${ Outerdrug[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Outerdrug[0]['address'] }<br><i class="material-icons">email</i> ${ Outerdrug[0]['email'] }<br><i class="material-icons">phone</i> ${ Outerdrug[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Outerdrug[0]['cost'] }<hr>
   
   %elif service_outcome == 90:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1441,7 +1441,7 @@ subquestion: |
   <span class="PYserviceprovider"> ${ Northdisability[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Northdisability[0]['service'] }</span><br><span class="PYblurb">${ Northdisability[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Northdisability[0]['address'] }<br><i class="material-icons">email</i> ${ Northdisability[0]['email'] }<br><i class="material-icons">phone</i> ${ Northdisability[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northdisability[0]['cost'] }<hr>
   
   %elif service_outcome == 92:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1467,7 +1467,7 @@ subquestion: |
   <span class="PYserviceprovider"> ${ CBDlegal[2]['service provider'] }</span><br><span class="PYservicetype"> ${ CBDlegal[2]['service'] }</span><br><span class="PYblurb">${ CBDlegal[2]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ CBDlegal[2]['address'] }<br><i class="material-icons">email</i> ${ CBDlegal[2]['email'] }<br><i class="material-icons">phone</i> ${ CBDlegal[2]['phone'] }<br><i class="material-icons">monetization_on</i> ${ CBDlegal[2]['cost'] }<hr>
   
   %elif service_outcome == 96:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1477,19 +1477,19 @@ subquestion: |
   %elif service_outcome == 98:
   <span class="PYserviceprovider"> ${ Southlegal[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Southlegal[0]['service'] }</span><br><span class="PYblurb">${ Southlegal[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Southlegal[0]['address'] }<br><i class="material-icons">email</i> ${ Southlegal[0]['email'] }<br><i class="material-icons">phone</i> ${ Southlegal[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Southlegal[0]['cost'] }<hr>
   %elif service_outcome == 99:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
     
   %elif service_outcome == 100:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
     
   %elif service_outcome == 101:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
@@ -1499,13 +1499,13 @@ subquestion: |
 
   <span class="PYserviceprovider"> ${ Northindig[1]['service provider'] }</span><br><span class="PYservicetype"> ${ Northindig[1]['service'] }</span><br><span class="PYblurb">${ Northindig[1]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Northindig[1]['address'] }<br><i class="material-icons">email</i> ${ Northindig[1]['email'] }<br><i class="material-icons">phone</i> ${ Northindig[1]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northindig[1]['cost'] }<hr>
   %elif service_outcome == 103:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
     
   %elif service_outcome == 104:
-    Oops, sorry, there aren’t actually any ${ TDBservices } services in the ${ TDBlocation.true_values() }. 
+    Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
     Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
