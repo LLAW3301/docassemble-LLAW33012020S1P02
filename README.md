@@ -1,8 +1,14 @@
-# docassemble.LLAW33012020S1P02
+**Code for SA Family Pathways Network - Service Directory app**
 
-A docassemble extension.
+*Run main_code2.yml to get started*
 
-## Author
 
-Mark Ferraretto, mark.ferraretto@flinders.edu.au
 
+Authors:
+  Timothy Ball
+  Phoebe Yap
+  Daniel Cheung
+  Zoe Vaughan
+  
+
+Flinders University 2020

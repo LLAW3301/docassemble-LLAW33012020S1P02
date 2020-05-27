@@ -1,0 +1,224 @@
+/* General Styles */
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+  
+h1 { 
+  font-family: Cabin, arial, sans-serif;
+  color: rgb(68,48,148);
+  font-size: 26px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700; line-height: 26.4px;
+  text-align: center;
+}
+  
+h3 { 
+  font-family: Cabin, arial, sans-serif; 
+  font-size: 26px; 
+  color: rgb(68,48,148);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+} 
+
+p { 
+  font-family: Cabin, arial, sans-serif;
+  color: #58595B;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: justify;
+} 
+
+hr {
+  display: block;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+ul a{
+  list-style: square;
+  font-size: 15px;
+  vertical-align: bottom;
+  margin: 0;
+}
+
+ul b{
+  font-family: Cabin, arial, sans-serif;
+  color: #58595B;
+  list-style: circle;
+  font-size: 15px;
+  vertical-align: bottom;
+  margin: 0;
+}
+
+li {
+  line-height: 1;
+}
+
+body {
+  background-image: url(https://www.pathwaysnetworksa.com.au/wp-content/uploads/sites/12/2014/08/Pathways_Background-Image.jpg);
+}
+
+/* Navigation bar */
+.navbar{
+    background-color: rgb(255,255,255) !important;
+}
+
+/* This sets the colour of the 'Source' link in the navbar */
+.navbar .nav-item a{
+    font-family: Cabin, arial, sans-serif;
+    font-size: 18px;
+    color: #58595B !important;
+}
+
+/* Line below the navbar*/
+.navbar{
+  border-bottom:8px
+  solid rgba(68,48,148);
+  padding: 0px !important;
+}
+
+.page-divider{
+  border:none !important;
+}
+
+/* dropdown-menu manages the right-hand menu (where we access the Playground
+   amongst other things) */
+.navbar .dropdown-menu{
+    /*  the rgba() function works just like rgb in that
+        it sets a colour.  But the fourth element sets an
+        'alpha' or transaparency value.  Here we are saying
+        to set the transparency to 30%
+    */
+    background-color: rgba(202,141,128,100);
+}
+/* Sets properties for when hovering over a menu item in the 
+   drop-down menu */
+.dropdown-item:hover{
+    background-color: rgba(202,141,128,0.5);
+}
+
+/* Privacy Policy Header */
+.PYprivacypolicy{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Appearance for 'Continue' button */
+.btn-primary{
+  color: rgb(255,255,255);
+  background-color: rgb(68, 48, 148);
+  border-color: rgb(0,0,0);
+  font-family: Cabin, arial, sans-serif;
+}
+/* ...and when hovering over it */
+.btn-primary:hover{
+  color: rgb(255,255,255);
+  background-color: rgb(77,61,133);
+  border-color: rgb(0,0,0);
+  font-family: Cabin, arial, sans-serif;
+}
+
+/* Apperance of 'Exit' button*/
+.btn-danger{
+  color: rgb(255,255,255);
+  background-color: #424242;
+  border-color: rgb(0,0,0);
+  font-family: Cabin, arial, sans-serif;
+}
+
+/* Appearance of 'Restart' button*/
+.btn-warning{
+   color: rgb(255,255,255);
+   background-color: rgb(139, 151, 141);
+   border-color: rgb(50,50,50);
+   font-family: Cabin, arial, sans-serif;
+}
+
+/* Appearance of 'Restart' button hover*/
+.btn-warning:hover{
+   color: rgb(255,255,255);
+   background-color: rgb(68,48,148);
+   border-color: rgb(50,50,50);
+   font-family: Cabin, arial, sans-serif;
+}
+
+/* Serive Category Result in Output */
+.PYservicecat{
+  font-family: Cabin, arial, sans-serif;
+  color: rgb(68,48,148);
+  font-style: bold;
+  font-size: 28px;
+}
+
+/* Output Results Heading */
+.PYoutputheader{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 26px;
+}
+
+/* Service Provider in Output*/
+.PYserviceprovider{
+  color: rgb(68,48,148);
+  font-family: Cabin, arial, sans-serif;
+  font-size: 15px;
+}
+
+/* Service Type in Output*/
+.PYservicetype{
+  color: rgb(144,156,149);
+  font-family: Cabin, arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Service Description/Blurb */
+.PYblurb{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(68,48,148);
+}
+  
+/* Material Icons for Output */
+.material-icons{
+  width: 13px;
+  height: 13px;
+  font-size: 15px;
+}
+
+/* Progress Bar */
+.progress-bar{
+  background-color: rgb(214, 205, 226);
+  font-family: Cabin, arial, sans-serif;
+  color: rgb(68,48,148);
+}
+
+/* Location buttons */
+.btn-light{
+}
+
+/* Location words */
+.labelauty-unchecked{
+  font-family: Cabin, arial, sans-serif;
+}
+
+/* Back button on Navbar */
+.navbar-brand{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 18px;
+  margin: 3px;
+  padding: 3px;
+}
+
+/* Map image */
+.daicon.daimageref{
+  width:400px;
+  margin-top: 98px;
+}
+  
