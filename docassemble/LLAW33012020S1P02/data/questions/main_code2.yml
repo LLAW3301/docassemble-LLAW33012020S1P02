@@ -4,7 +4,7 @@
 ---
 # This section lines contains backend information about the app and the students that created it. 
 # The value for 'title' is what shows on the browser tab. 
-# The value for 'exit url' is the website that the top right 'exit' button in the app will take you to, ideally it should either lead back to FLPN homepage (as is) or it should be changed to lead back to where ever the app is embedded
+# The value for 'exit url' is the website that the top right 'quick exit' button in the app will take you to, it is currently set to link to a google search for cooking pasta, but could either lead to FLPN homepage or it should be changed to any inconspicuous website.
 metadata:
   title: |
     Family Law Pathways Network
@@ -17,7 +17,8 @@ metadata:
     - name: Zoe Vaughan
   organisation: Flinders University
   show login: False
-  exit url: https://www.pathwaysnetworksa.com.au/
+  exit url: https://www.google.com/search?source=hp&ei=bLj6XoeXA9KW4-EPzpuLwAY&q=cooking+pasta&oq=cooking+pasta&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BQgAELEDOgUIABCDAVC3O1jsUWCAX2gAcAB4AIABxgSIAeQakgELMC42LjQuMC4yLjGYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab&ved=0ahUKEwiH_bqE06jqAhVSyzgGHc7NAmgQ4dUDCAk&uact=5
+  exit label: QUICK EXIT
 ---
 # FPSA Logo
 objects:
@@ -67,10 +68,13 @@ question: Service Directory
 subquestion: |
   Welcome to the South Australian Family Law Pathways Network Service Directory ('Service Directory'). This application is designed to help you find and engage in family law services according to your needs.<hr>
   
+  **Quick Exit Button**<br>
+  
+  The top right hand corner of every page contains a quick exit button. Due to the sensitive and personal nature of the information searched for within this app, you may require a quick way to back out to a search engine for inconspicuous web browsing.<hr>
   
   **Privacy Policy**<br>
   
-  The Service Directory will request for personal information such as your age and email address. Your email address will only be collected if you want a list of relevant services emailed to you. The personal information that you provide in the Service Directory will not be retained or disclosed to third parties.
+  The Service Directory will request personal information such as your email address. Your email address will only be collected if you want a list of relevant services emailed to you. The personal information that you provide in the Service Directory will not be retained or disclosed to third parties.
   
   If you want to discuss this policy, please contact us directly on 08 8419 2000.
   
@@ -79,19 +83,6 @@ buttons:
   - "Accept and continue": continue
   - "I do not accept": exit
     url: https://www.pathwaysnetworksa.com.au/
----
-# If the age confirmation variable in the section below is set to 'False', this section makes an ineligible endpoint display
-mandatory: True
-code: |
-  if TDB_ageconfirm == False:
-    endpoint['ineligible1']
----
-# This section gives a true or false value to an age confirmation variable based on whether the user is 18 or older
-code: |
-  if TDB_age >= 18:
-    TDB_ageconfirm = True
-  else:
-    TDB_ageconfirm = False
 ---
 # This section essentially asks what is the location that the user has clicked on, and then sets a location confirmation to true or false. If you click that you are not seeking South Australian services, the location confirmation variable is false
 code: |
@@ -388,7 +379,7 @@ code:  |
     service_outcome = 0
 ---
 # This section is the final end screen display. It contains a large portion of code that looks at what value has been attributed to the 'service outcome' in the above section, and then it display services one by one via pulling the data directly from the services list file.
-# The is an included PDF file generated at the bottom which contains the same services data. Users can email or print this PDF
+# There is an included PDF file generated at the bottom which contains the same services data. Users can email or print this PDF
 mandatory: True
 question: Available Services
 subquestion: |
@@ -1492,31 +1483,43 @@ subquestion: |
     Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
-    Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
+    **Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
     
   %elif service_outcome == 102:
   <span class="PYserviceprovider"> ${ Northindig[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Northindig[0]['service'] }</span><br><span class="PYblurb">${ Northindig[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Northindig[0]['address'] }<br><i class="material-icons">email</i> ${ Northindig[0]['email'] }<br><i class="material-icons">phone</i> ${ Northindig[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northindig[0]['cost'] }<hr>
 
   <span class="PYserviceprovider"> ${ Northindig[1]['service provider'] }</span><br><span class="PYservicetype"> ${ Northindig[1]['service'] }</span><br><span class="PYblurb">${ Northindig[1]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Northindig[1]['address'] }<br><i class="material-icons">email</i> ${ Northindig[1]['email'] }<br><i class="material-icons">phone</i> ${ Northindig[1]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Northindig[1]['cost'] }<hr>
+  
+  <br>**Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
+  
   %elif service_outcome == 103:
     Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
-    Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
+    **Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
     
   %elif service_outcome == 104:
     Oops, sorry, there aren’t actually any ${ TDBservices } in the ${ TDBlocation.true_values() }. 
 
     Please go back to select a different service category or location.
-    Alternatively, phone the SA Family Law Pathways Network on 8419 2000.
+    **Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
     
   %elif service_outcome == 105:
   <span class="PYserviceprovider"> ${ Westindig[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Westindig[0]['service'] }</span><br><span class="PYblurb">${ Westindig[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Westindig[0]['address'] }<br><i class="material-icons">email</i> ${ Westindig[0]['email'] }<br><i class="material-icons">phone</i> ${ Westindig[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Westindig[0]['cost'] }<hr>
+  
+  <br>**Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
+  
   %elif service_outcome == 106:
   <span class="PYserviceprovider"> ${ Outerindig[0]['service provider'] }</span><br><span class="PYservicetype"> ${ Outerindig[0]['service'] }</span><br><span class="PYblurb">${ Outerindig[0]['blurb'] }</span><br><br><i class="material-icons">location_on</i> ${ Outerindig[0]['address'] }<br><i class="material-icons">email</i> ${ Outerindig[0]['email'] }<br><i class="material-icons">phone</i> ${ Outerindig[0]['phone'] }<br><i class="material-icons">monetization_on</i> ${ Outerindig[0]['cost'] }<hr>
+
+  <br>**Alternatively, please try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
   %endif
   <br>
   <br>**The list of services above has been compiled into a file. Click below to download this list of services, or to email it to yourself.**
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
 progress: 100
 attachment: 
   name: Service Directory App Report

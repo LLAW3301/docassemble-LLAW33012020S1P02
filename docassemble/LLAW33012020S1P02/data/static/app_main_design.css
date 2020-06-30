@@ -73,6 +73,9 @@ body {
     font-family: Cabin, arial, sans-serif;
     font-size: 18px;
     color: #58595B !important;
+    border: #FF0000;
+    background-color: #FF0000;
+    border-radius: 4px;
 }
 
 /* Line below the navbar*/

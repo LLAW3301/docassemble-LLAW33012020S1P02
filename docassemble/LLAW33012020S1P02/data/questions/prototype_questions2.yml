@@ -1,13 +1,5 @@
 # This file contains all of the questions that are asked throughout the app
 ---
-# This section asks for the user age
-question: What is your age?
-fields:
-  - no label: TDB_age
-    datatype: integer
-    default: 18
-progress: 25
----
 # This section asks for the user to input the location for where they seek services. 
 # There is reference to a map with a north indicator so users can get an idea as to which location they need
 question: "Please select service location(s)"
@@ -26,7 +18,7 @@ fields:
       I do not live in South Australia
 right: |
   [FILE mapfinal.png, 400px]
-progress: 50
+progress: 33
 terms:
   help determining location: For guidance, various Council areas are shown for each compass point. Please note, this list of council areas is non-exhaustive.
 ---
@@ -72,7 +64,7 @@ buttons:
      image: youngadult
    - "Other/not listed": none of the above
      image: none
-progress: 75
+progress: 66
 ---
 # This section gives each image icon a reference name, so that reference name can be used to input the image into the above section as clickable icons
 images:
