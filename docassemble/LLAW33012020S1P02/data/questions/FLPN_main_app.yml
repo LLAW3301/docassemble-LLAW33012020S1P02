@@ -46,6 +46,7 @@ default screen parts:
 include:
   - FLPN_services.yml
   - FLPN_questions.yml
+  - FLPN_iteration.yml
 ---
 # This section classifies endpoints as dictionaries, in order to have them function properly
 objects:
@@ -150,9 +151,22 @@ question: Available Services
 subquestion: |
   <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }**: </span><hr>
 
+  ${TDBdisplay_table}
+
+  <br>**The list of services above has been compiled into a file. Click below to download this list of services, or to email it to yourself.**
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
   - Restart: restart
 progress: 100
+---
+table: TDBdisplay_table
+rows: TDBselected_services
+columns:
+  - Agency: |
+      '[{}]({})'.format(row_item['service'], row_item['website'])
+  - Locations: |
+      row_item['location']
+  - Caters for: |
+      row_item['caters_for']
 ---
