@@ -1,0 +1,51 @@
+---
+objects:
+  - TDBselected_services: DAList.using(there_are_any=True, auto_gather=False)
+---
+# iterate over true values for 'location' and 'caters_for' in FLPN_services file
+code: |
+  TDBselected_services.clear()
+  
+  for TDBa_service in FLPN_services:
+    TDBlocation_ok = False
+    for TDBa_location in TDBlocation:
+      if TDBa_location in TDBa_service['location']:
+       TDBlocation_ok = True
+    
+    TDBservices_ok = False
+    for TDB2a_service in TDBservices:
+      if TDB2a_service in TDBa_service['caters_for']:
+        TDBservices_ok = True
+  
+  # attempt at doing services iteration another way        
+  #  if TDBservices in TDBa_service['caters_for']:
+  #    TDBservices_ok = True
+  #  else:
+  #    TDBservices_ok = False
+    
+    if TDBlocation_ok and TDBservices_ok:
+      TDBselected_services.append(TDBa_service)
+  
+  TDBselected_services.gathered = True
+---
+# if meet location and service category requirement, appending service to table is enabled
+code: |
+  if ( FLPN_services[i]['location_requirement'] and FLPN_services[i]['service_requirement'] ):
+    FLPN_services[i]['append'] = True
+  else:
+    FLPN_services[i]['append'] = False
+---
+# setting location requirement
+code: |
+  FLPN_services[i]['location_requirement'] = False
+  for TDBa_location in TDBlocation:
+    if TDBa_location in FLPN_services[i]['location']:
+      FLPN_services[i]['location_requirement'] = True
+---
+# setting service category requirement
+code: |
+  FLPN_services[i]['service_requirement'] = False
+  for TDB2a_service in TDBservices:
+    if TDB2a_service in FLPN_services[i]['caters_for']:
+      FLPN_services[i]['service_requirement'] = True
+---
