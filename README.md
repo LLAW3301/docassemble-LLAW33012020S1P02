@@ -1,8 +1,7 @@
-# docassemble.LLAW33012020S1P02
+code for **Family Law Pathways Network SA**
 
-A docassemble extension.
+updated with more elegant data structure for easier amendment/addition of services
 
-## Author
 
-Mark Ferraretto, mark.ferraretto@flinders.edu.au
 
+Flinders Uni July 2020

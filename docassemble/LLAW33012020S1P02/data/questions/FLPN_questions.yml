@@ -1,0 +1,90 @@
+# This file contains all of the questions that are asked throughout the app
+---
+# This section asks for the user to input the location for where they seek services. 
+# There is reference to a map with a north indicator so users can get an idea as to which location they need
+question: "Please select service location(s)"
+subquestion: Refer to the map on the right for {help determining location}.<br>If you are using a mobile device, the map can be found below.
+fields:
+  - no label: TDBlocation
+    choices:
+      - <b>Adelaide CBD</b>: Adelaide CBD
+      - <b>North</b><br><ul class="a"><li>Prospect</li><li>Port Adelaide-Enfield</li><li>Salisbury</li><li>Tea Tree Gully</li><li>Playford</li></ul>: North
+      - <b>East</b><br><ul class="a"><li>Burnside</li><li>Campbelltown</li><li>Norwood, Payneham & St. Peters</li></ul>: East
+      - <b>South</b><br><ul class="a"><li>Mitcham</li><li>Marion</li><li>Onkaparinga</li></ul>: South
+      - <b>West</b><br><ul class="a"><li>West Torrens</li><li>Holdfast Bay</li><li>Charles Sturt</li></ul>: West
+      - <b>Outer Regional</b><br><ul class="a"><li>Yankalilla</li><li>Alexandrina</li><li>Adelaide Hills</li><li>Barossa</li><li>Gawler</li></ul>: Outer regional
+    datatype: checkboxes
+    none of the above: |
+      I do not live in South Australia
+right: |
+  [FILE mapfinal.png, 400px]
+progress: 33
+terms:
+  help determining location: For guidance, various Council areas are shown for each compass point. Please note, this list of council areas is non-exhaustive.
+---
+# This section contains buttons that allows a user to click one single service category. If more categories are required, a user can click the back button and pick a different service category
+question: Please select one service category
+field: TDBservices
+buttons:
+   - "Behaviour management": Behaviour management services
+     image: behaviour
+   - "Child services": Child services
+     image: child
+   - "Courses": Courses
+     image: courses
+   - "Court services": Court services
+     image: court
+   - "Disability services": Disability services
+     image: disable
+   - "Divorce": Divorce services
+     image: divorce
+   - "Domestic violence": Domestic violence services
+     image: domestic
+   - "Drug/Alcohol services": Drug/Alcohol services
+     image: drug
+   - "Female services": Female services
+     image: female
+   - "Indigenous services": Indigenous services
+     image: indigenous
+   - "Legal services": Legal services
+     image: legal
+   - "Male services": Male services
+     image: male
+   - "Mental health services": Mental health services
+     image: mental
+   - "Parental services": Parental services
+     image: family
+   - "Pre-separation": Pre-separation services
+     image: presep
+   - "Post-separation": Post-separation services
+     image: postsep
+   - "Shelters": Shelters
+     image: shelter
+   - "Teenager/young adult services": Teenager/young adult services 
+     image: youngadult
+   - "Other/not listed": none of the above
+     image: none
+progress: 66
+---
+# This section gives each image icon a reference name, so that reference name can be used to input the image into the above section as clickable icons
+images:
+  male: male.svg
+  disable: disability.svg
+  child: child.svg
+  court: court.svg
+  behaviour: behaviour.svg
+  courses: courses.svg
+  divorce: divorce.svg
+  domestic: domestic.svg
+  drug: drug.svg
+  family: family.svg
+  female: female.svg
+  indigenous: indigenous.svg
+  legal: legal.svg
+  mental: mental.svg
+  postsep: postsep.svg
+  presep: presep.svg
+  shelter: shelter.svg
+  youngadult: youngadult.svg
+  none: none.svg
+---
