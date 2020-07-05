@@ -20,7 +20,7 @@ code: |
 # note, this code results in too many false positives, too many services showing up on final screen from all locations rather than just user selected locations
  code: |
   FLPN_services[i]['location_requirement'] = False
-  for TDBa_location in TDBlocation:
+  for TDBa_location in TDBlocation.true_values():
     if TDBa_location in FLPN_services[i]['location']:
       FLPN_services[i]['location_requirement'] = True
 ---

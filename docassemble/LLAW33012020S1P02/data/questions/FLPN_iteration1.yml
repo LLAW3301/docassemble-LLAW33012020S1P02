@@ -12,7 +12,7 @@ code: |
       TDBservices_ok = False    
 
     TDBlocation_ok = False
-    for TDBa_location in TDBlocation:
+    for TDBa_location in TDBlocation.true_values():
       if TDBa_location in TDBa_service['location']:
        TDBlocation_ok = True
          

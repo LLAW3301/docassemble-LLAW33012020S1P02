@@ -46,7 +46,7 @@ default screen parts:
 include:
   - FLPN_services.yml
   - FLPN_questions.yml
-  - FLPN_iteration2.yml
+  - FLPN_iteration1.yml
 ---
 # This section classifies endpoints as dictionaries, in order to have them function properly
 objects:
