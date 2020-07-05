@@ -163,6 +163,8 @@ body {
 .PYoutputheader{
   font-family: Cabin, arial, sans-serif;
   font-size: 26px;
+  font-weight: normal;
+  color: #58595B;
 }
 
 /* Service Provider in Output*/

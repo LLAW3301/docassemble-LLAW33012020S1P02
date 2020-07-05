@@ -1,4 +1,40 @@
 ---
+# below is an example of how services are included in this app. You can copy and paste this template onto the bottom of this file (inside the ---) and change the values as needed for the new service. Make sure you delete all service categories ('caters_for') values and location values that dont apply, leaving begind only the values that do apply for your new service. (note: you will have to delete the hash tag at the start of every line)
+#  - service: NAME OF THE SERVICE
+#    service_provider: NAME OF THE SERVICE PROVIDER
+#    address: ADDRESS OF THE SERVICE (OR SERVICE PROVIDER)
+#    email: EMAIL ADDRESS IF KNOWN (OTHERWISE: 'NO EMAIL PROVIDED' OR STATEMENT TO THAT EFFECT)
+#    phone: SERVICE PROVIDER'S PHONE NUMBER
+#    cost: COST OF SERVICE
+#    website: LINK TO SERVICE PROVIDER'S WEBSITE/BOOKING PAGE/BROCHURE
+#    caters_for:
+#      - Male services
+#      - Female services
+#      - Parental services
+#      - Child services
+#      - Teenager/young adult services
+#      - Shelters
+#      - Courses
+#      - Divorce services
+#      - Pre-separation services
+#      - Post-separation services
+#      - Behaviour management services
+#      - Mental health services
+#      - Domestic violence services
+#      - Court services
+#      - Drug/Alcohol services
+#      - Disability services
+#      - Legal services
+#      - Indigenous services
+#    location:
+#      - Adelaide CBD
+#      - North
+#      - East
+#      - South
+#      - West
+#      - Outer regional
+#    blurb: DESCRIPTION OF THE SERVICE
+---
 variable name: FLPN_services
 use objects: true
 data: 

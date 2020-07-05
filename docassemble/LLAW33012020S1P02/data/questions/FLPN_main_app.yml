@@ -149,10 +149,10 @@ progress: 100
 mandatory: True
 question: Available Services
 subquestion: |
-  <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }**: </span><hr>
 
   ${TDBdisplay_table}
-
+  
+  <br>**Alternatively, you could try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
 under: |
   <br>**The list of services above has been compiled into a file. Click below to download this list of services, or to email it to yourself.**
 buttons:
@@ -164,12 +164,12 @@ progress: 100
 table: TDBdisplay_table
 rows: TDBselected_services
 columns:
-  - Agency: |
-      '[{}]({})<br>{}<br>{}<br>{}<br>{}'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['phone'], row_item['email'], row_item['cost'])
-  - Locations: |
-      row_item['location']
-  - Service category: |
-      row_item['caters_for']
-  - Description: |
-      row_item['blurb']
+  - <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }:** </span><hr>: |
+      '[{}]({})<br>{}<br>{}<br>{}<br>{}<br>{}'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['phone'], row_item['email'], row_item['cost'], row_item['blurb'])
+#  - Locations: |
+#      row_item['location']
+#  - Service category: |
+#      row_item['caters_for']
+#  - Description: |
+#      row_item['blurb']
 ---
