@@ -153,6 +153,7 @@ subquestion: |
 
   ${TDBdisplay_table}
 
+under: |
   <br>**The list of services above has been compiled into a file. Click below to download this list of services, or to email it to yourself.**
 buttons:
   - Exit: exit
@@ -164,9 +165,11 @@ table: TDBdisplay_table
 rows: TDBselected_services
 columns:
   - Agency: |
-      '[{}]({})'.format(row_item['service'], row_item['website'])
+      '[{}]({})<br>{}<br>{}<br>{}<br>{}'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['phone'], row_item['email'], row_item['cost'])
   - Locations: |
       row_item['location']
-  - Caters for: |
+  - Service category: |
       row_item['caters_for']
+  - Description: |
+      row_item['blurb']
 ---

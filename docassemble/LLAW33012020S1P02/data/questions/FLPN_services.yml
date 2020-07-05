@@ -10,31 +10,12 @@ data:
     cost: Free for parents with a child under 12 years
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: True
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Pre-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "8 week program exploring mindful awareness - helping us to focus on ourselves and others with kindness and acceptance."
   - service: "Who's in Charge"
     service_provider: Junction
@@ -44,31 +25,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: A safe and supportive environment for parents struggling with complex adolescent behaviours.
   - service: Circle of Security
     service_provider: Aboriginal Family Support Services
@@ -78,31 +39,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: True
+      - Parental services
+      - Child services
+      - Behaviour management services
+      - Indigenous services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Focuses on attachment, which is what makes a child feel safe, secure and protected.
   - service: Bringing Up Great Kids
     service_provider: Relationships Australia SA Berri
@@ -112,31 +54,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Bringing Up Great Kids is a four week program that supports parents and carers in building emotional connections with their children.
   - service: In It Together
     service_provider: Relationships Australia SA Berri
@@ -146,31 +69,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: A four week program where children and parent see individual practitioners concurrently. The information they discuss is mirrored in each session so that parent and child have a shared language which promotes dialogue long after leaving the therapy room.
   - service: I am Me
     service_provider: Relationships Australia SA Berri
@@ -180,31 +83,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: 3 week program for women as a therapeutic group to build identity, value and self-worth.
   - service: On being Male
     service_provider: Relationships Australia SA Berri
@@ -214,31 +96,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: We will talk about relationships, understanding parenthood and fatherhood, learning where values and ideas come from and how they shape us.
   - service: Strengthening Separated Families Program
     service_provider: Uniting Country SA
@@ -248,31 +109,13 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: True
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Teenager/young adult services
+      - Courses
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Building Connections Parenting Seminar, Keeping Kids in Mind Post Separation Course, Rocky Road School Holidays program for Children of Separated Parents.
   - service: Bringing Up Great Kids
     service_provider: Family Relationship Centre Mt Gambier
@@ -282,31 +125,12 @@ data:
     cost: $10
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Bringing Up Great Kids is a four week program that supports parents and carers in building emotional connections with their children.
   - service: Circle of Security
     service_provider: Family Relationship Centre Mt Gambier
@@ -316,31 +140,10 @@ data:
     cost: $10
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: A program for fathers, step-fathers and other male caregivers. The Circle of Security® Parenting™ program is based on decades of research about how secure parent-child relationships can be supported and strengthened.
   - service: Seasons for Growth
     service_provider: Family Relationship Centre Mt Gambier
@@ -350,31 +153,14 @@ data:
     cost: $10
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: True
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Divorce services
+      - Post-separation services
+      - Mental health services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: For parents whose children are affected by grief & loss due to divorce/separation.
   - service: "Tuning you're your Teen"
     service_provider: Family Relationship Centre Mt Gambier
@@ -384,31 +170,13 @@ data:
     cost: $10
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: True
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Teenager/young adult services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: A five week program that supports parents of teenagers to connect with and build positive, meaningful and supportive relationships with their teens by increasing awareness of what teens are going though and learning and using emotion coaching strategies.
   - service: Banana Splitz
     service_provider: Anglicare SA
@@ -418,31 +186,12 @@ data:
     cost: $50 (or $20 concession)
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Banana Splitz is a group based support program for separated children aged 5-12. Groups typically run for 6 x 2 hour sessions and are offered on afternoons and weekends.
   - service: Banana Splitz
     service_provider: "O'Sullivan Beach Children's Centre"
@@ -452,31 +201,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: A fun, therapeutic and educational group for children aged 6-12 years for children living with separation.
   - service: Banana Bites
     service_provider: Anglicare SA
@@ -486,31 +216,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Banana Bites is a group program designed to give children an opportunity to be supported, express their thoughts and feelings, let their families know what they need, and learn new skills to cope with family changes.
   - service: Outer North Harbour Homelessness Program
     service_provider: Centacare
@@ -520,31 +231,9 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: True
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Shelters
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: 24/7 on-site supported accommodation, with support provided to promote young peoples’ independent living skills, health, well-being and social and educational connections.
   - service: iKiDs
     service_provider: Relationships Australia SA
@@ -554,31 +243,13 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - South
     blurb: Program for separated children aged 4-18 involving individual counselling and group work.
   - service: Clear as Mud
     service_provider: Relationships Australia SA
@@ -588,31 +259,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "Free one hour education workshop for children aged 8 to 12 years. This workshop helps children explore common experiences of separation from a child's perspective."
   - service: Young Parents Group
     service_provider: Taikurrendi Children and Family Centre
@@ -622,31 +273,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: True
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Teenager/young adult services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Meet other parents, have fun with your children, learn cooking recipes together, play music/read books together.
   - service: ROAR
     service_provider: Anglicare SA - Hackham Community Centre
@@ -656,30 +287,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
+      - South
       - Outer regional:: False
     blurb: "For children aged 7-11. The course runs over 7 weeks and sessions are held after school for 1.5-2 hours. Designed to teach children about - Rights and responsibilities – what they are and why they are important Emotions/Feelings and how they present in our bodies."
   - service: Outer North Youth Homelessness Service
@@ -690,31 +301,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: True
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Shelters
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - North
+      - Outer regional
     blurb: Supported Tenancies and Stimulus Housing are generally allocated to young people aged over 18 who are homeless, who are at risk of becoming homeless, or whom face other barriers in accessing alternative forms of accommodation.
   - service: Rocky Road
     service_provider: Uniting Country SA
@@ -724,31 +314,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - North
+      - Outer regional
     blurb: Rocky Road is a group based support program for children aged 7-12 who are living with parental separation. The aim of the program is to teach children the skills to cope with the changes to their family.
   - service: Blast Off
     service_provider: Family Relationship Centre Mt Gambier
@@ -758,31 +328,11 @@ data:
     cost: $30 per family
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: Blast off is a group based support program for children aged 7-12 whose parents have separated.
   - service: Me Being Me
     service_provider: Family Relationship Centre Mt Gambier
@@ -792,31 +342,10 @@ data:
     cost: $10
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: "A well-being group program for children aged 6-13 years that focuses on many aspects that make up and contribute to a child's wellbeing and how they interact with the world."
   - service: Gowrie Playgroup
     service_provider: Gowrie SA
@@ -826,31 +355,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: A welcoming and interactive playgroup for children 0-5 years.
   - service: COS-P
     service_provider: Gowrie SA
@@ -860,31 +367,8 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: none provided.
   - service: Introduction to Rocky Road
     service_provider: Uniting Country SA
@@ -894,31 +378,10 @@ data:
     cost: $30 per child
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Rocky Road is a group based support program for children aged 7-12 who are living with parental separation. The aim of the program is to teach children the skills to cope with the changes to their family.
   - service: Legal Education Sessions
     service_provider: Legal Services Commission
@@ -928,31 +391,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: True
-      - indigenous: False
+      - Legal services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: The Legal Services Commission provides free legal information sessions from time to time for members of the public and workers in the sector. 
   - service: Family law advice and support
     service_provider: Family Advocacy and Support Service
@@ -962,31 +403,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: True
-      - drug/alcohol: False
-      - disability: False
-      - legal: True
-      - indigenous: False
+      - Domestic violence services
+      - Court services
+      - Legal services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: This service provides advice, general information, help, referrals, interpreters etc for people who are self represented and who have a hearing date in the Family Court or Federal Circuit Court.
   - service: TBA
     service_provider: "Women's Community Centre SA"
@@ -996,31 +417,14 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: True
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: True
-      - court: True
-      - drug/alcohol: False
-      - disability: False
-      - legal: True
-      - indigenous: False
+      - Female services
+      - Divorce services
+      - Mental health services
+      - Domestic violence services
+      - Court services
+      - Legal services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - East
     blurb: A low cost legal service every Friday afternoon for women with family law issues.
   - service: Family Court Support
     service_provider: "Women's Information Service"
@@ -1030,31 +434,15 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: True
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: True
-      - domestic: True
-      - court: True
-      - drug/alcohol: False
-      - disability: False
-      - legal: True
-      - indigenous: False
+      - Female services
+      - Divorce services
+      - Behaviour management services
+      - Mental health services
+      - Domestic violence services
+      - Court services
+      - Legal services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Family Court Support is a free and confidential service provided by trained volunteers to accompany women to the Adelaide Family and Federal Circuit Court. 
   - service: Free legal advice
     service_provider: "Southern Women's Primary Health"
@@ -1064,31 +452,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: True
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: True
-      - indigenous: False
+      - Female services
+      - Divorce services
+      - Domestic violence services
+      - Legal services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Meet with or contact a qualified lawyer to discuss family violence, family law, including children and property matters, victims of crime compensation, child protection, debt etc.
   - service: "Women's Domestic Violence Survivors Group"
     service_provider: Uniting Communities Pitt Street
@@ -1098,31 +467,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Mental health services
+      - Domestic violence services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: This is a free group facilitated by a Uniting Communities counsellor and typically consists of no more than 10 participants. The group offers women an opportunity to explore the effect of violence and abuse in a safe, nonjudgemental setting.
   - service: Women Are Strong... Women do Survive
     service_provider: "Women's Safety Services SA"
@@ -1132,31 +481,13 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: True
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Courses
+      - Divorce services
+      - Post-separation services
+      - Domestic violence services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb:  "8 week support group for women. How to reconnect with our personal strengths; The effects of abusive or hurtful relationships; How to manage overwhelming emotions; Women's role in the family and society; Developing strategies for personal safety."
   - service: The Shark Cage
     service_provider: Anglicare SA
@@ -1166,31 +497,16 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Courses
+      - Mental health services
+      - Domestic violence services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: True
-      - South: True
-      - West: True
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - East
+      - South
+      - West
     blurb:  An 9 week assertiveness and self-confidence building course for women who have experienced abusive or controlling relationships.
   - service: Reclaim Your Path - Pathways to Empowerment
     service_provider: Zahra Foundation Australia
@@ -1200,31 +516,13 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Courses
+      - Mental health services
+      - Domestic violence services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - South
     blurb:  Pathways to empowerment is a 9 week course for women who have experienced domestic violence. The group is about reconnecting with yourself, working out what sort of life you want, and the practical steps you can take to achieve this.
   - service: Financial Counsellor
     service_provider: Zahra Foundation Australia
@@ -1234,31 +532,14 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Domestic violence services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: True
-      - South: True
-      - West: True
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - East
+      - South
+      - West
     blurb:  Providing financial support and assistance to women who have experienced domestic violence.
   - service: Photo Voice Project
     service_provider: Hackham Community Group
@@ -1268,31 +549,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Domestic violence services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb:  Women who have a lived experience of Family and Domestic Violence can learn photography skills and share their stories, imagery and engages the community to become more aware and get actively involved in advocacy and creating change around domestic violence.
   - service: The Photo Voice Project
     service_provider: "Woodcroft Heights Children's Centre"
@@ -1302,31 +562,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Domestic violence services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb:  Women who have a lived experience of Family and Domestic Violence can learn photography skills and share their stories, imagery and engages the community to become more aware and get actively involved in advocacy and creating change around domestic violence.
   - service: Be Kind and Unwind - Personal Wellbeing
     service_provider: Anglicare SA
@@ -1336,31 +575,13 @@ data:
     cost: Gold coin donation
     website: XXXX
     caters_for:
-      - male: True
-      - female: True
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Female services
+      - Mental health services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - South
     blurb:  Wellbeing workshop – dealing with emotional overload, relaxation and mindfulness.
   - service: Family and Mental Health Service - Parent Cafe Program
     service_provider: Baptist Care
@@ -1370,31 +591,16 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: True
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Teenager/young adult services
+      - Behaviour management services
+      - Mental health services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: True
-      - South: True
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - East
+      - South
     blurb:  A free family counselling and early intervention service, highly skilled in working with children, young people and their families. The aim is to provide long term coping skills and strategies to face challenges, and assist in finding ways for individuals to express themselves through difficult emotions like anger and stress.
   - service: Alcohol and other Drug Program
     service_provider: Uniting Communities Adelaide
@@ -1404,31 +610,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: True
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Behaviour management services
+      - Mental health services
+      - Drug/Alcohol services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb:  This service aims to assist young people establish goals for treatment, improve confidence, deal with poor relationships. Program includes developing more effective community responses to drug and alcohol misuse. For young People between the ages of 12-25 years.
   - service: Outreach Counselling for Drug and Alcohol
     service_provider: Uniting Communities Adelaide
@@ -1438,31 +624,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: True
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Mental health services
+      - Drug/Alcohol services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb:  The program is for people who are seeking support for alcohol and other drug problems, but who do not wish to take part in the Residential Program. In house outreach counselling is based on an eligibility assessment. Contact Centre for more information.
   - service: Drug and Alcohol Service
     service_provider: Centacare
@@ -1472,31 +637,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: True
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Behaviour management services
+      - Mental health services
+      - Drug/Alcohol services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb:  Outreach services individuals and family members where there is a young person who either is a substance user in the immediate family or related to those residing in the same dwelling. Offers home detoxification; drug and alcohol counselling to young people and young adults 10 – 30 years of age with a substance use problem.
   - service: Drug and Alcohol Services
     service_provider: SA Health
@@ -1506,31 +651,15 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: True
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Mental health services
+      - Drug/Alcohol services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: True
-      - South: True
-      - West: True
-      - Outer regional: True
+      - Adelaide CBD
+      - North
+      - East
+      - South
+      - West
+      - Outer regional
     blurb:  Phone counselling, advice and information provided in South Australia for people experiencing drug, alcohol or other substance abuse.
   - service: Drug and Alcohol Counselling
     service_provider: Drug ARM SA
@@ -1540,31 +669,12 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: True
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Mental health services
+      - Drug/Alcohol services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
+      - South
     blurb:  A one on one counselling program service which offers drug and alcohol counselling for individuals and their families who are worried about their use of drugs and/or alcohol.
   - service: Balancing Screen time for Families
     service_provider: Lutheran Community Care
@@ -1574,31 +684,13 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Behaviour management services
+      - Mental health services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb:  This interactive workshop is designed to support your understanding of the effects of too much screen time on children and the impact on families.
   - service: Post Separation Parenting Course
     service_provider: Centacare
@@ -1608,31 +700,11 @@ data:
     cost: $5
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: "A workshop for separated parents wanting to understand and manage the changes in their family. The workshop will enable participants to: Share with others about what is different now that the family has changed; Learn about what their children need from them; Learn about communicating respectfully with the other parent"
   - service: "Keeping Families Safe: Picking up the Pieces After Domestic Violence"
     service_provider: Centacare
@@ -1642,31 +714,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: True
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
+      - Post-separation services
+      - Domestic violence services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: This two hour workshop is for separated parents who are concerned about the impact of domestic violence on their children.
   - service: Siblings in Focus
     service_provider: Junction Australia & Anglicare SA Communities for Children, Onkaparinga
@@ -1676,31 +729,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: True
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
+      - Disability services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "A program for siblings aged 5-12 years' old who have a brother or sister with a disability or chronic illness. This program allows the siblings to take time away from their role as carers to do activities, meet other children and have fun. Food provided."
   - service: Child Focused Information Session Online
     service_provider: Adelaide FRC- Relationships Australia SA
@@ -1710,31 +743,18 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: True
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: True
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Courses
+      - Divorce services
+      - Pre-separation services
+      - Post-separation services
+      - Court services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: True
-      - South: True
-      - West: True
-      - Outer regional: True
+      - Adelaide CBD
+      - North
+      - East
+      - South
+      - West
+      - Outer regional
     blurb: An overview of the family law system with a particular focus on post separation parenting and the impact of conflict on children. It is recommended that FDR clients complete this session as a precursor to mediation.
   - service: Kids Are First
     service_provider: Anglicare SA
@@ -1744,31 +764,11 @@ data:
     cost: $50 or concession $20
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - North
+      - South
     blurb: Group program targeting separated/divorced parents, particularly in complex or high conflict families. The program focuses on the impact of separation and parental conflict on children and is aimed at building communication, reducing conflict and court action, and achieving ongoing child focused co-operative parenting.
   - service: Kids Are First
     service_provider: Anglicare SA
@@ -1778,31 +778,11 @@ data:
     cost: $50 or concession $20
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Post-separation services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - East
     blurb: Group program targeting separated/divorced parents, particularly in complex or high conflict families. The program focuses on the impact of separation and parental conflict on children and is aimed at building communication, reducing conflict and court action, and achieving ongoing child focused co-operative parenting.
   - service: Child Focused Information Sessions
     service_provider: Uniting Communities
@@ -1812,31 +792,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: True
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Divorce services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Group program targeting separated/divorced parents, particularly in complex or high conflict families. The program focuses on the impact of separation and parental conflict on children and is aimed at building communication, reducing conflict and court action, and achieving ongoing child focused co-operative parenting.
   - service: Bringing Up Great Kids
     service_provider: Uniting Communities
@@ -1846,31 +806,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: True
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Teenager/young adult services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Interactive program for parents of young children and adolescents to help us raise happy and confident kids.
   - service: Circle of Security
     service_provider: Uniting Communities
@@ -1880,31 +819,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "This program is based on decades of research about how secure parent-child relationships can be supported and strengthened. Topics covered include: Learning to read emotional needs; Successfully managing emotions."
   - service: Circle of Security
     service_provider: "Darlington Children's Centre"
@@ -1914,31 +831,9 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "A course to help parents have supportive reactions to their children's emotions, and to help parents have more understanding of their child's behaviour. Parents will be better able to help their child organise their feelings so that the parent/child relationship can be enjoyed more fully, helping children feel secure both now and in the future."
   - service: Kids are First- Parenting Orders Program   
     service_provider: Anglicare SA
@@ -1948,31 +843,13 @@ data:
     cost: $50 or concession $20
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: True
-      - pre-separation: True
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Courses
+      - Divorce services
+      - Pre-separation services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - North
+      - West
     blurb: Group parenting program targeting separated/divorced parents, particularly in complex or high conflict families. Program focuses on impact of conflict on children and aimed at building communication, reducing conflict and court action, and achieving ongoing child focussed co-operative parenting.
   - service: Post Separation Parenting Course
     service_provider: Centacare
@@ -1982,31 +859,9 @@ data:
     cost: $5.00
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: "A workshop for separated parents wanting to understand and manage the changes in their family. The workshop will enable participants to: Share with others about what is different now that the family has changed; Learn about what their children need from them; Learn about communicating respectfully with the other parent"
   - service: Children in Focus Information Session
     service_provider: Family Relationship Centre Mount Gambier
@@ -2016,31 +871,10 @@ data:
     cost: $10.00 concession and low Income (under $50,000 pa) Otherwise $25.00
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: "Children in Focus Information Sessions are a 2.5 hour workshop for separated parents and families. The purpose of the workshop is to support parents and carers to better manage their own feelings and well-being, in order to better support the children. As the name suggests, the focus of the session is the children, and on what parents and family members can do to work together to better support and promote the children's development, relationships and well-being both now and for the future."
   - service: Working it out for the Kids
     service_provider: Relationships Australia SA Berri
@@ -2050,31 +884,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: "Program for separated parents who are finding it difficult to manage their emotions and keep conflict with their ex-partner away from their children. It seeks to help parties stay focused on the needs of their children; manage emotions such as anger, grief, disappointment and jealousy"
   - service: Building Connections Seminar/Strengthening Separated Families
     service_provider: Uniting Country SA
@@ -2084,31 +897,10 @@ data:
     cost: Check with provider
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: True
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Post-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: Building Connections is for separated parents and assists parents to have strong healthy relationships with their children. This program helps parents to understand the effects that family separation has on children, the impact of parental conflict upon children, how to improve their communication with the other parent and how to be a more effective parent to become child focused.
   - service: Acorn - Parent Infant Attachment Group
     service_provider: Anglicare SA
@@ -2118,31 +910,15 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Parental services
+      - Courses
+      - Mental health services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: True
-      - Outer regional: True
+      - North
+      - East
+      - West
+      - Outer regional
     blurb: The Acorn group supports mothers whose diagnosed mental health difficulties impact on parent-infant attachment. It is a structured, 15 week program that utilises shared experiences of play, music and movement, and dedicated parent-only time for journaling and peer support.
   - service: Healthy Hearts, Healthy Homes
     service_provider: Anglicare SA and Centacare
@@ -2152,31 +928,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: True
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Pre-separation services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Healthy Hearts Healthy Homes is suitable for couples or individuals who are keen to learn to improve the key relationships in their lives.
   - service: The Garden Group Program
     service_provider: Hackham Community Centre
@@ -2186,31 +941,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "An Infant/Toddler program for 0 - 4 years and their parent(s). An opportunity for shared positive experiences and sensory exploration activities through play, music and movement to support the relationship between you and your child."
   - service: Parenting by Connection
     service_provider: Community Transformations Inc
@@ -2220,31 +954,9 @@ data:
     cost: "Wherever we can access funding, the cost is low and, where we can't access funding, we charge a fee- for-service."
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Parenting by Connection provides parents with Staylistening, Setting Limits, Special Time, and Playlistening tools to build and rebuild the connection with their children, along with tools with which parents can build support from themselves
   - service: "Who's in Charge"
     service_provider: Junction Australia
@@ -2254,31 +966,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Goolwa sessions will run for 4 weeks, break for school holidays, then pick up again for 4 weeks, and morning tea will be provided. Seaford sessions will run for 8 weeks on Tuesday evenings, providing an after hours opportunity for working parents, and refreshments will be provided.
   - service: "Who's in Charge"
     service_provider: Reconnect
@@ -2288,31 +980,12 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "The Who's in Charge group is an 8 week program for parents or carers of young people (8-18) who are beyond control, violent or defiant."
   - service: Circle of Security Parenting"
     service_provider: Centacare
@@ -2322,31 +995,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: "This is an 8 week course – participants must commit to attending every session in order to receive a Certificate of Attendance A course to help parents have supportive reactions to their children’s emotions, and to help parents have more understanding of their child’s behaviour. Parents will be better able to help their child organise their feelings so that the parent/child relationship can be enjoyed more fully, helping children feel secure both now and in the future."
   - service: "Who's in Charge?"
     service_provider: Centacare
@@ -2356,31 +1008,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
+      - Behaviour management services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: A six week course for parents whose children are abusive towards them. The course is for parents of children aged between 8 and 18 who feel constantly challenged by their children’s behaviour.
   - service: How to Talk so Kids will Listen
     service_provider: Centacare
@@ -2390,31 +1022,9 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: Explore the skills associated with successful communication for parents. This includes how we listen, as well as what we say. Considers the importance of assisting children to develop emotional intelligence as part of successful communication.
   - service: Bringing Up Great Kids
     service_provider: Centacare
@@ -2424,31 +1034,9 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: True
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
     blurb: "Three workshops for parents and caregivers of children 0 to 8 years of age. These workshops aim to give parents the opportunity to explore emerging and developing relationships in their families by: Promoting family wellbeing; Identifying strategies that promote harmony in families; Increasing possibilities for connection between parents and their children."
   - service: Learning Together Program
     service_provider: Office for Children and Young People
@@ -2458,31 +1046,11 @@ data:
     cost: check with provider
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: "Learning Together is a family learning and support program for families with children aged 0-3 years. Family members work with early children teachers and in child and family friendly settings to support children’s learning. Offers a wide range of programs, including playgroups, Circle of Security Parenting and other programs."
   - service: Learning Together @ home program
     service_provider: Office for Children and Young People
@@ -2492,31 +1060,16 @@ data:
     cost: check with provider
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: True
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: True
-      - legal: False
-      - indigenous: True
+      - Parental services
+      - Teenager/young adult services
+      - Mental health services
+      - Disability services
+      - Indigenous services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: True
+      - North
+      - South
+      - West
+      - Outer regional
     blurb: "This is a program for families with children aged from birth to four years. The purpose of the program is to support families' abilities to be involved with their children's learning, through play. Aboriginal and Torres strait Islander families and children under guardianship of the Minister For Families are given priority when possible."
   - service: The Child and Family Foundations Program
     service_provider: Uniting Care Wesley
@@ -2526,31 +1079,12 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Behaviour management services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
     blurb: "The program aims to strengthen early childhood development and the wellbeing of children and their families. Child development issues and concerns which can be addressed include: Behavioural issues; Social skills difficulties; Parenting difficulties and concerns; Social isolation"
   - service: Positive Parenting Program (Triple P)
     service_provider: Uniting Care Wesley
@@ -2560,31 +1094,10 @@ data:
     cost: Check with provider
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
     blurb: Positive Parenting (Triple P) teaches simple and practical strategies to confidently tackle parenting challenges. Please join us for three FREE sessions.
   - service: Circle of Security Parenting
     service_provider: Uniting Care Wesley
@@ -2594,31 +1107,10 @@ data:
     cost: Check with provider
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: True
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - Adelaide CBD
+      - North
     blurb: Circle of Security helps guide parents towards building healthy attachments with their children. 50 years of research on attachment demonstrates that children with healthy attachments to parents are more likely to have positive lives and relationships in the future.
   - service: The Fathers Journey
     service_provider: "Cowandilla Children's Centre (with Anglicare SA)"
@@ -2628,31 +1120,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: An opportunity for fathers to share their unique experiences and journey as a father with other dads. Facilitated by Anglicare.
   - service: The Dad Factor
     service_provider: "Cowandilla Children's Centre (with Anglicare SA)"
@@ -2662,31 +1132,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: Aims to provide support, education, promote self-reflection and self-growth as well as to inspire fathers to value their unique role. Facilitated by Anglicare
   - service: Range of playgroups, support groups, courses and other services
     service_provider: Communities for Children North West Adelaide
@@ -2696,31 +1144,12 @@ data:
     cost: TBA
     website: www.unitingsa.com.au
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: True
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Mental health services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: "Range of playgroups, support groups, courses and other services for children with special needs, parents struggling with post natal depression etc. Check website to book"
   - service: The Dad Factor
     service_provider: "Forbes Children's Centre (with Anglicare SA)"
@@ -2730,31 +1159,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: A six week course for fathers, grandfathers, uncles and other male carers that can assist participants develop their own parenting style. Topics include communicating with children, helping children to develop self-confidence, children’s behaviour and how to deal with it, handling stress as a parent.
   - service: "Variety of Parenting and Children's program"
     service_provider: "Forbes Children's Centre (with Anglicare SA)"
@@ -2764,31 +1173,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: "Forbes Children's Centre offers a variety of children’s and parenting programs such as My Time, Food for Families, Healthy Cooking Classes and playgroups."
   - service: Circle of Security
     service_provider: "Forbes Children's Centre (with Anglicare SA)"
@@ -2798,31 +1187,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: "Circle of Security is a parenting group designed to help parents and carers of young children recognise and respond to their children's needs. Children who feel secure in their relationships with their parents have higher selfesteem, fewer behavioural problems, know how to be kind and enjoy more happiness with their parents."
   - service: Bringing Up Great Kids
     service_provider: "Forbes Children's Centre (with Anglicare SA)"
@@ -2832,31 +1200,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: Explore your own parenting style, explore your own experiences of being parented, share experiences with other parents. Explore your hopes and dreams for your child.
   - service: Connected Families Program
     service_provider: "Kalaya Children's Centre"
@@ -2866,31 +1213,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - North
+      - West
     blurb: For frustrated parents of children who are fussy eaters aged 8 months to 4 years.
   - service: "Who's in Charge"
     service_provider: Junction Community Centre Inc
@@ -2900,31 +1226,13 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: True
+      - Parental services
+      - Courses
+      - Indigenous services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - North
+      - West
+
     blurb: A program connecting and supporting Aboriginal families. Run with UCW Port Adelaide. Light lunch provided. An 8 week parenting group for parents who have young people who are out of control, defiant or violent.
   - service: Circle of Security
     service_provider: Junction Community Centre Inc
@@ -2934,31 +1242,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: True
+      - Parental services
+      - Indigenous services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - North
+      - West
     blurb: This attachment-based parenting course is offered twice per annum subject to demand.
   - service: Circle of Security
     service_provider: Gowrie SA
@@ -2968,31 +1256,10 @@ data:
     cost: $200 each or $350 per Couple
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: "An 8 week attachment based parenting course which helps parents to:  Build trust in relationships with children;  Learn how to read our children’s cues;  Learn how to repair ruptures in our relationships’; Discover delight with our children"
   - service: "Toolbox Parenting Program - Tweens and Teens (10-16 years)"
     service_provider: Lutheran Community Care
@@ -3002,31 +1269,10 @@ data:
     cost: Free
     website: "http://cityofpae.evanced.info/signup"
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: "Over six weeks Toolbox aims to help you feel inspired, see the possibilities of a great future for your teen while grasping the concepts and practices of being a 'Parent coach' . To book visit website"
   - service: Circle of Security Parenting
     service_provider: Relationships Australia SA
@@ -3036,31 +1282,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: This 8 session course is deal for mothers, fathers, significant others, parents to be, grandparents, foster and adoptive parents or anyone that is providing care for children. This course focuses on children behaviours, feelings and relationships and how to support parents in this challenging role.
   - service: Baby in Mind Infant Massaging
     service_provider: "Seaton Children's Centre & Relationships Australia SA"
@@ -3070,31 +1295,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: "This course teaches caregivers easy strokes and movements that can used to play, explore and support a baby's wellbeing and flourishing. Massage can help build a conversation with baby around what secure touch feels like. For non-walking babies under 12 months."
   - service: Bringing Up Great Kids
     service_provider: "Ocean View College and Children's Centre & Relationships Australia SA"
@@ -3104,31 +1309,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: True
+      - Outer regional
     blurb: "It is difficult a times to understand and interpret what your child is trying to tell you and at the same time helping them to understand what you're telling them in order to build positive relationships. This course is to support parents and caregivers in building emotional connections with their children"
   - service: Circle of Security
     service_provider: Aboriginal Family Support Services  
@@ -3138,31 +1322,15 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: True
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: True
+      - Parental services
+      - Child services
+      - Courses
+      - Behaviour management services
+      - Indigenous services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: True
+      - North
+      - East
+      - Outer regional
     blurb: Learn how to support your child through attachment and security in a culturally safe and appropriate environment. Catering is supplied.
   - service: Baby in Mind Infant Massaging
     service_provider: Relationships Australia SA
@@ -3172,31 +1340,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "Massage has shown to reduce crying times, improve sleep and reduce stress hormones in babies. This course teaches caregivers fun and easy massage technique that can used to play, explore and support a baby's wellbeing and flourishing. For non-walking babies under 11 months. Tea, coffee and snacks provided."
   - service: Mindfulness
     service_provider: "Ardtornish Children's Centre St Agnes"
@@ -3206,31 +1354,10 @@ data:
     cost: $60/$100 (educators). Concession available.
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: A four evening course just for men- exploring way to better respond to life.
   - service: Circle of Security
     service_provider: "Avenue College Children's Centres Hillcrest SA 5086"
@@ -3240,31 +1367,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "A 7-week attachment course which helps parents build trust with children, learn how to read children's cues, learn how to repair ruptures in relationships and discover delight with children."
   - service: Kids in Focus
     service_provider: Centacare- Elizabeth Park   
@@ -3274,31 +1381,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "Works with families where there is substance misuse and at the same time, enhancing the family's parenting ability through intensive support and education."
   - service: The Dads Business
     service_provider: Centacare- Elizabeth Park   
@@ -3308,31 +1395,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "The Dad's Business Program delivers a range of informal and inclusive activities to enhance family health and promote inclusive fathering"
   - service: "Various Children's Activities & Playgroups & Parent Support Groups"
     service_provider: Ingle Farm Family Zone
@@ -3342,31 +1408,11 @@ data:
     cost: TBA
     website: "http://www.salisburyc4c.org.au/familyzone.php."
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "Parents are encouraged to come along with their children and connect for fun and educational activities."
   - service: Circle of Security  
     service_provider: Ingle Farm Family Zone
@@ -3376,31 +1422,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "This course covers what children's behaviours mean, how to help children with their feelings and to feel secure in relationship and engage more in play and learning. It also covers how to support you in your roles as a parent and how to manage difficult child behaviours: tantrums, attention seeking, clinginess."
   - service: Bringing up Great Kids  
     service_provider: Relationships Australia SA
@@ -3410,31 +1436,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: This course is suitable for all family composition. It covers identifying important messages and how to convey them, understanding the messages of your children and develop strategies to manage parenting approach.  
   - service: Parenting Together
     service_provider: Relationships Australia SA
@@ -3444,31 +1449,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "This is a community based parenting program, supporting participants to improve communication with significant people in their children's lives. These may be current or former partners, extended family members, school and childcare providers or any other significant person to the children. Bookings essential."
   - service: Family Support & Playgroups    
     service_provider: "Gawler District College Children's Centre Evanston"
@@ -3478,31 +1463,12 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: A service offering one on one support for families and carers in supported, positive parenting programs.  Centre offers a range of other supportive and interactive playgroups such as Infant massage, Baby Steps, Baby Move & Groove.
   - service: Circle of Security
     service_provider: "Gawler District College Children's Centre Evanston"
@@ -3512,31 +1478,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "A 6-week relationship based intervention program in a friendly environment to help you learn to support your children's emotional needs. Designed to enhance attachment and security between parents and children. No childcare available."
   - service: Saturday Dads and Kids Group
     service_provider: "Gawler District College Children's Centre Evanston"
@@ -3546,31 +1492,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: Group for dads and kids on the first Saturday of each month. Include excursions, cooking, messy play and more. Free hot breakfast provided.  
   - service: Kids, Blokes and Dad Jokes      
     service_provider: Lake Windemere B-7 School- Salisbury North SA 5108
@@ -3580,31 +1506,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Child services
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: Group for blokes and kids every Saturday. Excursions, cooking, messy play and more. Light lunch provided.
   - service: Various Playgroups
     service_provider: Mark Oliphant College B-12 Munno Para 5115
@@ -3614,31 +1519,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: False
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: Playgroup for children eligible for preschool in 2019 but not an enrolment for preschool. Series of specialised Playgroups offered throughout the week.  
   - service: Circle of Security Parenting
     service_provider: Mark Oliphant College B-12 Munno Para 5115
@@ -3648,31 +1532,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "Parenting course that covers understanding your child's needs and helping organise their feelings, feel secure, engage more in play and learning and how to meet the emotional needs through tough times and challenging behaviours."
   - service: Baby Play and Connect
     service_provider: "The Park's Children Centre"
@@ -3682,31 +1546,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: A group for parenting/caregivers and their babies under 12 months. Supporting them to build relationships through play, understanding appropriate stages of development and through exploration of their environment.  
   - service: Parenting Support
     service_provider: "The Park's Children Centre"
@@ -3716,31 +1560,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
+      - East
     blurb: "8 week course on Circle of Security Parenting for young children. The course  covers understanding your child's needs and helping organise their feelings, feel secure, engage more in play and learning and how to meet the emotional needs through tough times and challenging behaviours."
   - service: Circle of Security Parenting
     service_provider: "The Park's Children Centre"
@@ -3750,31 +1574,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: True
-      - South: False
-      - West: False
-      - Outer regional: False
+      - East
     blurb: "Parenting course that covers understanding your child's needs and helping organise their feelings, feel secure, engage more in play and learning and how to meet the emotional needs through tough times and challenging behaviours."
   - service: Back on Track
     service_provider: Relationships Australia SA 
@@ -3784,31 +1586,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "12-week men's program which address use of violence examining: are you hurting or scaring someone you care about? Is violence causing problems in your relationship? Would you like different ways to deal with anger? If you are thinking about making changes to be a better father or partner, you don't have to do it alone."
   - service: Caring Dads
     service_provider: Relationships Australia SA 
@@ -3818,31 +1599,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: Supporting fathers how have hurt or scared their children, to explore parenting strategies and address the impact on relationships. Helping fathers become nurturing and supportive fathers to improve their relationships with children.
   - service: Circle of Security
     service_provider: Relationships Australia SA 
@@ -3852,31 +1612,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "Parenting course that covers understanding your child's needs and helping organise their feelings, feel secure, engage more in play and learning and how to meet the emotional needs through tough times and challenging behaviours."
   - service: Managing Challenging Behaviour
     service_provider: Relationships Australia SA 
@@ -3886,31 +1625,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: False
-      - South: False
-      - West: False
-      - Outer regional: False
+      - North
     blurb: "Parenting course that will help you to better understand your child's challenging behaviours and learn to respond effectively in a way that helps both you and your child."
   - service: SPRING Early Intervention Family Support
     service_provider: Anglicare SA
@@ -3920,31 +1638,12 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: True
-      - East: True
-      - South: True
-      - West: False
-      - Outer regional: False
+      - North
+      - East
+      - South
     blurb: A support Service provides preventative and early intervention to support families experiencing challenges that are impacting on their children. Works with families with children (0-18) that are seeking support to improve their parenting abilities and achieve a nurturing family environment.  Family Support Practitioners provide family focused and inclusive home visiting service for up to six months, home visits either weekly or fortnightly for up to two hours.
   - service: Dads Moving Towards Responsibility
     service_provider: Anglicare SA
@@ -3954,31 +1653,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Interactive group program that respectfully challenges men to face up and take responsibility for unacceptable behaviour and attitudes. Significant time is given to development of skills to stop abuse and violence towards their partners, ex partners and children. Ongoing every Thursday 6pm-8pm. *Intake required before attending*.
   - service: Mindful Awareness Parenting Group Program
     service_provider: Anglicare SA
@@ -3988,31 +1666,13 @@ data:
     cost: Free for parents with a child under 12 years
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: True
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: True
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Child services
+      - Courses
+      - Pre-separation services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: 8 week program exploring mindful awareness - helping us to focus on ourselves and others with kindness and acceptance.
   - service: Sacred Little Ones- Parent Infant Attachment Program
     service_provider: Anglicare SA- Christies Beach
@@ -4022,31 +1682,12 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: True
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Female services
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: Group organise an opportunity for mothers/primary caregivers to connect with and nurture themselves ad their little ones through song, dance-play and some dedicated creative self-reflection time.  Aim is to enhance parent-infant interaction and strengthen relationships.
   - service: Circle of Security
     service_provider: Anglicare SA
@@ -4056,31 +1697,12 @@ data:
     cost: TBA.
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: True
+      - South
+      - West
+      - Outer regional
     blurb: An 8-week program for parents, grandparents and carers wanting to further develop their relationship with their children and learn more about child development. Booking essential.
   - service: Variety of courses and parenting groups
     service_provider: Aldinga Community Centre
@@ -4090,31 +1712,11 @@ data:
     cost: TBA.
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: TBA
   - service: Bringing up great Kids
     service_provider: Aldinga Community Centre
@@ -4124,31 +1726,11 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: True
-      - Outer regional: False
+      - South
+      - West
     blurb: "Join Huong and Tracey to develop a better understanding of your child's behaviour and brain development and increase you tool box of strategies to support your child's emotional and physical needs. Booking is required. Creche available."
   - service: Dads Matter
     service_provider: Christies Downs Community House
@@ -4158,31 +1740,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: "Discover and share creative ways to care for yourself and your children. Meet other Dad's form the community and yarn about mindful parenting. A safe and comfortable environment for fathers to express their feelings, ideas, concerns and aspirations relating to their parenting experience."
   - service: Circle of Security - Hackham West
     service_provider: "Hackham West Children's Centre"
@@ -4192,31 +1753,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: An 8-week program to support parents to learn self-care strategies and be reflective about parenting. Free crèche, bookings required.
   - service: Dads Making a Difference
     service_provider: Hackham Community Centre
@@ -4226,31 +1767,11 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: An exciting activity program for Dads and their kids on the weekends for low or no cost.  
   - service: Circle of Security
     service_provider: "O'Sullivan Breach Children's Centre"
@@ -4260,31 +1781,9 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: False
-      - West: True
-      - Outer regional: False
+      - West
     blurb: "An 8-week program for parents to explore and develop s shared understanding of: The Circle of Security as a roadmap for understanding and responding to children's needs, impact of our own experiences. Group facilitated by Bec Johns (occupational Therapist) and Tara Anderson (Speech Pathologist)."
   - service: The Dad Factor  
     service_provider: "O'Sullivan Breach Children's Centre"
@@ -4294,31 +1793,9 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: A 6-week program For MEN exploring their role as a father. The Dad Factor program aims to provide support, education, promotes self-reflection and growth; as well as inspire fathers to value their unique role.
   - service: My Time
     service_provider: "O'Sullivan Breach Children's Centre"
@@ -4328,31 +1805,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: False
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: True
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Disability services
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: This is a support group for adults who care for young children with a disability. Creche provided.  
   - service: Kids & Dads
     service_provider: "Uniting Community & Anglicare SA"
@@ -4362,31 +1818,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: Free weekly activity for children (age 0-12) and the significant man in their life fathers, step-fathers, grand-fathers, uncles or mentors to enjoy fun activities together, share food and learn new skills and build relationships.  
   - service: The Dad Factor  
     service_provider: "Woodcroft Heights, Children's Centre"
@@ -4396,31 +1831,10 @@ data:
     cost: Free
     website: XXXX
     caters_for:
-      - male: True
-      - female: False
-      - parents: False
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Male services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: False
+      - South
     blurb: For men exploring their role as a father. The Dad Factor program aims to provide support, education, promotes self-reflection and growth; as well as inspire fathers to value their unique role.
   - service: Kidstuff for Young Parents
     service_provider: Metropolitan Youth Health
@@ -4430,30 +1844,10 @@ data:
     cost: TBA
     website: XXXX
     caters_for:
-      - male: False
-      - female: False
-      - parents: True
-      - children: False
-      - teenager: False
-      - shelter: False
-      - course: True
-      - divorce: False
-      - pre-separation: False
-      - post-separation: False
-      - behaviour: False
-      - mental: False
-      - domestic: False
-      - court: False
-      - drug/alcohol: False
-      - disability: False
-      - legal: False
-      - indigenous: False
+      - Parental services
+      - Courses
     location:
-      - Adelaide CBD: False
-      - North: False
-      - East: False
-      - South: True
-      - West: False
-      - Outer regional: True
+      - South
+      - Outer regional
     blurb: Are you pregnant, a mum or a dad, under 25 years? Chill out and meet other young parents and join in with FUN activities. Have fun and learn while discovering creative ways for caring for your child and yourself. Morning Tea Provided.
 ---

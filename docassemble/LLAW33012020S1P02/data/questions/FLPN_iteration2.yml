@@ -25,5 +25,5 @@ code: |
   FLPN_services[i]['service_requirement'] = False
   for TDB2a_service in TDBservices:
     if TDB2a_service in FLPN_services[i]['caters_for']:
-      FLPN_services[i]['location_requirement'] = True
+      FLPN_services[i]['service_requirement'] = True
 ---

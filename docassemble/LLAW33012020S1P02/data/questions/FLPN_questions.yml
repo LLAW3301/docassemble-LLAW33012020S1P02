@@ -60,7 +60,7 @@ buttons:
      image: postsep
    - "Shelters": Shelters
      image: shelter
-   - "Teenager/young adult services": Teenager/young adult services 
+   - "Teenager/young adult services": Teenager/young adult services
      image: youngadult
    - "Other/not listed": none of the above
      image: none
