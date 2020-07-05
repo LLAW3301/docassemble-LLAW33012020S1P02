@@ -367,6 +367,7 @@ data:
     cost: Free
     website: XXXX
     caters_for:
+      - Child services
     location:
       - Outer regional
     blurb: none provided.

@@ -10,20 +10,31 @@ code: |
   TDBselected_services.gathered = True
 ---
 code: |
-  if ( FLPN_services[i]['location_requirement'] and FLPN_services[i]['service_requirement'] ):
+  if ( FLPN_services[i]['location_requirement'] and 
+    FLPN_services[i]['service_requirement'] ):
+    
     FLPN_services[i]['append'] = True
   else:
     FLPN_services[i]['append'] = False
 ---
-code: |
+# note, this code results in too many false positives, too many services showing up on final screen from all locations rather than just user selected locations
+ code: |
   FLPN_services[i]['location_requirement'] = False
   for TDBa_location in TDBlocation:
     if TDBa_location in FLPN_services[i]['location']:
       FLPN_services[i]['location_requirement'] = True
 ---
+# tried to use the same code for service_requirement as for location, this results in no services showing
+# code: |
+#  FLPN_services[i]['service_requirement'] = False
+#  for TDB2a_service in TDBservices:
+#    if TDB2a_service in FLPN_services[i]['caters_for']:
+#      FLPN_services[i]['service_requirement'] = True
+---
+# this code works better to set the 'service_requirement' - actually results in some services displaying
 code: |
-  FLPN_services[i]['service_requirement'] = False
-  for TDB2a_service in TDBservices:
-    if TDB2a_service in FLPN_services[i]['caters_for']:
-      FLPN_services[i]['service_requirement'] = True
+  if TDBservices in FLPN_services[i]['caters_for']:
+    FLPN_services[i]['service_requirement'] = True
+  else:
+    FLPN_services[i]['service_requirement'] = False
 ---
