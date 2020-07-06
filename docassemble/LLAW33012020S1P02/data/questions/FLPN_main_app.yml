@@ -153,8 +153,14 @@ subquestion: |
   ${TDBdisplay_table}
   
   <br>**Alternatively, you could try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
-under: |
-  <br>**The list of services above has been compiled into a file. Click below to download this list of services, or to email it to yourself.**
+
+  <br><br>**The services above have been compiled into a document. Click below to download this list of services, or to email it to yourself.**
+attachment: 
+  name: Service Directory App Report
+  docx template file: FLPN_services_app_report.docx
+  valid formats:
+    - pdf
+allow emailing: True
 buttons:
   - Exit: exit
     url: https://www.pathwaysnetworksa.com.au/
@@ -164,12 +170,6 @@ progress: 100
 table: TDBdisplay_table
 rows: TDBselected_services
 columns:
-  - <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }:** </span><hr>: |
-      '[{}]({})<br>{}<br>{}<br>{}<br>{}<br>{}'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['phone'], row_item['email'], row_item['cost'], row_item['blurb'])
-#  - Locations: |
-#      row_item['location']
-#  - Service category: |
-#      row_item['caters_for']
-#  - Description: |
-#      row_item['blurb']
+  - <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }:** </span><br><br><span class="websitedisplay">Click on the service provider's name to be taken to their website/brochure</span><br>: |
+      '[<span class="PYserviceprovider">{}</span>]({})<br><span class="PYservicetype">{}</span><br><span class="PYblurb">{}</span><br><br><span class="servicedisplayfont"><i class="material-icons">location_on</i> {}<br><i class="material-icons">email</i> {}<br><i class="material-icons">phone</i> {}<br><i class="material-icons">monetization_on</i> {}</span>'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['blurb'], row_item['address'], row_item['email'], row_item['phone'], row_item['cost'])
 ---

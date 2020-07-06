@@ -35,13 +35,7 @@ code: |
     if TDBa_location in FLPN_services[i]['location']:
       FLPN_services[i]['location_requirement'] = True
 ---
-# setting service category requirement
-# code: |
-#  FLPN_services[i]['service_requirement'] = False
-#  for TDB2a_service in TDBservices:
-#    if TDB2a_service in FLPN_services[i]['caters_for']:
-#      FLPN_services[i]['service_requirement'] = True
----
+# setting service requirement
 code: |
   if TDBservices in FLPN_services[i]['caters_for']:
     FLPN_services[i]['service_requirement'] = True

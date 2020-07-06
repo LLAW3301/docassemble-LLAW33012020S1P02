@@ -23,6 +23,13 @@ h3 {
   line-height: 15.4px;
 } 
 
+h4 {
+  font-family: Cabin, arial, sans-serif;
+  color: rgb(144,156,149);
+  list-style: circle;
+  font-size: 10px;
+}
+
 p { 
   font-family: Cabin, arial, sans-serif;
   color: #58595B;
@@ -187,9 +194,27 @@ body {
   font-family: Cabin, arial, sans-serif;
   font-size: 14px;
   font-style: italic;
+  text-align: justify;
   color: rgb(68,48,148);
 }
-  
+
+/* Display info about clicking on website link */
+.websitedisplay{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 15px;
+  color: rgb(144,156,149);
+}
+
+/* font settings for phone, email, address etc display */
+.servicedisplayfont{ 
+  font-family: Cabin, arial, sans-serif;
+  color: #58595B;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: justify;
+} 
+
 /* Material Icons for Output */
 .material-icons{
   width: 13px;
