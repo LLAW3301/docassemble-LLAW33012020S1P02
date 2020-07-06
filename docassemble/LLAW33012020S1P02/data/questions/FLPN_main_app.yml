@@ -1,0 +1,175 @@
+---
+# This is the main file for running the FLPN Service Directory App
+# Comments can be found at the start of every block (sections separated by three hyphens)
+---
+# This section lines contains backend information about the app and the students that created it. 
+# The value for 'title' is what shows on the browser tab. 
+# The value for 'exit url' is the website that the top right 'quick exit' button in the app will take you to, it is currently set to link to a google search for cooking pasta, but could either lead to FLPN homepage or it should be changed to any inconspicuous website.
+metadata:
+  title: |
+    Family Law Pathways Network
+  short title: |
+    FLPN Service Directory
+  authors:
+    - name: Timothy Ball
+    - name: Daniel Cheung
+    - name: Phoebe Yap
+    - name: Zoe Vaughan
+  organisation: Flinders University
+  show login: False
+  exit url: https://www.google.com/search?source=hp&ei=bLj6XoeXA9KW4-EPzpuLwAY&q=cooking+pasta&oq=cooking+pasta&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BQgAELEDOgUIABCDAVC3O1jsUWCAX2gAcAB4AIABxgSIAeQakgELMC42LjQuMC4yLjGYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab&ved=0ahUKEwiH_bqE06jqAhVSyzgGHc7NAmgQ4dUDCAk&uact=5
+  exit label: QUICK EXIT
+---
+# FPSA Logo
+objects:
+  - PYlogo: DAStaticFile.using(filename='familylaw_pathways_logo2.jpg')
+  - PYaddresslogo: DAStaticFile.using(filename='location.svg')
+---
+mandatory: True
+code: |
+  set_parts(logo='<img src="' + PYlogo.url_for() + '" style="height: 50px;">')
+---
+# This section includes a 'created by Flinders and FLPN' banner and logo at the bottom of every page
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: center">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with SA Family Law Pathways Network
+    </i></small></cite>
+    </div>
+    </div>
+---
+# This section lets us pull data from the lists data file, and pull questions from the questions file
+include:
+  - FLPN_services.yml
+  - FLPN_questions.yml
+  - FLPN_iteration1.yml
+---
+# This section classifies endpoints as dictionaries, in order to have them function properly
+objects:
+  - endpoint: DADict
+---
+# This section contains additional app features, like adding the progress bar at the top of every page
+features:
+  css: app_main_design.css
+  progress bar: True
+  show progress bar percentage: True
+  debug: False
+  navigation back button: True
+  hide standard menu: True
+---
+# This section is the welcome screen
+# There is information about what the app does, a disclaimer, and buttons leading you forward or to escape. 
+# Clicking 'I do not accept' takes you to the FLPN home page (the URL listed below 'I do not accept' in this section. That URL should be changed if you intend to embed this app somewhere specific, that way, app users can be lead directly back to the last page they were on before entering the app
+mandatory: True
+question: Service Directory
+subquestion: |
+  Welcome to the South Australian Family Law Pathways Network Service Directory ('Service Directory'). This application is designed to help you find and engage in family law services according to your needs.<hr>
+  
+  **Quick Exit Button**<br>
+  
+  The top right hand corner of every page contains a quick exit button. Due to the sensitive and personal nature of the information searched for within this app, you may require a quick way to back out to a search engine for inconspicuous web browsing.<hr>
+  
+  **Privacy Policy**<br>
+  
+  The Service Directory will request personal information such as your email address. Your email address will only be collected if you want a list of relevant services emailed to you. The personal information that you provide in the Service Directory will not be retained or disclosed to third parties.
+  
+  If you want to discuss this policy, please contact us directly on 08 8419 2000.
+  
+  By continuing you accept these terms and also the terms specified in the National Family Law Pathways Network <a href="https://www.familylawpathways.com.au/privacy.php">privacy policy</a>.
+buttons:
+  - "Accept and continue": continue
+  - "I do not accept": exit
+    url: https://www.pathwaysnetworksa.com.au/
+---
+# This section essentially asks what is the location that the user has clicked on, and then sets a location confirmation to true or false. If you click that you are not seeking South Australian services, the location confirmation variable is false
+code: |
+  if TDBlocation['North']:
+    TDBlocation_confirm = True
+  elif TDBlocation['Adelaide CBD']:
+    TDBlocation_confirm = True
+  elif TDBlocation['East']:
+    TDBlocation_confirm = True
+  elif TDBlocation['South']:
+    TDBlocation_confirm = True
+  elif TDBlocation['West']:
+    TDBlocation_confirm = True
+  elif TDBlocation['Outer regional']:
+    TDBlocation_confirm = True
+  else:
+    TDBlocation_confirm = False
+---
+# If that location confirmation above is false then this section ensures another endpoint is displayed
+mandatory: True
+code: |
+  if TDBlocation_confirm == False:
+    endpoint['ineligible2']
+---
+# In this section, the text in 'subquestion' is what is actually displayed for the endpoint where users are not looking for South Australian services
+event: endpoint['ineligible2']
+question: No services available
+subquestion: |
+  The services in this application are conducted in South Australia. Currently the application does not cater for other jurisdictions.
+  
+  <br>Please contact the SA Family Law Pathways Network for information on how to access services in other jurisdictions.<br>
+  <br>**Phone:** 08 8419 2000<br>
+  **Mobile:** 0407 317 376<br>
+  **Email:** pathways@rasa.org.au
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
+# This section ensures another ineligible endpoint is displayed if users select that they are not after any of the service categories that are listed
+mandatory: True
+code: |
+  if TDBservices == 'none of the above':
+    endpoint['ineligible3']
+---
+# In this section, the text in 'subquestion' is what is actually displayed for the endpoint where users cannot find any service categories that suit their needs
+event: endpoint['ineligible3']
+question: Other services wanted
+subquestion: |
+  You have indicated that you require other services not listed in this application.
+  
+  <br>Please contact the SA Family Law Pathways Network for information on the specific service type you require.<br>
+  <br>**Phone:** 08 8419 2000<br>
+  **Mobile:** 0407 317 376<br>
+  **Email:** pathways@rasa.org.au
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
+mandatory: True
+question: Available Services
+subquestion: |
+
+  ${TDBdisplay_table}
+  
+  <br>**Alternatively, you could try your request on the [Aboriginal Services Directory](http://aboriginalservicesdirectory.com.au/#s=1)**
+
+  <br><br>**The services above have been compiled into a document. Click below to download this list of services, or to email it to yourself.**
+attachment: 
+  name: Service Directory App Report
+  docx template file: FLPN_services_app_report.docx
+  valid formats:
+    - pdf
+allow emailing: True
+buttons:
+  - Exit: exit
+    url: https://www.pathwaysnetworksa.com.au/
+  - Restart: restart
+progress: 100
+---
+table: TDBdisplay_table
+rows: TDBselected_services
+columns:
+  - <span class="PYoutputheader">We found these <span class="PYservicecat">${ TDBservices }</span> in the **${ TDBlocation.true_values() }:** </span><br><br><span class="websitedisplay">Click on the service provider's name to be taken to their website/brochure</span><br>: |
+      '[<span class="PYserviceprovider">{}</span>]({})<br><span class="PYservicetype">{}</span><br><span class="PYblurb">{}</span><br><br><span class="servicedisplayfont"><i class="material-icons">location_on</i> {}<br><i class="material-icons">email</i> {}<br><i class="material-icons">phone</i> {}<br><i class="material-icons">monetization_on</i> {}</span>'.format(row_item['service_provider'], row_item['website'], row_item['service'], row_item['blurb'], row_item['address'], row_item['email'], row_item['phone'], row_item['cost'])
+---
