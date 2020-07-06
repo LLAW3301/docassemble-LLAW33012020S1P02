@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.LLAW33012020S1P02',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='code for **Family Law Pathways Network SA**\r\n\r\nupdated with more elegant data structure for easier amendment/addition of services\r\n\r\n\r\n\r\nFlinders Uni July 2020\r\n',
+      long_description='code for **Family Law Pathways Network SA**\r\n\r\nupdated with more elegant data structure for easier amendment/addition of services\r\n\r\nprogram files are\r\n- main_code2.yml\r\n- FLPN_questions.yml\r\n- FLPN_services.yml\r\n- FLPN_iteration1.yml\r\n\r\n\r\nFlinders Uni July 2020\r\n',
       long_description_content_type='text/markdown',
       author='TB, PY',
       author_email='ball0174@flinders.edu.au',
