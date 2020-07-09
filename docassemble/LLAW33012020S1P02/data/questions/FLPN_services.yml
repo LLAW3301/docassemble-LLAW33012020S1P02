@@ -1,12 +1,12 @@
 ---
-# below is an example of how services are included in this app. You can copy and paste this template onto the bottom of this file (inside the ---) and change the values as needed for the new service. Make sure you delete all service categories ('caters_for') values and location values that dont apply, leaving begind only the values that do apply for your new service. (note: you will have to delete the hash tag at the start of every line)
+# below is an example of how services are included in this app. You can copy and paste this template onto the bottom of this file (inside the ---) and change the values as needed for the new service. Make sure you delete all service categories ('caters_for') values and location values that dont apply, leaving begind only the values that do apply for your new service. (note: you will have to delete the hash tag at the start of every line). Also, if one of your values (eg. the service name) has an apostrophe in it, you must enclose the entire line with double apostrophes (eg "Darlington Children's Centre")
 #  - service: NAME OF THE SERVICE
 #    service_provider: NAME OF THE SERVICE PROVIDER
 #    address: ADDRESS OF THE SERVICE (OR SERVICE PROVIDER)
 #    email: EMAIL ADDRESS IF KNOWN (OTHERWISE: 'NO EMAIL PROVIDED' OR STATEMENT TO THAT EFFECT)
 #    phone: SERVICE PROVIDER'S PHONE NUMBER
 #    cost: COST OF SERVICE
-#    website: LINK TO SERVICE PROVIDER'S WEBSITE/BOOKING PAGE/BROCHURE
+#    website: LINK TO SERVICE PROVIDER'S WEBSITE/BOOKING PAGE/BROCHURE (SOMETIMES STARTING WITH 'WWW.' DOES NOT WORK, TRY TO ALWAYS START WITH 'HTTPS://'
 #    caters_for:
 #      - Male services
 #      - Female services
@@ -1179,7 +1179,7 @@ data:
     email: no email address provided
     phone: See blurb to book
     cost: TBA
-    website: www.unitingsa.com.au
+    website: https://unitingsa.com.au/
     caters_for:
       - Parental services
       - Child services
@@ -1443,7 +1443,7 @@ data:
     email: familyzone@lccare.org.au
     phone: 8349 6099
     cost: TBA
-    website: "http://www.salisburyc4c.org.au/familyzone.php."
+    website: "http://www.salisburyc4c.org.au/familyzone.php"
     caters_for:
       - Parental services
       - Child services
