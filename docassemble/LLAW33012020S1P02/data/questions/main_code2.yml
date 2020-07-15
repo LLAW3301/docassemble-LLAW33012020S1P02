@@ -4,12 +4,12 @@
 ---
 # This section lines contains backend information about the app and the students that created it. 
 # The value for 'title' is what shows on the browser tab. 
-# The value for 'exit url' is the website that the top right 'quick exit' button in the app will take you to, it is currently set to link to a google search for cooking pasta, but could either lead to FLPN homepage or it should be changed to any inconspicuous website.
+# The value for 'exit url' is the website that the top right 'quick exit' button in the app will take you to, it is currently set to link to BOM adelaide weather, but could either lead to FLPN homepage or it should be changed to any inconspicuous website.
 metadata:
   title: |
-    iRefer SA
+    iReferSA
   short title: |
-    iRefer SA
+    iReferSA
   authors:
     - name: Timothy Ball
     - name: Daniel Cheung
@@ -17,7 +17,7 @@ metadata:
     - name: Zoe Vaughan
   organisation: Flinders University
   show login: False
-  exit url: https://www.google.com/search?source=hp&ei=bLj6XoeXA9KW4-EPzpuLwAY&q=cooking+pasta&oq=cooking+pasta&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BQgAELEDOgUIABCDAVC3O1jsUWCAX2gAcAB4AIABxgSIAeQakgELMC42LjQuMC4yLjGYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab&ved=0ahUKEwiH_bqE06jqAhVSyzgGHc7NAmgQ4dUDCAk&uact=5
+  exit url: http://www.bom.gov.au/sa/
   exit label: QUICK EXIT
 ---
 # FPSA Logo
